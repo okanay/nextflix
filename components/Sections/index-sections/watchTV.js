@@ -9,7 +9,8 @@ export const WatchTV = () => {
     return (<section id={'watch-on-tv'} className={'bg-skin-theme-body-1000 py-24'}>
         <div className={'flex flex-row flex-wrap justify-center items-center gap-16 xlPhone:gap-4'}>
             <div className={'text-skin-theme-font-900 px-8 tablet:px-4'}>
-                <h1 className={'text-3xl lgPhone:text-5xl tablet:text-6xl max-w-2xl font-semibold'}>{language.t1}</h1>
+                <h1 className={'text-2xl lgPhone:text-4xl tablet:text-5xl max-w-2xl font-semibold'}>{language.t1}</h1>
+
                 <h3 className={'text-base lgPhone:text-xl tablet:text-2xl font-semibold max-w-2xl mt-4'}>{language.t2}</h3>
             </div>
             <div className={'relative flex flex-row justify-center'}>

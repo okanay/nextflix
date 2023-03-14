@@ -14,43 +14,48 @@ export const animationStore = {
             transition: {delay: 0.01},
         }
     },
+    answer: {
+        initial: {scaleY: 0, transformOrigin: "top"},
+        open: {scaleY: 1, x: 0, y: 0, position: "static", transformOrigin: "top", transition: {duration: 0.3}},
+        close: {scaleY: 0, x: 0, y: 2, position: "absolute", transformOrigin: "top", transition: {duration: 0}},
+    },
     sideNavigationBar: {
-        initial : {
+        initial: {
             x: 0,
-            zIndex : 0,
+            zIndex: 0,
             y: 0,
             transition: {delay: 0, duration: 0}
         },
         initialHidden: {
             x: -255,
-            y : 45,
-            zIndex : 20,
-            position : "absolute",
+            y: 45,
+            zIndex: 20,
+            position: "absolute",
         },
         blockMobil: {
             x: 0,
-            zIndex : 20,
+            zIndex: 20,
             y: 45,
-            position : "absolute",
+            position: "absolute",
             transition: {delay: 0, duration: 0.25, ease: "linear"}
         },
         block: {
             x: 0,
-            zIndex : 0,
+            zIndex: 0,
             y: 0,
             transition: {delay: 0, duration: 0}
         },
         hidden: {
             x: 0,
-            zIndex : 0,
-            y : 0 ,
+            zIndex: 0,
+            y: 0,
             transition: {delay: 0, duration: 0.2, ease: "linear"}
         },
         hiddenMobil: {
             x: -255,
-            zIndex : 20,
+            zIndex: 20,
             y: 45,
-            position : "absolute",
+            position: "absolute",
             transition: {delay: 0, duration: 0.2, ease: "linear"}
         }
     },
@@ -73,19 +78,19 @@ export const animationStore = {
         hidden: {}
     },
     loadOpacityWithYAngle: {
-        visible: {opacity: 1, y: 0, transition : {duration : 0.3}},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.3}},
         hidden: {opacity: 0, y: 20}
     },
     loadOpacityWithYAngleShort: {
-        visible: {opacity: 1, y: 0, transition : {duration : 0.3}},
+        visible: {opacity: 1, y: 0, transition: {duration: 0.3}},
         hidden: {opacity: 0, y: 10}
     },
     loadOpacityWithXAngle: {
-        visible: {opacity: 1, x: 0, transition : {duration : 0.3}},
+        visible: {opacity: 1, x: 0, transition: {duration: 0.3}},
         hidden: {opacity: 0, x: -20}
     },
     loadOpacityWithXAngleShort: {
-        visible: {opacity: 1, x: 0, transition : {duration : 0.3    }},
+        visible: {opacity: 1, x: 0, transition: {duration: 0.3}},
         hidden: {opacity: 0, x: -10}
     },
 }

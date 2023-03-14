@@ -18,7 +18,8 @@ export default function Home() {
             <DivededFull/>
             <KidsAccount/>
             <DivededFull/>
-            {/*<FrequentlyQuestions/>*/}
+            <FrequentlyQuestions/>
+            <DivededFull/>
         </div>
     )
 }
