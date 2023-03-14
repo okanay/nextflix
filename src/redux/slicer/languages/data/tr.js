@@ -67,5 +67,30 @@ export const trLanguage = {
             i1 : "E-posta adresi",
             b1 : "Başlayın"
         }
+    },
+    footer: {
+        t1: {p1 : "Sorularınız mı var?", p2 : "numaralı telefonu arayın"},
+        n1: "0850-390-7444",
+        links: [
+            {n: "SSS", url: "/"},
+            {n: "Medya Merkezi", url: "/"},
+            {n: "İzleme Yolları", url: "/"},
+            {n: "Kurumsal Bilgiler", url: "/"},
+            {n: "Sadece Netflix'te", url: "/"},
+            {n: "Hediye Kartı Koşulları", url: "/"},
+            {n: "Yatırımcı İlişkileri", url: "/"},
+            {n: "Kullanım Koşulları", url: "/"},
+            {n: "Bize Ulaşın", url: "/"},
+            {n: "Yardım Merkezi", url: "/"},
+            {n: "İş İmkanları", url: "/"},
+            {n: "Gizlilik", url: "/"},
+            {n: "Hız Testi", url: "/"},
+            {n: "Hesap", url: "/"},
+            {n: "Hediye Kartı Kullan", url: "/"},
+            {n: "Çerez Tercihleri", url: "/"},
+            {n: "Yasal Hükümler", url: "/"},
+        ],
+        t2 : "Netflix Türkiye"
     }
+
 }

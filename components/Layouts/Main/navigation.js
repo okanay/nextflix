@@ -5,7 +5,7 @@ import Image from "next/image";
 export const Navigation = () => {
 
 
-    return (<div className={'relative'}>
+    return (<nav className={'relative'}>
         <div className={'h-[600px] absolute w-full'}>
             <Image src={'/contents-image.jpg'} width={2545} height={600} alt={'netflix contents'} priority={true}
                    className={'w-full scale-135 h-full object-cover object-contain'}/>
@@ -20,5 +20,5 @@ export const Navigation = () => {
                 </div>
             </div>
         </div>
-    </div>)
+    </nav>)
 }
