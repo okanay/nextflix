@@ -22,7 +22,8 @@ export const trLanguage = {
             p1 : "İndiriliyor.."
         },
         section4 : {
-
+            t1 : "İstediğiniz her yerde izleyin.",
+            t2 : "Ekstra ücret ödemeden telefonda, tablette, bilgisayarda, televizyonda sınırsız film ve dizi izleyin."
         },
         section5 : {
 

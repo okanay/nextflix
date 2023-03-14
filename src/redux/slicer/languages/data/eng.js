@@ -21,7 +21,10 @@ export const engLanguage = {
             t2 : "Save your favorites easily and always have something to watch.",
             p1 : "Downloading.."
         },
-        section4: {},
+        section4: {
+            t1 : "Watch everywhere.",
+            t2 : "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more."
+        },
         section5: {}
     }
 }

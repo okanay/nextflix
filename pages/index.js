@@ -14,7 +14,7 @@ export default function Home() {
             <DivededFull/>
             <OfflineWatch/>
             <DivededFull/>
-            {/*<WhereEverYouWant/>*/}
+            <WhereEverYouWant/>
             {/*<DivededFull/>*/}
             {/*<KidsAccount/>*/}
             {/*<DivededFull/>*/}

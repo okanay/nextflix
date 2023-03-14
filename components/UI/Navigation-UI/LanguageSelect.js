@@ -21,9 +21,9 @@ export const LanguageSelect = () => {
             {languageBtn.state && (
                 <div
                     onMouseLeave={() => {setLanguageBtn(prevState => {return {selectedValue: prevState.selectedValue, state: false}})}}
-                    className={'absolute top-10 w-28 bg-transparent border border-skin-theme-body-600 rounded flex flex-col items-start justify-start px-4 py-2 gap-1'}>
-                    <button type={"button"} onClick={() => {setLanguageBtn(prevState => {return {selectedValue: "tr", state: true}})}}>{language.trLan}</button>
-                    <button type={"button"} onClick={() => {setLanguageBtn(prevState => {return {selectedValue: "eng", state: true}})}}>{language.engLan}</button>
+                    className={'absolute top-9 w-28 bg-skin-theme-body-1000/20 border border-skin-theme-body-600 rounded flex flex-col items-start justify-start px-4 py-2 gap-1'}>
+                    <button className={'hover:text-skin-theme-600'} type={"button"} onClick={() => {setLanguageBtn(prevState => {return {selectedValue: "tr", state: true}})}}>{language.trLan}</button>
+                    <button className={'hover:text-skin-theme-600'} type={"button"} onClick={() => {setLanguageBtn(prevState => {return {selectedValue: "eng", state: true}})}}>{language.engLan}</button>
                 </div>
             )}
         </div>
