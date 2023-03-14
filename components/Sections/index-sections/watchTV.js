@@ -14,7 +14,7 @@ export const WatchTV = () => {
             </div>
             <div className={''}>
                 <div className={'relative flex flex-row justify-center'}>
-                    <video autoPlay loop muted className={"w-full absolute"}>
+                    <video autoPlay loop muted className={"w-96 h-96 absolute"}>
                         <source
                             src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
                             type="video/mp4"/>
