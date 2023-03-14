@@ -1,12 +1,12 @@
 import {useSelector} from "react-redux";
 import Image from "next/image";
 
-export const TvWatch = () => {
+export const WatchTV = () => {
 
     const language = useSelector(state => state.language.value.index.section2)
 
 
-    return (<section id={'tv-watch'} className={'bg-skin-theme-body-1000 py-32'}>
+    return (<section id={'watch-on-tv'} className={'bg-skin-theme-body-1000 py-32'}>
         <div className={'flex flex-row flex-wrap justify-center items-center gap-16 xlPhone:gap-24'}>
                 <div className={'text-skin-theme-font-900 px-8 tablet:px-4'}>
                     <h1 className={'text-3xl xlPhone:text-5xl tablet:text-6xl max-w-2xl font-semibold'}>{language.t1}</h1>

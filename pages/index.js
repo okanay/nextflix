@@ -1,12 +1,12 @@
-import {EmailChecklist} from "../components/Sections/index-sections/emailChecklist";
-import {TvWatch} from "../components/Sections/index-sections/tvWatch";
+import {GetStarted} from "../components/Sections/index-sections/getStarted";
+import {WatchTV} from "../components/Sections/index-sections/watchTV";
 import {DivededFull} from "../components/UI/Index-UI/DivededFull";
 
 export default function Home() {
     return (<div className={''}>
-            <EmailChecklist/>
+            <GetStarted/>
             <DivededFull/>
-            <TvWatch/>
+            <WatchTV/>
             <DivededFull/>
             <section id={'offline-watch'}>
                 <p>Çevrimdışı izlemek için içerikleri indirin.</p>

@@ -1,7 +1,7 @@
 import {ChevronRightIcon} from "@heroicons/react/20/solid";
 import {useSelector} from "react-redux";
 
-export const GetStarted = () => {
+export const GetStartedBtn = () => {
     const language = useSelector(state => state.language.value.index.section1)
 
     return (
@@ -12,7 +12,7 @@ export const GetStarted = () => {
                        className={'w-[18rem] xlPhone:w-[22rem] h-14 bg-transparent bg-skin-theme-body-1000/10 border border-skin-theme-body-400 rounded px-3 peer placeholder:text-transparent focus:outline-none'}
                        placeholder={"."}/>
                 <label htmlFor="email-get-started"
-                       className={`absolute text-gray-300/40 transition-all duration-300
+                       className={`absolute text-gray-300/60 transition-all duration-300
                         top-1 left-3 text-[0.6rem] peer-placeholder-shown:text-gray-300/80
                         peer-placeholder-shown:top-4 peer-placeholder-shown:left-3.5 peer-placeholder-shown:text-base` }>{language.i1}</label>
             </div>
