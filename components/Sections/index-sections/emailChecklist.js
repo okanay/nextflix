@@ -5,7 +5,7 @@ export const EmailChecklist = () => {
     const language = useSelector(state => state.language.value.index.section1)
 
     return (<section id={'email-checklist'} className={'h-[610px]'}>
-        <div className={'absolute w-full bg-gradient-to-t from-black via-black/30 to-black h-[610px] flex flex-col justify-center items-center text-skin-theme-font-900'}>
+        <div className={'absolute w-full bg-gradient-to-t from-skin-theme-body-1000 via-from-skin-theme-body-1000/30 to-from-skin-theme-body-1000 h-[610px] flex flex-col justify-center items-center text-skin-theme-font-900'}>
             <div className={'text-center flex flex-col gap-3 pt-24'}>
                 <h1 className={'text-4xl md:text-5xl font-bold'}>{language.t1}</h1>
                 <h3 className={'text-lg md:text-2xl font-semibold my-3'}>{language.t2}</h3>

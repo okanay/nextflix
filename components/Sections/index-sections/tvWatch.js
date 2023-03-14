@@ -13,7 +13,7 @@ export const TvWatch = () => {
                     <h3 className={'text-sm xlPhone:text-lg tablet:text-xl font-semibold max-w-2xl mt-4'}>{language.t2}</h3>
                 </div>
                 <div className={''}>
-                    <Image src={"/tv.png"} alt={"tv"} width={540} height={540} />
+                    <Image src={"/tv.png"} alt={"tv"} width={540} height={540} priority={true} />
                 </div>
         </div>
     </section>)

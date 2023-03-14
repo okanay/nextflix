@@ -2,20 +2,24 @@ import {createSlice} from '@reduxjs/toolkit'
 import {trLanguage} from "./data/tr";
 import {engLanguage} from "./data/eng";
 
+export const defaultLanguage = {code : "tr", data : trLanguage}
 export const languageSlice = createSlice({
     name: 'theme',
     initialState: {
-        value: trLanguage,
+        value: defaultLanguage.data,
     },
     reducers: {
         changeLanguage: (state, action) => {
-            if (action.payload === "tr")
-            {
-                state.value = trLanguage
-            }
-            else if (action.payload === "eng")
-            {
-                state.value = engLanguage
+            switch (action.payload) {
+                case "tr":
+                    state.value = trLanguage
+                    break
+                case "eng":
+                    state.value = engLanguage
+                    break
+                default:
+                    state.value = trLanguage
+                    break
             }
         },
     },

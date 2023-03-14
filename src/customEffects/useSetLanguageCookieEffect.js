@@ -1,11 +1,13 @@
 import {useEffect} from "react";
-import {useDispatch} from "react-redux";
-export const useSetLanguageCookieEffect = (setLanguageBtn, lan) => {
+import {useCookies} from "react-cookie";
+export const useSetLanguageCookieEffect = (setLanguageBtn) => {
+
+    const [language, setLanguage] = useCookies(['language']);
 
     useEffect(() => {
 
-        setLanguageBtn({selectedValue : lan, state : false})
+        setLanguageBtn({selectedValue : language.language, state : false})
 
-    }, [lan])
+    }, [language])
 
 }
