@@ -16,7 +16,11 @@ export const engLanguage = {
             t1: "Enjoy on your TV.",
             t2: "Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.",
         },
-        section3: {},
+        section3: {
+            t1 : "Download your shows to watch offline.",
+            t2 : "Save your favorites easily and always have something to watch.",
+            p1 : "Downloading.."
+        },
         section4: {},
         section5: {}
     }

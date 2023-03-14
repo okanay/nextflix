@@ -17,7 +17,9 @@ export const trLanguage = {
             t2 : "Akıllı TV, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray oynatıcılar ve daha fazlasında seyredin.",
         },
         section3 : {
-
+            t1 : "Çevrimdışı izlemek için içerikleri indirin.",
+            t2 : "En sevdiğiniz içerikleri kolayca kaydedin ve her zaman izleyecek bir şeyleriniz olsun.",
+            p1 : "İndiriliyor.."
         },
         section4 : {
 
