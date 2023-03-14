@@ -1,29 +1,14 @@
 import {useSelector} from "react-redux";
-import {PlusIcon} from "@heroicons/react/20/solid";
+import {PlusIcon, XMarkIcon} from "@heroicons/react/20/solid";
 import {GetStartedBtn} from "../../UI/Index-UI/GetStartedBtn";
 import {useState} from "react";
-import {motion as m} from "framer-motion";
-import {animationStore} from "../../../framer-motion/animation-store";
-
 export const FrequentlyQuestions = () => {
 
     const language = useSelector(state => state.language.value.index.section6)
-    const [answers, setAnswers] = useState(
-        [
-            {open: false},
-            {open: false},
-            {open: false},
-            {open: false},
-            {open: false},
-            {open: false},
-            {open: false},
-        ]
-    )
+    const [answers, setAnswers] = useState(questions)
     const handleQuestionClick = (id) => {
         let value = answers[id].open
-        setAnswers(prevState => {
-            return [...prevState, answers[id].open = !value]
-        })
+        setAnswers(prevState => {return [...prevState, answers[id].open = !value]})
     }
 
     return (<section id={'questions'} className={'bg-skin-theme-body-1000 py-24 text-skin-theme-font-900'}>
@@ -37,17 +22,18 @@ export const FrequentlyQuestions = () => {
                                 className="py-4 bg-skin-theme-body-900 rounded-sm flex flex-col justify-center px-6 cursor-pointer">
                                 <div className="flex flex-row justify-between items-center">
                                     <h1 className="text-base basePhone:text-lg sm:text-2xl font-semibold">{item.t}</h1>
-                                    <PlusIcon
-                                        className="w-6 h-6 basePhone:w-8 basePhone:h-8 laptop:w-12 laptop:h-12 origin-top"/>
+                                    {answers[index].open ? (<XMarkIcon
+                                        className="w-6 h-6 basePhone:w-8 basePhone:h-8 laptop:w-12 laptop:h-12 origin-top"/>) : (<PlusIcon
+                                        className="w-6 h-6 basePhone:w-8 basePhone:h-8 laptop:w-12 laptop:h-12 origin-top"/>)}
                                 </div>
                             </div>
-                            <m.div
-                                variants={animationStore.answer}
-                                animate={answers[index].open ? "open" : "close"}
-                                className="py-4 bg-skin-theme-body-900 rounded-sm flex flex-col justify-center px-6 cursor-pointer my-0.5"
-                            >
-                                <h2 className="text-xs basePhone:text-sm sm:text-lg font-semibold">{language.q[index].a}</h2>
-                            </m.div>
+                            {answers[index].open && (
+                                <div
+                                    className="py-4 bg-skin-theme-body-900 rounded-sm flex flex-col justify-center px-6 cursor-pointer my-0.5"
+                                >
+                                    <h2 className="text-xs basePhone:text-sm sm:text-lg font-semibold">{language.q[index].a}</h2>
+                                </div>
+                            )}
                         </div>
                     );
                 })}
@@ -57,3 +43,13 @@ export const FrequentlyQuestions = () => {
         </div>
     </section>)
 }
+
+export const questions = [
+    {open: false},
+    {open: false},
+    {open: false},
+    {open: false},
+    {open: false},
+    {open: false},
+    {open: false},
+]
