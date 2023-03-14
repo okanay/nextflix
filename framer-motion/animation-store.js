@@ -1,23 +1,9 @@
 const easing = [0.6, -0.05, 0.01, 0.99];
 export const animationStore = {
-    main: {
-        exit: {
-            opacity: 0,
-            transition: {delay: 0, duration: 0.1}
-        },
-        initial: {
-            opacity: 0,
-            transition: {}
-        },
-        animate: {
-            opacity: 1,
-            transition: {delay: 0.01},
-        }
-    },
     answer: {
         initial: {scaleY: 0, transformOrigin: "top"},
-        open: {scaleY: 1, x: 0, y: 0, position: "static", transformOrigin: "top", transition: {duration: 0.3}},
-        close: {scaleY: 0, x: 0, y: 2, position: "absolute", transformOrigin: "top", transition: {duration: 0}},
+        open: {scaleY: 1, scaleX: 1, x: 0, y: 0, transformOrigin: "top", position : "static", transition: {duration: 0}},
+        close: {scaleY: 0, scaleX: 1, x: 0, y: 1, transformOrigin: "top", position : "absolute",  transition: {delay: 0.1 ,duration: 0}},
     },
     sideNavigationBar: {
         initial: {
