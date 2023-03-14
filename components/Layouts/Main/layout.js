@@ -1,6 +1,13 @@
+import {Navigation} from "./navigation";
+import {useCookies} from "react-cookie";
+
 export const Layout = ({children}) => {
 
-    return <div>
+
+    const [language, setLanguage] = useCookies(['language']);
+
+    return <div className={''}>
+        <Navigation lan={language.language}/>
         {children}
     </div>
 }

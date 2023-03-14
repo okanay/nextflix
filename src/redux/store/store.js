@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import themeReducer from "../slicer/themeSlice"
+import languageReducer from "../slicer/languages/languagesSlice"
 
 export default configureStore({
     reducer: {
-        theme: themeReducer,
+        language: languageReducer,
     },
 })

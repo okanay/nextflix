@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 function withOpacity(variableName) {
   return ({opacityValue}) => {
 
@@ -12,8 +13,12 @@ function withOpacity(variableName) {
 
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -65,6 +70,9 @@ module.exports = {
           'theme-font-900' : withOpacity('--theme-font-900'),
           'theme-font-1000' : withOpacity('--theme-font-1000'),
         }
+      },
+      scale: {
+        '105': '1.05',
       }
     },
   },
