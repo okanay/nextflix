@@ -17,7 +17,7 @@ export const FrequentlyQuestions = () => {
             <div className={'space-y-4 max-w-[1300px] w-full px-4'}>
                 {language.q.map((item, index) => {
                     return (
-                        <div className="relative" key={item.t + `${index}`} onClick={() => handleQuestionClick(index)}>
+                        <div className="" key={item.t + `${index}`} onClick={() => handleQuestionClick(index)}>
                             <div
                                 className="py-4 bg-skin-theme-body-900 rounded-sm flex flex-col justify-center px-6 cursor-pointer">
                                 <div className="flex flex-row justify-between items-center">
@@ -27,13 +27,9 @@ export const FrequentlyQuestions = () => {
                                     </div>
                                 </div>
                             </div>
-                            {answers[index].open && (
-                                <div
-                                    className="py-4 bg-skin-theme-body-900 rounded-sm flex flex-col justify-center px-6 cursor-pointer my-0.5"
-                                >
-                                    <h2 className="text-xs basePhone:text-sm sm:text-lg font-semibold">{language.q[index].a}</h2>
-                                </div>
-                            )}
+                            <div className={`bg-skin-theme-body-900 rounded-sm flex flex-col justify-center px-6 cursor-pointer my-0.5 overflow-hidden transition-all duration-700 ${answers[index].open ? "max-h-[500px]" : "max-h-0"}`}>
+                                <h2 className="text-xs basePhone:text-sm sm:text-lg font-semibold overflow-hidden py-4">{language.q[index].a}</h2>
+                            </div>
                         </div>
                     );
                 })}
