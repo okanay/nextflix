@@ -31,7 +31,7 @@ export const OfflineWatch = () => {
             </div>
             <div className={'text-skin-theme-font-900 px-8 tablet:px-4'}>
                 <h1 className={'text-3xl lgPhone:text-5xl tablet:text-6xl max-w-2xl font-semibold'}>{language.t1}</h1>
-                <h3 className={'text-sm lgPhone:text-2xl tablet:text-xl font-semibold max-w-2xl mt-4'}>{language.t2}</h3>
+                <h3 className={'text-base lgPhone:text-xl tablet:text-2xl font-semibold max-w-2xl mt-4'}>{language.t2}</h3>
             </div>
         </div>
     </section>)

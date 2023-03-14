@@ -15,9 +15,9 @@ export default function Home() {
             <OfflineWatch/>
             <DivededFull/>
             <WhereEverYouWant/>
-            {/*<DivededFull/>*/}
-            {/*<KidsAccount/>*/}
-            {/*<DivededFull/>*/}
+            <DivededFull/>
+            <KidsAccount/>
+            <DivededFull/>
             {/*<FrequentlyQuestions/>*/}
         </div>
     )

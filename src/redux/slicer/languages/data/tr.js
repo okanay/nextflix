@@ -26,7 +26,8 @@ export const trLanguage = {
             t2 : "Ekstra ücret ödemeden telefonda, tablette, bilgisayarda, televizyonda sınırsız film ve dizi izleyin."
         },
         section5 : {
-
+            t1 : "Çocuklarınız için profiller oluşturun.",
+            t2 : "Üyeliğinize dâhil olan bu ücretsiz deneyim sayesinde çocuklarınız, sadece onlara özel bir alanda en sevdikleri karakterlerle maceralara atılabilir."
         }
     }
 }

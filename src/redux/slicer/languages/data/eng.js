@@ -25,6 +25,9 @@ export const engLanguage = {
             t1 : "Watch everywhere.",
             t2 : "Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more."
         },
-        section5: {}
+        section5: {
+            t1 : "Create profiles for kids.",
+            t2 : "Send kids on adventures with their favorite characters in a space made just for them—free with your membership."
+        }
     }
 }
