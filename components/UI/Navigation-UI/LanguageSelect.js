@@ -14,7 +14,7 @@ export const LanguageSelect = () => {
     return (
         <div
             onClick={() => {setLanguageBtn(prevState => {return {selectedValue: prevState.selectedValue, state: !prevState.state}})}}
-            className={'flex flex-row justify-center gap-2 text-skin-theme-font-900 items-center px-2 py-[0.345rem] border border-skin-theme-body-600 rounded relative transition-all duration-300 hover:scale-105'}>
+            className={'flex flex-row justify-center gap-2 text-skin-theme-font-900 items-center px-2 py-[0.345rem] border border-skin-theme-body-400 rounded relative transition-all duration-300 hover:scale-105'}>
             <GlobeAltIcon className={'w-5 h-5'}/>
             <span>{languageBtn.selectedValue === "tr" ? language.trLan : language.engLan}</span>
             <ArrowSmallDownIcon className={'w-5 h-5 '}/>

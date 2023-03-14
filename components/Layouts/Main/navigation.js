@@ -7,7 +7,7 @@ export const Navigation = () => {
 
     return (<div className={'relative'}>
         <div className={'h-[600px] absolute w-full'}>
-            <Image src={'/index-section-1-image.jpg'} width={2545} height={600} alt={'netflix contents'} priority={true}
+            <Image src={'/contents-image.jpg'} width={2545} height={600} alt={'netflix contents'} priority={true}
                    className={'w-full scale-135 h-full object-cover object-contain'}/>
         </div>
         <div className={'mx-auto w-full max-w-screen-desktop'}>
