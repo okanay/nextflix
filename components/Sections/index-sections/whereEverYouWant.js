@@ -18,7 +18,7 @@ export const WhereEverYouWant = ({language}) => {
                         relative flex flex-row justify-center`}>
                     <Image src={"/devices.png"} className={'z-10 scale-80 tablet:scale-100'} alt={"tv"} width={720} loading={"lazy"}
                            height={720}/>
-                    <video autoPlay loop muted className={`
+                    <video loop="true" autoPlay="autoplay" controls="controls" muted='muted' className={`
                         w-[10rem] h-[10rem] top-10
                         basePhone:w-[12.5rem] basePhone:h-[12.5rem] basePhone:top-10
                         xlPhone:w-[13rem] xlPhone:h-[13rem] lgPhone:top-10
