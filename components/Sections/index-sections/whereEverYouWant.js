@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 export const WhereEverYouWant = ({language}) => {
-
-    return (<section id={'where-ever-you-want-watch'} className={'bg-skin-theme-body-1000 pt-6 pb-0 xlPhone:py-24'}>
+    return (<section id={'where-ever-you-want-watch'} className={'bg-skin-theme-body-1000 pt-10 pb-0 xlPhone:py-24'}>
         <div className={'flex flex-row flex-wrap justify-center items-center gap-4 xlPhone:gap-16'}>
             <div className={'text-skin-theme-font-900 px-8 tablet:px-4 text-center xlPhone:text-start'}>
                 <h1 className={'text-3xl lgPhone:text-4xl tablet:text-5xl max-w-2xl font-semibold'}>{language.t1}</h1>

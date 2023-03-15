@@ -9,7 +9,7 @@ export const FrequentlyQuestions = ({language}) => {
         setAnswers(prevState => {return [...prevState, answers[id].open = !value]})
     }
 
-    return (<section id={'questions'} className={'bg-skin-theme-body-1000 py-8 xlPhone:py-24 text-skin-theme-font-900'}>
+    return (<section id={'questions'} className={'bg-skin-theme-body-1000 py-12 xlPhone:py-24 text-skin-theme-font-900'}>
         <div className={'flex flex-col justify-center items-center w-full gap-3'}>
             <h1 className={'text-3xl lgPhone:text-4xl tablet:text-5xl font-semibold mb-6'}>{language.t1}</h1>
             <div className={'space-y-4 max-w-[1300px] w-full px-4'}>
