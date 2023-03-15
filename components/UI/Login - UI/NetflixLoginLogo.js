@@ -5,7 +5,7 @@ export const NetflixLoginLogo = () => {
 
     return (
         <Link href={'/'}>
-            <Image src={'/netflix.png'} alt={'netflix'} width={180} height={160} className={'py-4 mx-6'} loading={'lazy'}/>
+            <Image src={'/netflix.png'} alt={'netflix'} width={904} height={276} className={'w-44 mx-4 py-4 tablet:py-5 tablet:mx-12'} loading={'eager'}/>
         </Link>
     )
 }
