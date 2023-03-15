@@ -35,7 +35,9 @@ export const LoginFooter = () => {
                 </div>
             </div>
 
-            <LanguageSelect rotation={'right'}/>
+           <div className={'pb-16'}>
+               <LanguageSelect rotation={'right'}/>
+           </div>
         </div>
     </footer>)
 }

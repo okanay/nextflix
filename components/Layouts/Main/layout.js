@@ -1,7 +1,7 @@
 export const Layout = ({children}) => {
 
 
-    return <div>
+    return <div className={'h-[100vh]'}>
         {children}
     </div>
 }
