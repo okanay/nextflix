@@ -32,7 +32,7 @@ export const FrequentlyQuestions = ({language}) => {
                     );
                 })}
             </div>
-            <h1 className={'text-sm lgPhone:text-lg tablet:text-xl font-semibold mt-10 mb-2 px-6'}>{language.t2}</h1>
+            <h1 className={'text-sm lgPhone:text-lg tablet:text-xl font-semibold mt-10 mb-2 px-6 text-center'}>{language.t2}</h1>
             <GetStartedBtn/>
         </div>
     </section>)
