@@ -91,5 +91,19 @@ export const engLanguage = {
             {n: "Legal Notices", url: "/"},
         ],
         t2 : "Netflix Turkey"
+    },
+    loginArea : {
+        t1: "Sign In",
+        i1 : "Email or phone number",
+        i2 : "Password",
+        b1 : "Sign In",
+        i3: "Remember me",
+        l1 : "Need help?",
+        t2 : {
+            p1: "New to netflix",
+            l1 : "Sign up now.",
+        },
+        t3 : "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
+        t4 : {p1 : "", p2 : " Learn more."}
     }
 }

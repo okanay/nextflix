@@ -91,6 +91,20 @@ export const trLanguage = {
             {n: "Yasal Hükümler", url: "/"},
         ],
         t2 : "Netflix Türkiye"
+    },
+    loginArea : {
+        t1: "Oturum Aç",
+        i1 : "E-posta veya telefon numarası",
+        i2 : "Parola",
+        b1 : "Oturum Aç",
+        i3: "Beni hatırla",
+        l1 : "Yardım ister misiniz?",
+        t2 : {
+            p1: "Netflix'e katılmak ister misiniz?",
+            l1 : "Şimdi kaydolun.",
+        },
+        t3 : "Bu sayfa robot olmadığınızı kanıtlamak için Google reCAPTCHA tarafından korunuyor. ",
+        t4 : {p1 : "Daha fazlasını öğrenin.", p2 : ""}
     }
 
 }
