@@ -1,18 +1,14 @@
 import {useSelector} from "react-redux";
 import {LanguageSelect} from "../../UI/Navigation-UI/LanguageSelect";
-
-export const LoginFooter = () => {
+export const SignInFooter = () => {
 
     const language = useSelector(state => state.language.value.footer)
 
-    return (<footer
-        className={'tablet:bg-skin-theme-body-1000/70 bg-skin-theme-body-1000 text-skin-theme-font-900 py-8 xlPhone:py-8 tablet:py-16 px-8 text-[0.85rem] basePhone:text-[0.9rem] tablet:mt-48 border-t border-skin-theme-body-500 mt-24'}>
-        <div
-            className={'max-w-[1300px] mx-auto text-skin-theme-font-600 flex flex-col justify-start items-start w-full'}>
+    return (<footer className={'bg-skin-theme-body-100 text-skin-theme-font-50 text-[0.85rem] basePhone:text-[0.9rem] shadow-sm shadow-skin-theme-body-800 w-full absolute bottom-0 '}>
+        <div className={'max-w-[1300px] pt-8 pb-12 px-12 text-skin-theme-font-600 flex flex-col justify-start items-start w-full'}>
             <h5 className={''}>{language.t1.p1} <span className={'underline'}>{language.n1}</span> {language.t1.p2}</h5>
 
-            <div
-                className={'w-full my-8 gap-1 underline flex flex-col text-center items-center justify-center content-end text-xs text-skin-theme-font-600'}>
+            <div className={'my-8 w-full underline flex flex-col text-start items-start justify-start content-start text-xs text-skin-theme-font-600'}>
                 <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-start w-full gap-4">
                     <div className="">
                         <p>{language.links[0].n}</p>
@@ -35,9 +31,8 @@ export const LoginFooter = () => {
                 </div>
             </div>
 
-           <div className={'pb-16'}>
-               <LanguageSelect rotation={'right'} theme={'dark'}/>
-           </div>
+            <LanguageSelect rotation={'right'} theme={'light'}/>
+
         </div>
     </footer>)
 }

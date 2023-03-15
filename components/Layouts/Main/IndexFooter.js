@@ -44,7 +44,7 @@ export const IndexFooter = () => {
                 </div>
             </div>
 
-            <LanguageSelect rotation={'right'}/>
+            <LanguageSelect rotation={'right'} theme={'dark'}/>
             <h5 className={'text-[0.95rem] mt-8'}>{language.t2}</h5>
 
         </div>

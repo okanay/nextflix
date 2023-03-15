@@ -1,8 +1,10 @@
 import {ChevronRightIcon} from "@heroicons/react/20/solid";
 import {useSelector} from "react-redux";
 import {useRef} from "react";
+import {useRouter} from "next/router";
 
 export const GetStartedBtn = () => {
+    const router = useRouter()
     const language = useSelector(state => state.language.value.index.section1)
     const emailRef = useRef(null)
 
@@ -12,7 +14,7 @@ export const GetStartedBtn = () => {
         if (!emailRef.current.value) {
             emailRef.current.focus();
         } else {
-
+            router.push("/signin/registration")
         }
     }
 
