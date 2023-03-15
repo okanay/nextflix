@@ -1,10 +1,7 @@
-import {Footer} from "./footer";
-
 export const Layout = ({children}) => {
 
 
-    return <div className={''}>
+    return <div>
         {children}
-        <Footer/>
     </div>
 }

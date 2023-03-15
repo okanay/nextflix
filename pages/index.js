@@ -7,6 +7,7 @@ import {KidsAccount} from "../components/Sections/index-sections/kidsAccount";
 import {FrequentlyQuestions} from "../components/Sections/index-sections/frequentlyQuestions";
 import {useSelector} from "react-redux";
 import {IndexNavigation} from "../components/Layouts/Main/indexNavigation";
+import {IndexFooter} from "../components/Layouts/Main/IndexFooter";
 
 export default function Home() {
 
@@ -26,6 +27,7 @@ export default function Home() {
             <DivededFull/>
             <FrequentlyQuestions language={language.index.section6}/>
             <DivededFull/>
+            <IndexFooter/>
         </div>
     )
 }

@@ -2,23 +2,23 @@ import Image from "next/image";
 
 export const OfflineWatch = ({language}) => {
 
-    return (<section id={'offline-watch'} className={'bg-skin-theme-body-1000 pt-8 pb-16 xlPhone:py-24'}>
+    return (<section id={'offline-watch'} className={'bg-skin-theme-body-1000 pt-8 pb-16 xlPhone:py-16'}>
         <div
-            className={'flex flex-row flex-wrap-reverse justify-center items-center gap-4 xlPhone:gap-16 xlPhone:gap-4'}>
+            className={'flex flex-row flex-wrap-reverse justify-center items-center gap-4 xlPhone:gap-8'}>
             <div className={'bg-skin-theme-body-1000 flex flex-col items-center justify-center relative'}>
                 <Image src={"/mobile.jpg"} alt={"tv"} width={700} height={640} loading={"lazy"} className={`
                         w-[18rem] h-[14rem]
                         basePhone:w-[20rem] basePhone:h-[16rem] 
                         xlPhone:w-[24rem] xlPhone:h-[20rem] 
                         sm:w-[26rem] sm:h-[22rem] 
-                        tablet:w-[36rem] tablet:h-[30rem] `}/>
+                        tablet:w-[40rem] tablet:h-[29rem] `}/>
                 <div
                     className={`absolute
                         w-[12rem] h-[3rem] bottom-6
                         basePhone:w-[14rem] basePhone:h-[4rem] basePhone:bottom-6
                         xlPhone:w-[14rem] xlPhone:h-[4rem] xlPhone:bottom-6
                         sm:w-[14rem] sm:h-[4rem] sm:bottom-6
-                        tablet:w-[20rem] tablet:h-[5rem] tablet:bottom-12
+                        tablet:w-[22rem] tablet:h-[5.5rem] tablet:bottom-12
                      bg-skin-theme-body-1000 rounded-lg border border-skin-theme-body-400 flex flex-row items-center justify-between px-3`}>
                     <div className={'flex flex-row justify-start items-center gap-2'}>
                         <Image src={"/boxshot.png"} alt={"stranger things"} width={50} height={100} priority={true}

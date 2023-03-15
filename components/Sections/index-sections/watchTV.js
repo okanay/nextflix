@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export const WatchTV = ({language}) => {
 
-    return (<section id={'watch-on-tv'} className={'bg-skin-theme-body-1000 py-8 xlPhone:py-24'}>
-        <div className={'flex flex-row flex-wrap justify-center items-center gap-4 xlPhone:gap-16 xlPhone:gap-4'}>
+    return (<section id={'watch-on-tv'} className={'bg-skin-theme-body-1000 pt-8 pb-16 xlPhone:py-16'}>
+        <div className={'flex flex-row flex-wrap justify-center items-center gap-4 xlPhone:gap-8'}>
             <div className={'text-skin-theme-font-900 px-8 tablet:px-4 text-center xlPhone:text-start'}>
                 <h1 className={'text-3xl lgPhone:text-4xl tablet:text-5xl max-w-2xl font-semibold'}>{language.t1}</h1>
 
