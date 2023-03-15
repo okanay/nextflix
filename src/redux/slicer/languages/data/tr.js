@@ -110,12 +110,23 @@ export const trLanguage = {
         registration: {
             p: {
                 p1: "ADIM",
-                n1: "1",
                 p2: "/",
-                n2: "3",
             },
             t1: "Hesabınızı oluşturalım",
             t2: "Netflix sizin için kişiselleştirilir. İstediğiniz zaman, istediğiniz cihazda izlemek için bir parola oluşturun.",
+            b1 : "İleri",
+        },
+        regform : {
+            p: {
+                p1: "ADIM",
+                p2: "/",
+            },
+            t1 : "Üyeliğinizi başlatmak için bir parola oluşturun",
+            t2 : "Sadece birkaç adım daha kaldı, sonra bitiyor!\n" +
+                "Biz de formaliteyi hiç sevmiyoruz.",
+            i1 : "E-posta",
+            i2 : "Bir parola ekleyin",
+            t3 : "Netflix özel teklifleri e‑posta ile gönderilmesin.",
             b1 : "İleri",
         }
     }

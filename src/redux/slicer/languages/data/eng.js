@@ -110,12 +110,23 @@ export const engLanguage = {
         registration: {
             p: {
                 p1: "STEP",
-                n1: "1",
                 p2: "OF",
-                n2: "3",
             },
             t1: "Finish setting up your account",
             t2: "Netflix is personalized for you. Create a password to watch on any device at any time.",
+            b1 : "Next",
+        },
+        regform : {
+            p: {
+                p1: "STEP",
+                p2: "OF",
+            },
+            t1 : "Create a password to start your membership",
+            t2 : "Just a few more steps and you're done!\n" +
+                "We hate paperwork, too.",
+            i1 : "Email",
+            i2 : "Add a password",
+            t3 : "Please do not email me Netflix special offers.",
             b1 : "Next",
         }
     }
