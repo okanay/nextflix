@@ -105,6 +105,18 @@ export const trLanguage = {
         },
         t3 : "Bu sayfa robot olmadığınızı kanıtlamak için Google reCAPTCHA tarafından korunuyor. ",
         t4 : {p1 : "Daha fazlasını öğrenin.", p2 : ""}
+    },
+    signup: {
+        registration: {
+            p: {
+                p1: "ADIM",
+                n1: "1",
+                p2: "/",
+                n2: "3",
+            },
+            t1: "Hesabınızı oluşturalım",
+            t2: "Netflix sizin için kişiselleştirilir. İstediğiniz zaman, istediğiniz cihazda izlemek için bir parola oluşturun.",
+            b1 : "İleri",
+        }
     }
-
 }

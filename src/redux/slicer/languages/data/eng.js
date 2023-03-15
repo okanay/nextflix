@@ -69,7 +69,7 @@ export const engLanguage = {
         }
     },
     footer: {
-        t1: {p1 : "Questions? Call", p2 : ""},
+        t1: {p1: "Questions? Call", p2: ""},
         n1: "0850-390-7444",
         links: [
             {n: "FAQ", url: "/"},
@@ -90,20 +90,33 @@ export const engLanguage = {
             {n: "Cookie Preferences", url: "/"},
             {n: "Legal Notices", url: "/"},
         ],
-        t2 : "Netflix Turkey"
+        t2: "Netflix Turkey"
     },
-    loginArea : {
+    loginArea: {
         t1: "Sign In",
-        i1 : "Email or phone number",
-        i2 : "Password",
-        b1 : "Sign In",
+        i1: "Email or phone number",
+        i2: "Password",
+        b1: "Sign In",
         i3: "Remember me",
-        l1 : "Need help?",
-        t2 : {
+        l1: "Need help?",
+        t2: {
             p1: "New to netflix",
-            l1 : " Sign up now.",
+            l1: " Sign up now.",
         },
-        t3 : "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
-        t4 : {p1 : "", p2 : " Learn more."}
+        t3: "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
+        t4: {p1: "", p2: " Learn more."}
+    },
+    signup: {
+        registration: {
+            p: {
+                p1: "STEP",
+                n1: "1",
+                p2: "OF",
+                n2: "3",
+            },
+            t1: "Finish setting up your account",
+            t2: "Netflix is personalized for you. Create a password to watch on any device at any time.",
+            b1 : "Next",
+        }
     }
 }
