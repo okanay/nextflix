@@ -4,7 +4,7 @@ export const RegistrationSection = () => {
 
     return <section id={'registration-section'} className={'scale-90 basePhone:scale-100 w-full flex flex-col justify-center items-center tablet:mb-72 my-20'}>
         <div className={'max-w-screen-lg flex flex-col flex-wrap justify-center items-center'}>
-            <Image src={"/registerDevices.png"} alt={"tv"} width={500} height={120} className={'w-72'} loading={"lazy"}/>
+            <Image src={"/registerDevices.png"} alt={"tv"} width={500} height={120} className={'w-72'} loading={"eager"}/>
             <h4 className={'text-xs mt-10'}>STEP <b>1</b> OF <b>3</b></h4>
             <h2 className={'text-4xl font-semibold text-center max-w-screen-smPhone'}>Finish setting up your account</h2>
             <h3 className={'text-[1.10rem] text-center max-w-[275px] mt-4'}>Netflix is personalized for you. Create a password to watch on any device at any time.</h3>

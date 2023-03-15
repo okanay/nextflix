@@ -9,7 +9,7 @@ export const OfflineWatch = ({language}) => {
         <div
             className={'flex flex-row flex-wrap-reverse justify-center items-center gap-4 xlPhone:gap-8'}>
             <div className={'bg-skin-theme-body-1000 flex flex-col items-center justify-center relative'}>
-                <Image src={"/mobile.jpg"} alt={"tv"} width={700} height={640} loading={"lazy"} className={`
+                <Image src={"/mobile.jpg"} alt={"tv"} width={700} height={640} loading={"eager"} className={`
                         w-[18rem] h-[14rem]
                         basePhone:w-[20rem] basePhone:h-[16rem] 
                         xlPhone:w-[24rem] xlPhone:h-[20rem] 
@@ -26,7 +26,7 @@ export const OfflineWatch = ({language}) => {
                         tablet:w-[22rem] tablet:h-[5.5rem] tablet:bottom-12
                      bg-skin-theme-body-1000 rounded-lg border border-skin-theme-body-400 flex flex-row items-center justify-between px-3`}>
                         <div className={'flex flex-row justify-start items-center gap-2'}>
-                            <Image src={"/boxshot.png"} alt={"stranger things"} width={50} height={100} priority={true}
+                            <Image src={"/boxshot.png"} alt={"stranger things"} width={50} height={100} loading={'eager'}
                                    className={`
                                 w-[1.5rem] h-[2rem] bottom-6
                                 basePhone:w-[2rem] basePhone:h-[2.5rem] basePhone:bottom-6

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const LoginArea = ({language}) => {
 
     return (<section id={'login-area'}
@@ -19,8 +21,8 @@ export const LoginArea = ({language}) => {
                     <p>{language.l1}</p>
                 </div>
                 <div className={'flex flex-col justify-start text-xs mt-8 text-skin-theme-font-700'}>
-                    <p className={'text-base'}>{language.t2.p1}<span
-                        className={'text-skin-theme-font-900'}>{language.t2.l1}</span></p>
+                    <p className={'text-base'}>{language.t2.p1}<Link href={'/signin/registration'}
+                        className={'text-skin-theme-font-900'}>{language.t2.l1}</Link></p>
                     <div className={'mt-3'}>
                         <span>{language.t3}</span>
                         <span className={'text-blue-600'}>{language.t4.p2}</span>
