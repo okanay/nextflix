@@ -7,21 +7,21 @@ export const LoginBackgroundImage = ({children}) => {
 
 
     return (
-        <div style={{position: 'relative'}} className={'w-full h-full bg-black'}>
-            <div className={`absolute w-full h-full z-10`}>
+        <div style={{position: 'relative'}} className={''}>
+            <div className={`absolute z-10 w-full h-full bg-cover bg-left-top`}>
                 <div
-                    className={`${loadingImage ? LoginBackgroundImageClass.complete : LoginBackgroundImageClass.loading} absolute z-10 w-full h-[100vh] h-full bg-cover`}
+                    className={`${loadingImage ? LoginBackgroundImageClass.complete : LoginBackgroundImageClass.loading} absolute z-10 w-full h-full`}
                 />
                 <Image
                     src={'/contents-image.jpg'}
                     alt={"contents"}
                     width={2460}
                     height={1640}
-                    className={'m-auto w-full h-full hidden tablet:block'}
+                    className={'hidden tablet:block h-full object-cover object-left-top'}
                     onLoadingComplete={() => {setLoadingImage(true)}}/>
             </div>
 
-            <div className={'relative z-40 w-full h-full'}>{children}</div>
+            <div className={'relative z-40'}>{children}</div>
         </div>
     );
 }

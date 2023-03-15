@@ -6,7 +6,7 @@ export const LoginFooter = () => {
     const language = useSelector(state => state.language.value.footer)
 
     return (<footer
-        className={'bg-skin-theme-body-1000/70 text-skin-theme-font-900 py-8 xlPhone:py-8 tablet:py-16 px-8 text-[0.85rem] basePhone:text-[0.9rem] tablet:mt-48 border-t border-skin-theme-body-500 mt-24'}>
+        className={'tablet:bg-skin-theme-body-1000/70 bg-skin-theme-body-1000 text-skin-theme-font-900 py-8 xlPhone:py-8 tablet:py-16 px-8 text-[0.85rem] basePhone:text-[0.9rem] tablet:mt-48 border-t border-skin-theme-body-500 mt-24'}>
         <div
             className={'max-w-[1300px] mx-auto text-skin-theme-font-600 flex flex-col justify-start items-start w-full'}>
             <h5 className={''}>{language.t1.p1} <span className={'underline'}>{language.n1}</span> {language.t1.p2}</h5>
