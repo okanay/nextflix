@@ -11,6 +11,7 @@ export const useLanguageEffect = (languageBtn) => {
     useEffect(() => {
         if (languageBtn.selectedValue !== "initial")
         {
+            window.scrollTo(0, 0);
             let language = languageBtn.selectedValue === "undefined" ? defaultLanguage.code : languageBtn.selectedValue
             dispatch(changeLanguage(language))
             setLanguage('language', language, {path: '/'});
