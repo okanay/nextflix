@@ -12,6 +12,12 @@
 
 @layer base {
 
+  .background-image {
+    width: 100%;
+    height: 100%;
+    background-image: url('/public/contents-image.jpg');
+    background-size: cover;
+  }
 
   :root {
     --theme-50: 255, 241, 241;
