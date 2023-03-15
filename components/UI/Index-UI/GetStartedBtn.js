@@ -19,8 +19,9 @@ export const GetStartedBtn = () => {
     return (
         <form className={'flex flex-row flex-wrap gap-2 justify-center items-center'} onSubmit={handleSubmit}>
             <div className={'relative peer'}>
-                <input type="text"
+                <input type="email"
                        ref={emailRef}
+                       inputMode={'email'}
                        id={'email-get-started'}
                        className={'w-[18rem] xlPhone:w-[22rem] h-14 bg-transparent bg-skin-theme-body-1000/10 border border-skin-theme-body-400 rounded px-3 peer placeholder:text-transparent focus:outline-none'}
                        placeholder={"."}/>
