@@ -101,7 +101,7 @@ export const trLanguage = {
         l1 : "Yardım ister misiniz?",
         t2 : {
             p1: "Netflix'e katılmak ister misiniz?",
-            l1 : "Şimdi kaydolun.",
+            l1 : " Şimdi kaydolun.",
         },
         t3 : "Bu sayfa robot olmadığınızı kanıtlamak için Google reCAPTCHA tarafından korunuyor. ",
         t4 : {p1 : "Daha fazlasını öğrenin.", p2 : ""}

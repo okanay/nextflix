@@ -101,7 +101,7 @@ export const engLanguage = {
         l1 : "Need help?",
         t2 : {
             p1: "New to netflix",
-            l1 : "Sign up now.",
+            l1 : " Sign up now.",
         },
         t3 : "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
         t4 : {p1 : "", p2 : " Learn more."}

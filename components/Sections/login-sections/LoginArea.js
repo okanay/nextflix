@@ -20,7 +20,7 @@ export const LoginArea = ({language}) => {
                 </div>
                 <div className={'flex flex-col justify-start text-xs mt-8 text-skin-theme-font-700'}>
                     <p className={'text-base'}>{language.t2.p1}<span
-                        className={'text-skin-theme-font-900'}>{language.t2.p2}</span></p>
+                        className={'text-skin-theme-font-900'}>{language.t2.l1}</span></p>
                     <div className={'mt-3'}>
                         <span>{language.t3}</span>
                         <span className={'text-blue-600'}>{language.t4.p2}</span>
