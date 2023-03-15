@@ -8,7 +8,7 @@ export const GetStarted = ({language}) => {
 
     return (<section id={'get-started-with-email'} className={'h-[610px]'}>
         <div className={'h-[600px] absolute w-full'}>
-            <Image src={'/contents-image.jpg'} width={2545} height={600} alt={'netflix contents'} loading={"lazy"} onLoadingComplete={() => {setLoadingImage(true)}}
+            <Image src={'/contents-image.jpg'} width={2545} height={600} alt={'netflix contents'} loading={"eager"} onLoadingComplete={() => {setLoadingImage(true)}}
                    className={'w-full scale-135 h-full object-cover object-contain'}/>
         </div>
         <div

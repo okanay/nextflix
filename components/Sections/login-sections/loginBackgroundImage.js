@@ -13,6 +13,7 @@ export const LoginBackgroundImage = ({children}) => {
                     className={`${loadingImage ? LoginBackgroundImageClass.complete : LoginBackgroundImageClass.loading} absolute z-10 w-full h-full`}
                 />
                 <Image
+                    loading={'eager'}
                     src={'/contents-image.jpg'}
                     alt={"contents"}
                     width={2460}
