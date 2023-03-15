@@ -6,12 +6,14 @@ import {WhereEverYouWant} from "../components/Sections/index-sections/whereEverY
 import {KidsAccount} from "../components/Sections/index-sections/kidsAccount";
 import {FrequentlyQuestions} from "../components/Sections/index-sections/frequentlyQuestions";
 import {useSelector} from "react-redux";
+import {IndexNavigation} from "../components/Layouts/Main/indexNavigation";
 
 export default function Home() {
 
     const language = useSelector(state => state.language.value)
 
     return (<div className={''}>
+            <IndexNavigation/>
             <GetStarted language={language.index.section1}/>
             <DivededFull/>
             <WatchTV language={language.index.section2}/>

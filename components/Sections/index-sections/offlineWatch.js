@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const OfflineWatch =  ({language}) => {
 
-        return (<section id={'offline-watch'}  className={'bg-skin-theme-body-1000 pt-8 pb-12 xlPhone:py-24'}>
+        return (<section id={'offline-watch'}  className={'bg-skin-theme-body-1000 pt-8 pb-20 xlPhone:py-24'}>
         <div className={'flex flex-row flex-wrap-reverse justify-center items-center gap-4 xlPhone:gap-16 xlPhone:gap-4'}>
             <div className={'bg-skin-theme-body-1000 flex flex-col items-center justify-center relative'}>
                 <Image src={"/mobile.jpg"} alt={"tv"} width={700} height={640} loading={"lazy"}/>

@@ -1,11 +1,8 @@
 import {NetflixLogo} from "../../UI/Navigation-UI/NetflixLogo";
 import {LanguageSelect} from "../../UI/Navigation-UI/LanguageSelect";
 import {SignInButton} from "../../UI/Navigation-UI/SignInButton";
-import Image from "next/image";
-import {useState} from "react";
-export const Navigation = () => {
 
-
+export const IndexNavigation = () => {
 
     return (<nav className={'relative'}>
         <div className={'mx-auto w-full max-w-screen-desktop'}>
