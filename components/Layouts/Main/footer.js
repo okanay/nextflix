@@ -4,6 +4,7 @@ import {LanguageSelect} from "../../UI/Navigation-UI/LanguageSelect";
 export const Footer = () => {
 
     const language = useSelector(state => state.language.value.footer)
+
     return (<footer className={'bg-skin-theme-body-1000 py-24 text-skin-theme-font-900 px-8 text-[0.85rem] basePhone:text-[0.9rem]'}>
         <div className={'max-w-[1300px] mx-auto text-skin-theme-font-700 flex flex-col justify-start items-start w-full'}>
             <h5 className={''}>{language.t1.p1} <span>{language.n1}</span> {language.t1.p2}</h5>

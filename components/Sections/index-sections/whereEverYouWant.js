@@ -1,15 +1,11 @@
 import Image from "next/image";
-import {useSelector} from "react-redux";
 
-export const WhereEverYouWant = () => {
+export const WhereEverYouWant = ({language}) => {
 
-    const language = useSelector(state => state.language.value.index.section4)
-
-
-    return (<section id={'where-ever-you-want-watch'} className={'bg-skin-theme-body-1000 py-32'}>
-        <div className={'flex flex-row flex-wrap justify-center items-center gap-16 xlPhone:gap-24'}>
-            <div className={'text-skin-theme-font-900 px-8 tablet:px-4'}>
-                <h1 className={'text-2xl lgPhone:text-4xl tablet:text-5xl max-w-2xl font-semibold'}>{language.t1}</h1>
+    return (<section id={'where-ever-you-want-watch'} className={'bg-skin-theme-body-1000 py-8 xlPhone:py-24'}>
+        <div className={'flex flex-row flex-wrap justify-center items-center gap-4 xlPhone:gap-16 xlPhone:gap-4'}>
+            <div className={'text-skin-theme-font-900 px-8 tablet:px-4 text-center xlPhone:text-start'}>
+                <h1 className={'text-3xl lgPhone:text-4xl tablet:text-5xl max-w-2xl font-semibold'}>{language.t1}</h1>
 
                 <h3 className={'text-base lgPhone:text-xl tablet:text-2xl font-semibold max-w-2xl mt-4'}>{language.t2}</h3>
             </div>
@@ -21,8 +17,8 @@ export const WhereEverYouWant = () => {
                         sm:w-[40rem] sm:h-[34rem] 
                         tablet:w-[44rem] tablet:h-[36rem] 
                         relative flex flex-row justify-center`}>
-                    <Image src={"/devices.png"} className={'z-10 scale-80 tablet:scale-100'} alt={"tv"} width={720}
-                           height={720} priority={true}/>
+                    <Image src={"/devices.png"} className={'z-10 scale-80 tablet:scale-100'} alt={"tv"} width={720} loading={"lazy"}
+                           height={720}/>
                     <video autoPlay loop muted className={`
                         w-[10rem] h-[10rem] top-10
                         basePhone:w-[12.5rem] basePhone:h-[12.5rem] basePhone:top-10

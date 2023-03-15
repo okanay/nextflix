@@ -5,20 +5,24 @@ import {OfflineWatch} from "../components/Sections/index-sections/offlineWatch";
 import {WhereEverYouWant} from "../components/Sections/index-sections/whereEverYouWant";
 import {KidsAccount} from "../components/Sections/index-sections/kidsAccount";
 import {FrequentlyQuestions} from "../components/Sections/index-sections/frequentlyQuestions";
+import {useSelector} from "react-redux";
 
 export default function Home() {
+
+    const language = useSelector(state => state.language.value)
+
     return (<div className={''}>
-            <GetStarted/>
+            <GetStarted language={language.index.section1}/>
             <DivededFull/>
-            <WatchTV/>
+            <WatchTV language={language.index.section2}/>
             <DivededFull/>
-            <OfflineWatch/>
+            <OfflineWatch language={language.index.section3}/>
             <DivededFull/>
-            <WhereEverYouWant/>
+            <WhereEverYouWant language={language.index.section4}/>
             <DivededFull/>
-            <KidsAccount/>
+            <KidsAccount language={language.index.section5}/>
             <DivededFull/>
-            <FrequentlyQuestions/>
+            <FrequentlyQuestions language={language.index.section6}/>
             <DivededFull/>
         </div>
     )

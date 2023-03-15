@@ -1,20 +1,18 @@
-import {useSelector} from "react-redux";
 import {PlusIcon} from "@heroicons/react/20/solid";
 import {GetStartedBtn} from "../../UI/Index-UI/GetStartedBtn";
 import {useState} from "react";
-export const FrequentlyQuestions = () => {
+export const FrequentlyQuestions = ({language}) => {
 
-    const language = useSelector(state => state.language.value.index.section6)
     const [answers, setAnswers] = useState(questions)
     const handleQuestionClick = (id) => {
         let value = answers[id].open
         setAnswers(prevState => {return [...prevState, answers[id].open = !value]})
     }
 
-    return (<section id={'questions'} className={'bg-skin-theme-body-1000 py-24 text-skin-theme-font-900'}>
-        <div className={'flex flex-col justify-center items-center w-full gap-3'}>
+    return (<section id={'questions'}  className={'bg-skin-theme-body-1000 py-8 xlPhone:py-24'}>
+        <div className={'flex flex-row flex-wrap justify-center items-center gap-4 xlPhone:gap-16 xlPhone:gap-4'}>
             <h1 className={'text-3xl lgPhone:text-4xl tablet:text-5xl font-semibold mb-6'}>{language.t1}</h1>
-            <div className={'space-y-4 max-w-[1300px] w-full px-4'}>
+            <div className={'space-y-4 max-w-[1300px] w-full px-4 text-skin-theme-font-900'}>
                 {language.q.map((item, index) => {
                     return (
                         <div className="" key={item.t + `${index}`} onClick={() => handleQuestionClick(index)}>
