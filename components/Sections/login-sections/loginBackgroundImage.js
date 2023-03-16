@@ -1,6 +1,6 @@
 import Image from "next/image";
 import {useState} from "react";
-
+import backgroundImage from "../../../public/contents-image.jpg"
 export const LoginBackgroundImage = ({children}) => {
 
     const [loadingImage, setLoadingImage] = useState(false)
@@ -13,11 +13,9 @@ export const LoginBackgroundImage = ({children}) => {
                     className={`${loadingImage ? LoginBackgroundImageClass.complete : LoginBackgroundImageClass.loading} absolute z-10 w-full h-full`}
                 />
                 <Image
-                    loading={'eager'}
-                    src={'/contents-image.jpg'}
+                    src={backgroundImage}
+                    priority
                     alt={"contents"}
-                    width={2460}
-                    height={1640}
                     className={'hidden tablet:block h-full object-cover object-left-top'}
                     onLoadingComplete={() => {setLoadingImage(true)}}/>
             </div>

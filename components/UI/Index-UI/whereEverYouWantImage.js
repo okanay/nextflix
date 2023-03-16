@@ -1,4 +1,5 @@
 import Image from "next/image";
+import whereImage from "../../../public/devices.png"
 
 export const WhereEverYouWantImage = ({language}) => {
 
@@ -10,8 +11,7 @@ export const WhereEverYouWantImage = ({language}) => {
                         sm:w-[40rem] sm:h-[34rem] 
                         tablet:w-[44rem] tablet:h-[36rem] 
                         relative flex flex-row justify-center`}>
-                <Image src={"/devices.png"} className={'z-10 scale-80 tablet:scale-100'} alt={"tv"} width={720} loading={"eager"}
-                       height={720}/>
+                <Image src={whereImage} className={'z-10 scale-80 tablet:scale-100'} alt={"tv"} priority/>
                 <video autoPlay loop muted playsInline className={`
                         w-[10rem] h-[10rem] top-10
                         basePhone:w-[12.5rem] basePhone:h-[12.5rem] basePhone:top-10

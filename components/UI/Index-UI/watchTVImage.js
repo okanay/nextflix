@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import watchImage from "../../../public/tv.png"
 export const WatchTVImage = ({language}) => {
 
     return (<div className={'relative flex flex-row justify-center'}>
@@ -10,7 +10,7 @@ export const WatchTVImage = ({language}) => {
                         sm:w-[40rem] sm:h-[34rem] 
                         tablet:w-[44rem] tablet:h-[36rem] 
                         relative flex flex-row justify-center`}>
-                <Image src={"/tv.png"} alt={"tv"} width={720} height={720} className={'z-20'} loading={"eager"}/>
+                <Image src={watchImage} alt={"tv"} className={'z-20'} priority/>
                 <video autoPlay loop muted playsInline className={`
                         w-[15rem] h-[15rem] top-5
                         basePhone:w-[17.5rem] basePhone:h-[17.5rem] basePhone:top-5

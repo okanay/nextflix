@@ -1,13 +1,14 @@
 import Image from "next/image";
 import {useState} from "react";
-
+import offlineImage from "../../../public/mobile.jpg"
+import strangerThings from "../../../public/boxshot.png"
 export const OfflineWatchImage = ({language}) => {
 
     const [imageLoading, setImageLoading] = useState(false)
 
 
     return (<div className={'bg-skin-theme-body-1000 flex flex-col items-center justify-center relative'}>
-        <Image src={"/mobile.jpg"} alt={"tv"} width={700} height={640} loading={"eager"} className={`
+        <Image src={offlineImage} alt={"tv"} priority className={`
                         w-[18rem] h-[14rem]
                         basePhone:w-[20rem] basePhone:h-[16rem] 
                         xlPhone:w-[24rem] xlPhone:h-[20rem] 
@@ -24,7 +25,7 @@ export const OfflineWatchImage = ({language}) => {
                         tablet:w-[22rem] tablet:h-[5.5rem] tablet:bottom-12
                      bg-skin-theme-body-1000 rounded-lg border border-skin-theme-body-400 flex flex-row items-center justify-between px-3`}>
                 <div className={'flex flex-row justify-start items-center gap-2'}>
-                    <Image src={"/boxshot.png"} alt={"stranger things"} width={50} height={100} loading={'eager'}
+                    <Image src={strangerThings} alt={"strangerThings"} priority
                            className={`
                                 w-[1.5rem] h-[2rem] bottom-6
                                 basePhone:w-[2rem] basePhone:h-[2.5rem] basePhone:bottom-6
