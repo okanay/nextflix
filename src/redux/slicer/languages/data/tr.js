@@ -122,12 +122,25 @@ export const trLanguage = {
                 p2: "/",
             },
             t1 : "Üyeliğinizi başlatmak için bir parola oluşturun",
-            t2 : "Sadece birkaç adım daha kaldı, sonra bitiyor!\n" +
-                "Biz de formaliteyi hiç sevmiyoruz.",
+            t2 : "Sadece birkaç adım daha kaldı, sonra bitiyor!",
+            t3 : "Biz de formaliteyi hiç sevmiyoruz.",
             i1 : "E-posta",
             i2 : "Bir parola ekleyin",
-            t3 : "Netflix özel teklifleri e‑posta ile gönderilmesin.",
+            t4 : "Netflix özel teklifleri e‑posta ile gönderilmesin.",
             b1 : "İleri",
-        }
+        },
+        plan: {
+            p: {
+                p1: "ADIM",
+                p2: "/",
+            },
+            t1: "Planınızı seçin.",
+            rules: [
+                {l: "Taahhüt yok, istediğiniz zaman iptal edin."},
+                {l: "Tek ve düşük bir ücretle, Netflix'teki her şey önünüzde."},
+                {l: "Tüm cihazlarınızda sınırsız izleme imkânı."},
+            ],
+            b1 : "İleri",
+        },
     }
 }

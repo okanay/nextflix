@@ -14,7 +14,7 @@ export const GetStartedBtn = () => {
         if (!emailRef.current.value) {
             emailRef.current.focus();
         } else {
-            router.push("/signin/registration")
+            router.push("/signup/registration")
         }
     }
 

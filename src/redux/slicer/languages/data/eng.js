@@ -114,20 +114,33 @@ export const engLanguage = {
             },
             t1: "Finish setting up your account",
             t2: "Netflix is personalized for you. Create a password to watch on any device at any time.",
-            b1 : "Next",
+            b1: "Next",
         },
-        regform : {
+        regform: {
             p: {
                 p1: "STEP",
                 p2: "OF",
             },
-            t1 : "Create a password to start your membership",
-            t2 : "Just a few more steps and you're done!\n" +
-                "We hate paperwork, too.",
-            i1 : "Email",
-            i2 : "Add a password",
-            t3 : "Please do not email me Netflix special offers.",
-            b1 : "Next",
-        }
+            t1: "Create a password to start your membership",
+            t2: "Just a few more steps and you're done!",
+            t3: "We hate paperwork, too.",
+            i1: "Email",
+            i2: "Add a password",
+            t4: "Please do not email me Netflix special offers.",
+            b1: "Next",
+        },
+        plan: {
+            p: {
+                p1: "STEP",
+                p2: "OF",
+            },
+            t1: "Choose your plan.",
+            rules: [
+                {l: "No commitments, cancel anytime."},
+                {l: "Everything on Netflix for one low price."},
+                {l: "Unlimited viewing on all your devices."},
+            ],
+            b1: "Next",
+        },
     }
 }
