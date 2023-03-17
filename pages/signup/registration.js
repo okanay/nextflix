@@ -1,14 +1,14 @@
-import {NavigationSignIn} from "../../components/Sections/signup-sections/NavigationSignIn";
-import {SignUpFooter} from "../../components/Sections/signup-sections/SignUpFooter";
+import {NavigationSignUp} from "../../components/Sections/signup-sections/NavigationSignUp";
+import {FooterSignUp} from "../../components/Sections/signup-sections/FooterSignUp";
 import {RegistrationSection} from "../../components/Sections/signup-sections/RegistrationSection";
 import {WhiteBackground} from "../../components/Sections/signup-sections/WhiteBackground";
 
 const Registration = () => {
 
     return (<WhiteBackground>
-            <NavigationSignIn/>
+            <NavigationSignUp/>
             <RegistrationSection/>
-            <SignUpFooter/>
+            <FooterSignUp/>
         </WhiteBackground>
     )
 }

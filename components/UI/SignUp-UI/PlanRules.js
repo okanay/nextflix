@@ -1,4 +1,4 @@
-import {Check} from "./check";
+import {CheckSVG} from "./CheckSVG";
 
 export const PlanRules = ({language}) => {
 
@@ -8,7 +8,7 @@ export const PlanRules = ({language}) => {
             {
                 return (
                     <li key={rule.l} className={'flex flex-row justify-start items-start mt-[20px] m-[0px]'}>
-                        <Check color={'text-skin-theme-600'}/>
+                        <CheckSVG color={'text-skin-theme-600'}/>
                         <span className={'text-[18px] ml-[10px]'}>{rule.l}</span>
                     </li>
                 )

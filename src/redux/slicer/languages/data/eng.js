@@ -186,6 +186,66 @@ export const engLanguage = {
             },
             t3 : "Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.",
             b1 : "Next"
+        },
+        paymentPicker : {
+            p: {
+                p1: "STEP",
+                p2: "OF",
+            },
+            t1 : "Choose how to pay",
+            t2 : "Your payment is encrypted and you can change how you pay anytime.",
+            t3 : "Secure for peace of mind.",
+            t4 : "Cancel easily online.",
+            t5 : "End-to-end encrypted",
+            b1 : "Credit or Debit Card",
+            b2 : "Gift Code",
+        },
+        giftOption : {
+            p: {
+                p1: "STEP",
+                p2: "OF",
+            },
+            t1 : "Enter your gift code",
+            i1 : "Gift Card Pin or Code",
+            box : {
+                price : "130.99 TL",
+                month : "/month",
+                plan : "Premium Plan",
+                change : "Change",
+            },
+            b1 : "Redeem Gift Code",
+            t2 : {
+                p1 : "This page is protected by Google reCAPTCHA to ensure you're not a bot. ",
+                p2 : "Learn more."
+            }
+        },
+        creditOption : {
+            p: {
+                p1: "STEP",
+                p2: "OF",
+            },
+            t1 : "Set up your credit or debit card",
+            i1 : "First name",
+            i2 : "Last name",
+            i3 : "Card number",
+            i4 : "Expiration date (MM/YY)",
+            i5 : "Security code (CVV)",
+            box : {
+                price : "130.99 TL",
+                month : "/month",
+                plan : "Premium Plan",
+                change : "Change",
+            },
+            t2 : "Your payments will be processed internationally. Additional bank fees may apply.",
+            t3 : {
+                p1 : "By checking the checkbox below, you agree to our ",
+                p2 : " Terms of Use, ",
+                p3 : "Privacy Statement, ",
+                p4 : "and that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently 130.99 TL/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.",
+            },
+            i6 : "I agree.",
+            b1 : "Start Membership",
+
         }
     }
 }

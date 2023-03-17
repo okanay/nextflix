@@ -1,16 +1,16 @@
 import {WhiteBackground} from "../../components/Sections/signup-sections/WhiteBackground";
 import {NavigationSignUp} from "../../components/Sections/signup-sections/NavigationSignUp";
 import {FooterSignUp} from "../../components/Sections/signup-sections/FooterSignUp";
-import {PlanSection} from "../../components/Sections/signup-sections/PlanSection";
+import {PaymentPickerSection} from "../../components/Sections/signup-sections/paymentPickerSection";
 
-const Plan = () => {
+const PaymentPicker = () => {
 
     return (<WhiteBackground>
             <NavigationSignUp/>
-            <PlanSection/>
+            <PaymentPickerSection/>
             <FooterSignUp/>
         </WhiteBackground>
     )
 }
 
-export default Plan
+export default PaymentPicker

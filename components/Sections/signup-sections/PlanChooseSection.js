@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 import Link from "next/link";
-import {Check} from "../../UI/SignUp-UI/check";
+import {CheckSVG} from "../../UI/SignUp-UI/CheckSVG";
 import {useState} from "react";
 
 export const PlanChooseSection = () => {
@@ -19,15 +19,15 @@ export const PlanChooseSection = () => {
             <h1 className={'text-[32px] font-semibold '}>{language.t1}</h1>
             <ul className={'flex flex-col justify-start items-start mt-4 w-full space-y-1.5 text-[18px]'}>
                 <li className={'flex flex-row justify-start items-start gap-2 w-full'}>
-                    <Check color={"text-skin-theme-600"}/>
+                    <CheckSVG color={"text-skin-theme-600"}/>
                     <p>{language.rules[0].l}</p>
                 </li>
                 <li className={'flex flex-row justify-start items-start gap-2 w-full'}>
-                    <Check color={"text-skin-theme-600"}/>
+                    <CheckSVG color={"text-skin-theme-600"}/>
                     <p>{language.rules[1].l}</p>
                 </li>
                 <li className={'flex flex-row justify-start items-start gap-2 w-full'}>
-                    <Check color={"text-skin-theme-600"}/>
+                    <CheckSVG color={"text-skin-theme-600"}/>
                     <p>{language.rules[2].l}</p>
                 </li>
             </ul>
@@ -73,9 +73,9 @@ export const PlanChooseSection = () => {
                 </tr>
                 <tr className={'flex flex-row sm:px-6 h-[41px]'}>
                     <td className={'w-[0%] tablet:w-[40%] hidden tablet:block flex flex-row justify-start'}>{language.description[3].d}</td>
-                    <td onClick={() => {setSelected(0)}} className={'w-1/3 tablet:w-[20%] flex flex-row justify-center'}><Check color={`${textColor(0)}`}/></td>
-                    <td onClick={() => {setSelected(1)}} className={'w-1/3 tablet:w-[20%] flex flex-row justify-center'}><Check color={`${textColor(1)}`}/></td>
-                    <td onClick={() => {setSelected(2)}} className={'w-1/3 tablet:w-[20%] flex flex-row justify-center'}><Check color={`${textColor(2)}`}/></td>
+                    <td onClick={() => {setSelected(0)}} className={'w-1/3 tablet:w-[20%] flex flex-row justify-center'}><CheckSVG color={`${textColor(0)}`}/></td>
+                    <td onClick={() => {setSelected(1)}} className={'w-1/3 tablet:w-[20%] flex flex-row justify-center'}><CheckSVG color={`${textColor(1)}`}/></td>
+                    <td onClick={() => {setSelected(2)}} className={'w-1/3 tablet:w-[20%] flex flex-row justify-center'}><CheckSVG color={`${textColor(2)}`}/></td>
                 </tr>
             </tbody>
         </table>
@@ -85,6 +85,6 @@ export const PlanChooseSection = () => {
         <small className={'mt-3 px-4 text-skin-theme-font-600'}>
             <span>{language.t3}</span>
         </small>
-        <Link href={'/signup/regform'} className={'w-10/12 basePhone:w-7/12 sm:w-5/12 mx-auto text-center mt-7 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl'}>{language.b1}</Link>
+        <Link href={'/signup/paymentpicker'} className={'w-10/12 basePhone:w-7/12 sm:w-5/12 mx-auto text-center mt-7 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl'}>{language.b1}</Link>
     </section>
 }

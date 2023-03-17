@@ -114,20 +114,20 @@ export const trLanguage = {
             },
             t1: "Hesabınızı oluşturalım",
             t2: "Netflix sizin için kişiselleştirilir. İstediğiniz zaman, istediğiniz cihazda izlemek için bir parola oluşturun.",
-            b1 : "İleri",
+            b1: "İleri",
         },
-        regform : {
+        regform: {
             p: {
                 p1: "ADIM",
                 p2: "/",
             },
-            t1 : "Üyeliğinizi başlatmak için bir parola oluşturun",
-            t2 : "Sadece birkaç adım daha kaldı, sonra bitiyor!",
-            t3 : "Biz de formaliteyi hiç sevmiyoruz.",
-            i1 : "E-posta",
-            i2 : "Bir parola ekleyin",
-            t4 : "Netflix özel teklifleri e‑posta ile gönderilmesin.",
-            b1 : "İleri",
+            t1: "Üyeliğinizi başlatmak için bir parola oluşturun",
+            t2: "Sadece birkaç adım daha kaldı, sonra bitiyor!",
+            t3: "Biz de formaliteyi hiç sevmiyoruz.",
+            i1: "E-posta",
+            i2: "Bir parola ekleyin",
+            t4: "Netflix özel teklifleri e‑posta ile gönderilmesin.",
+            b1: "İleri",
         },
         plan: {
             p: {
@@ -140,53 +140,112 @@ export const trLanguage = {
                 {l: "Tek ve düşük bir ücretle, Netflix'teki her şey önünüzde."},
                 {l: "Tüm cihazlarınızda sınırsız izleme imkânı."},
             ],
-            b1 : "İleri",
+            b1: "İleri",
         },
         planChoose: {
             p: {
                 p1: "ADIM",
                 p2: "/",
             },
-            t1 : "Kendinize uygun bir plan seçin",
-            rules : [
-                { l : "Canınız neyi isterse izleyin. Reklamsız."},
-                { l : "Sadece sizin için önerilen içerikler."},
-                { l : "Planınızı istediğiniz zaman değiştirebilir ya da iptal edebilirsiniz."},
+            t1: "Kendinize uygun bir plan seçin",
+            rules: [
+                {l: "Canınız neyi isterse izleyin. Reklamsız."},
+                {l: "Sadece sizin için önerilen içerikler."},
+                {l: "Planınızı istediğiniz zaman değiştirebilir ya da iptal edebilirsiniz."},
             ],
-            plans : [
+            plans: [
                 {
-                    plan : "Temel",
-                    price : "63,99 TL",
-                    quality : "İyi",
-                    resolution : "720p",
+                    plan: "Temel",
+                    price: "63,99 TL",
+                    quality: "İyi",
+                    resolution: "720p",
                 },
                 {
-                    plan : "Standart",
-                    price : "97,99 TL",
-                    quality : "Daha iyi",
-                    resolution : "1080p",
+                    plan: "Standart",
+                    price: "97,99 TL",
+                    quality: "Daha iyi",
+                    resolution: "1080p",
                 },
                 {
-                    plan : "Özel",
-                    price : "130,99 TL",
-                    quality : "En yüksek",
-                    resolution : "4K+HDR",
+                    plan: "Özel",
+                    price: "130,99 TL",
+                    quality: "En yüksek",
+                    resolution: "4K+HDR",
                 },
             ],
-            description : [
-                {d :"Aylık ücret"},
-                {d :"Video kalitesi"},
-                {d :"Çözünürlük"},
-                {d :"Televizyon, bilgisayar, cep telefonu ve tabletinizde seyredin"},
+            description: [
+                {d: "Aylık ücret"},
+                {d: "Video kalitesi"},
+                {d: "Çözünürlük"},
+                {d: "Televizyon, bilgisayar, cep telefonu ve tabletinizde seyredin"},
             ],
-            t2 : {
-                p1 : "HD (720p), Tam HD (1080p), Ultra HD (4K) ve HDR kullanılabilirliği internet hizmetinize ve cihazınızın özelliklerine bağlıdır. Tüm içerikler bütün çözünürlüklerde mevcut olmayabilir. Ayrıntılar için ",
-                p2 : "Kullanım Koşulları ",
-                p3 : "sözleşmemize bakın."
+            t2: {
+                p1: "HD (720p), Tam HD (1080p), Ultra HD (4K) ve HDR kullanılabilirliği internet hizmetinize ve cihazınızın özelliklerine bağlıdır. Tüm içerikler bütün çözünürlüklerde mevcut olmayabilir. Ayrıntılar için ",
+                p2: "Kullanım Koşulları ",
+                p3: "sözleşmemize bakın."
             },
-            t3 : "Bu hesabı sadece sizinle birlikte yaşayanlar kullanabilir. Özel planda aynı anda 4 farklı cihazda içerik izleyin. Standart planda bu sayı 2, Temel planda ise 1'dir.",
-            b1 : "İleri"
+            t3: "Bu hesabı sadece sizinle birlikte yaşayanlar kullanabilir. Özel planda aynı anda 4 farklı cihazda içerik izleyin. Standart planda bu sayı 2, Temel planda ise 1'dir.",
+            b1: "İleri"
 
         },
+        paymentPicker: {
+            p: {
+                p1: "ADIM",
+                p2: "/",
+            },
+            t1: "Tercih ettiğiniz ödeme yöntemini seçin",
+            t2: "Ödeme yönteminiz şifrelenerek korunur ve dilediğiniz zaman ödeme yönteminizi değiştirebilirsiniz.",
+            t3: "Endişelenmeyin, güvenlidir.",
+            t4: "İstediğiniz zaman internet üzerinden kolayca iptal edebilirsiniz.",
+            t5: "Uçtan uca şifreli",
+            b1: "Kredi Kartı veya Banka Kartı",
+            b2: "Hediye Kartı",
+        },
+        giftOption: {
+            p: {
+                p1: "ADIM",
+                p2: "/",
+            },
+            t1: "Hediye kodunuzu girin",
+            i1: "Hediye Kartı Pini veya Kodu",
+            box: {
+                price: "130.99 TL",
+                month: "/Ay",
+                plan: "Özel Plan",
+                change: "Değiştir",
+            },
+            b1: "Hediye Kodunu Kullan",
+            t2: {
+                p1: "Bu sayfa robot olmadığınızı kanıtlamak için Google reCAPTCHA tarafından korunuyor. ",
+                p2: "Daha fazlasını öğrenin."
+            }
+        },
+        creditOption : {
+            p: {
+                p1: "ADIM",
+                p2: "/",
+            },
+            t1 : "Ödemenizi ayarlayın: Kredi Kartı/Banka Kartı",
+            i1 : "Adı",
+            i2 : "Soyadı",
+            i3 : "Kart Numarası",
+            i4 : "Son Kullanma Tarihi (AA/YY)",
+            i5 : "Güvenlik kodu (CVV)",
+            box: {
+                price: "130.99 TL",
+                month: "/Ay",
+                plan: "Özel Plan",
+                change: "Değiştir",
+            },
+            t2 : "Ödemeleriniz uluslararası olarak işlenecektir. İlave banka ücretleri uygulanabilir.",
+            t3 : {
+                p1 : "Aşağıdaki onay kutusunu işaretleyerek",
+                p2 : "Kullanım Koşullarımızı",
+                p3 : "Gizlilik Bildirimimizi ",
+                p4 : "ve 18 yaşından büyük olduğunuzu kabul edersiniz. Netflix, üyeliğinizi otomatik olarak devam ettirecek ve siz iptal edene kadar üyelik ücretini (şu anda aylık 130,99 TL) ödeme yönteminizden tahsil edecektir. Gelecekte ücret alınmasını istemiyorsanız üyeliğinizi istediğiniz zaman iptal edebilirsiniz.",
+            },
+            i6 : "Kabul Ediyorum",
+            b1 : "Üyeliğinizi Başlatın",
+        }
     }
 }

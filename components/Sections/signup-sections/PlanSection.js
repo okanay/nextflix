@@ -4,7 +4,7 @@ import Link from "next/link";
 import {PlanRules} from "../../UI/SignUp-UI/PlanRules";
 import checkmark from "../../../public/checkmark.png"
 
-export const PlanComponent = () => {
+export const PlanSection = () => {
 
     const language = useSelector(state => state.language.value.signup.plan)
 

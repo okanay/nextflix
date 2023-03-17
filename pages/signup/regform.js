@@ -1,5 +1,5 @@
-import {NavigationSignIn} from "../../components/Sections/signup-sections/NavigationSignIn";
-import {SignUpFooter} from "../../components/Sections/signup-sections/SignUpFooter";
+import {NavigationSignUp} from "../../components/Sections/signup-sections/NavigationSignUp";
+import {FooterSignUp} from "../../components/Sections/signup-sections/FooterSignUp";
 import {RegistrationSection} from "../../components/Sections/signup-sections/RegistrationSection";
 import {WhiteBackground} from "../../components/Sections/signup-sections/WhiteBackground";
 import {RegformSection} from "../../components/Sections/signup-sections/RegformSection";
@@ -7,9 +7,9 @@ import {RegformSection} from "../../components/Sections/signup-sections/RegformS
 const Regform = () => {
 
     return (<WhiteBackground>
-            <NavigationSignIn/>
+            <NavigationSignUp/>
             <RegformSection/>
-            <SignUpFooter/>
+            <FooterSignUp/>
         </WhiteBackground>
     )
 }
