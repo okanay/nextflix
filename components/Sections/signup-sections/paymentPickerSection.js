@@ -28,27 +28,37 @@ export const PaymentPickerSection = () => {
                 </div>
             </div>
 
-            <div className={'w-full flex flex-row justify-end gap-1 items-center mt-6 mb-0.5'}>
+            <div className={'w-full flex flex-row justify-end gap-1 items-center mt-6 mb-0.5 px-4 sm:px-0'}>
                 <p className={'text-[12px]'}>{language.t5}</p>
                 <LockSVG/>
             </div>
-            <Link href={'/signup/creditoption'} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between'}>
-                <div className={'flex flex-row justify-start gap-2 items-center'}>
-                    <span>{language.b1}</span>
-                    <Image src={MasterCard} alt={"checkmark"} className={'w-10'} priority/>
-                    <Image src={Visa} alt={"checkmark"} className={'w-10'} priority/>
-                    <Image src={AmericanExpress} alt={"checkmark"} className={'w-10'} priority/>
-                    <Image src={Troy} alt={"checkmark"} className={'w-10'} priority/>
-                </div>
-                <ArrowRightSVG/>
-            </Link>
-            <Link href={'/signup/giftoption'} className={'w-full text-start px-4 mt-2 py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between'}>
-                <div className={'flex flex-row justify-start gap-2 items-center'}>
-                    <span>{language.b2}</span>
-                    <Image src={NetflixGift} alt={"checkmark"} className={'w-10'} priority/>
-                </div>
-                <ArrowRightSVG/>
-            </Link>
+            <div className={'w-full px-4 sm:px-0'}>
+                <Link href={'/signup/creditoption'} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center mb-2'}>
+                    <div className={'flex flex-row sm:flex-col justify-between gap-2 items-center'}>
+                        <div className={'flex flex-col sm:flex-row justify-start gap-2 items-start'}>
+                            <span>{language.b1}</span>
+                            <div className={'flex flex-row justify-start gap-2 items-start'}>
+                                <Image src={MasterCard} alt={"checkmark"} className={'w-8 basePhone:w-10'} priority/>
+                                <Image src={Visa} alt={"checkmark"} className={'w-8 basePhone:w-10'} priority/>
+                                <Image src={AmericanExpress} alt={"checkmark"} className={'w-8 basePhone:w-10'} priority/>
+                                <Image src={Troy} alt={"checkmark"} className={'w-8 basePhone:w-10'} priority/>
+                            </div>
+                        </div>
+                    </div>
+                    <ArrowRightSVG/>
+                </Link>
+                <Link href={'/signup/giftoption'} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center'}>
+                    <div className={'flex flex-row sm:flex-col justify-between gap-2 items-center'}>
+                        <div className={'flex flex-col sm:flex-row justify-start gap-2 items-start'}>
+                            <span>{language.b2}</span>
+                            <div className={'flex flex-row justify-start gap-2 items-start'}>
+                                <Image src={NetflixGift} alt={"checkmark"} className={'w-8 basePhone:w-10'} priority/>
+                            </div>
+                        </div>
+                    </div>
+                    <ArrowRightSVG/>
+                </Link>
+            </div>
         </div>
     </section>)
 }
