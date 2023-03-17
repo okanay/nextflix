@@ -9,6 +9,7 @@ export const PlanChooseSection = () => {
     const [selected, setSelected] = useState(2)
     const textColor = (id) => {return selected === id ? "text-skin-theme-600 " : "cursor-pointer"}
     const boxColor = (id) => {return selected === id ? "bg-skin-theme-600" : "bg-skin-theme-300 cursor-pointer"}
+    const selectedEffect = (id) => {return selected === id ? "bg-skin-theme-600" : "hidden"}
 
 
 
@@ -33,17 +34,22 @@ export const PlanChooseSection = () => {
         </div>
         <table className={'max-w-[1080px] sm:max-w-[960px] w-full text-[14px] tablet:text-[16px] text-skin-theme-font-400'}>
             <tbody className={'flex flex-col gap-4'}>
-                <tr className={'flex flex-row sm:px-6  h-[75px] sm:h-[100px] laptop:h-[120px] text-skin-theme-font-900 text-center mb-4'}>
+                <tr className={'flex flex-row sm:px-6  h-[60px] sm:h-[80px] laptop:h-[100px] text-skin-theme-font-900 text-center mb-4'}>
                     <td className={'tablet:w-[40%] w-[0%] flex flex-row justify-start'}></td>
                     <td className={'tablet:w-[60%] w-[100%] flex flex-row text-[15px] tablet:text-[18px]'}>
-                        <div onClick={() => {setSelected(0)}} className={`w-1/3 h-full ${boxColor(0)} py-[18px] flex flex-col justify-center mx-2 sm:mx-6`}>
+                        <div onClick={() => {setSelected(0)}} className={`w-1/3 h-full ${boxColor(0)} py-[18px] flex flex-col justify-center mx-2 sm:mx-7 z-20 relative items-center`}>
                             <p className={''}>{language.plans[0].plan}</p>
+                            <div className={`p-2 xlPhone:p-3 absolute -bottom-1 xlPhone:-bottom-1.5 rotate-45 ${selectedEffect(0)} z-10`}></div>
                         </div>
-                        <div onClick={() => {setSelected(1)}} className={`w-1/3 h-full ${boxColor(1)} py-[18px] flex flex-col justify-center mx-2 sm:mx-6`}>
+                        <div onClick={() => {setSelected(1)}} className={`w-1/3 h-full ${boxColor(1)} py-[18px] flex flex-col justify-center mx-2 sm:mx-7 z-20 relative items-center`}>
                             <p className={''}>{language.plans[1].plan}</p>
+                            <div className={`p-2 xlPhone:p-3 absolute -bottom-1 xlPhone:-bottom-1.5 rotate-45 ${selectedEffect(1)} z-10`}></div>
+
                         </div>
-                        <div onClick={() => {setSelected(2)}} className={`w-1/3 h-full ${boxColor(2)} py-[18px] flex flex-col justify-center mx-2 sm:mx-6`}>
+                        <div onClick={() => {setSelected(2)}} className={`w-1/3 h-full ${boxColor(2)} py-[18px] flex flex-col justify-center mx-2 sm:mx-7 z-20 relative items-center`}>
                             <p className={''}>{language.plans[2].plan}</p>
+                            <div className={`p-2 xlPhone:p-3 absolute -bottom-1 xlPhone:-bottom-1.5 rotate-45 ${selectedEffect(2)} z-10`}></div>
+
                         </div>
                     </td>
                 </tr>
