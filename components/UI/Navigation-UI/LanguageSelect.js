@@ -25,7 +25,7 @@ export const LanguageSelect = ({rotation, theme}) => {
             {languageBtn.state && (
                 <div
                     onMouseLeave={() => {setLanguageBtn(prevState => {return {selectedValue: prevState.selectedValue, state: false}})}}
-                    className={`absolute ${rotation === "down" ? "top-7 tablet:top-9" : "-top-[0.18rem] left-[7.05rem] tablet:-top-0.5 tablet:left-[7.9rem]"} w-24 tablet:w-28 ${theme === "light" ? "bg-skin-theme-body-200/50" : "bg-skin-theme-body-1000/20"} border border-skin-theme-body-600 rounded-sm flex flex-col items-start justify-start px-4 py-2 gap-1`}>
+                    className={`absolute ${rotation === "down" ? "top-7 tablet:top-9" : "-top-[0.18rem] left-[7.05rem] tablet:-top-0.5 tablet:left-[7.9rem]"} w-24 tablet:w-28 ${theme === "light" ? "bg-skin-theme-body-100/10" : "bg-skin-theme-body-1000/20"} border border-skin-theme-body-400 rounded-sm flex flex-col items-start justify-start px-4 py-2 gap-1`}>
                     <button className={'hover:text-skin-theme-600'} type={"button"} onClick={() => {setLanguageBtn(prevState => {return {selectedValue: "tr", state: true}})}}>{language.trLan}</button>
                     <button className={'hover:text-skin-theme-600'} type={"button"} onClick={() => {setLanguageBtn(prevState => {return {selectedValue: "eng", state: true}})}}>{language.engLan}</button>
                 </div>
