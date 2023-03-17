@@ -142,5 +142,51 @@ export const trLanguage = {
             ],
             b1 : "İleri",
         },
+        planChoose: {
+            p: {
+                p1: "ADIM",
+                p2: "/",
+            },
+            t1 : "Kendinize uygun bir plan seçin",
+            rules : [
+                { l : "Canınız neyi isterse izleyin. Reklamsız."},
+                { l : "Sadece sizin için önerilen içerikler."},
+                { l : "Planınızı istediğiniz zaman değiştirebilir ya da iptal edebilirsiniz."},
+            ],
+            plans : [
+                {
+                    plan : "Temel",
+                    price : "63,99 TL",
+                    quality : "İyi",
+                    resolution : "720p",
+                },
+                {
+                    plan : "Standart",
+                    price : "97,99 TL",
+                    quality : "Daha iyi",
+                    resolution : "1080p",
+                },
+                {
+                    plan : "Özel",
+                    price : "130,99 TL",
+                    quality : "En yüksek",
+                    resolution : "4K+HDR",
+                },
+            ],
+            description : [
+                {d :"Aylık ücret"},
+                {d :"Video kalitesi"},
+                {d :"Çözünürlük"},
+                {d :"Televizyon, bilgisayar, cep telefonu ve tabletinizde seyredin"},
+            ],
+            t2 : {
+                p1 : "HD (720p), Tam HD (1080p), Ultra HD (4K) ve HDR kullanılabilirliği internet hizmetinize ve cihazınızın özelliklerine bağlıdır. Tüm içerikler bütün çözünürlüklerde mevcut olmayabilir. Ayrıntılar için ",
+                p2 : "Kullanım Koşulları ",
+                p3 : "sözleşmemize bakın."
+            },
+            t3 : "Bu hesabı sadece sizinle birlikte yaşayanlar kullanabilir. Özel planda aynı anda 4 farklı cihazda içerik izleyin. Standart planda bu sayı 2, Temel planda ise 1'dir.",
+            b1 : "İleri"
+
+        },
     }
 }

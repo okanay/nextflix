@@ -142,5 +142,50 @@ export const engLanguage = {
             ],
             b1: "Next",
         },
+        planChoose: {
+            p: {
+                p1: "STEP",
+                p2: "OF",
+            },
+            t1 : "Choose the plan that’s right for you",
+            rules : [
+                { l : "Watch all you want. Ad-free."},
+                { l : "Recommendations just for you."},
+                { l : "Change or cancel your plan anytime."},
+            ],
+            plans : [
+                {
+                    plan : "Basic",
+                    price : "63,99 TL",
+                    quality : "Good",
+                    resolution : "720p",
+                },
+                {
+                    plan : "Standart",
+                    price : "97,99 TL",
+                    quality : "Better",
+                    resolution : "1080p",
+                },
+                {
+                    plan : "Premium",
+                    price : "130,99 TL",
+                    quality : "Best",
+                    resolution : "4K+HDR",
+                },
+            ],
+            description : [
+                {d :"Monthly price"},
+                {d :"Video quality"},
+                {d :"Resolution"},
+                {d :"Watch on your TV, computer, mobile phone and tablet"},
+            ],
+            t2 : {
+                p1 : "HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our ",
+                p2 : "Terms of Use ",
+                p3 : "for more details."
+            },
+            t3 : "Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.",
+            b1 : "Next"
+        }
     }
 }

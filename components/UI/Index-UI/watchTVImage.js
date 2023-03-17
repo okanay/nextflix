@@ -2,7 +2,7 @@ import Image from "next/image";
 import watchImage from "../../../public/tv.png"
 export const WatchTVImage = ({language}) => {
 
-    return (<div className={'relative flex flex-row justify-center'}>
+    return (<div className={'relative flex flex-row justify-center content-start'}>
             <div className={`
                         w-[20rem] h-[20rem]
                         basePhone:w-[24.5rem] basePhone:h-[22rem] 

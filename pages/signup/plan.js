@@ -1,14 +1,14 @@
-import {WhiteBackground} from "../../components/Sections/signin-sections/WhiteBackground";
-import {NavigationSignIn} from "../../components/Sections/signin-sections/NavigationSignIn";
-import {SignInFooter} from "../../components/Sections/signin-sections/SignInFooter";
-import {PlanComponent} from "../../components/Sections/signin-sections/PlanComponent";
+import {WhiteBackground} from "../../components/Sections/signup-sections/WhiteBackground";
+import {NavigationSignIn} from "../../components/Sections/signup-sections/NavigationSignIn";
+import {SignUpFooter} from "../../components/Sections/signup-sections/SignUpFooter";
+import {PlanComponent} from "../../components/Sections/signup-sections/PlanComponent";
 
 const Plan = () => {
 
     return (<WhiteBackground>
             <NavigationSignIn/>
             <PlanComponent/>
-            <SignInFooter/>
+            <SignUpFooter/>
         </WhiteBackground>
     )
 }

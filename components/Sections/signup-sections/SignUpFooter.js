@@ -1,6 +1,6 @@
 import {useSelector} from "react-redux";
 import {LanguageSelect} from "../../UI/Navigation-UI/LanguageSelect";
-export const SignInFooter = () => {
+export const SignUpFooter = () => {
 
     const language = useSelector(state => state.language.value.footer)
 
