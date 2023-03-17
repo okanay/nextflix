@@ -9,7 +9,7 @@ export const CreditOptionSection = () => {
 
     const language = useSelector(state => state.language.value.signup.creditOption)
 
-    return <section id={'credit-option-section'} className={'w-full h-full max-w-[440px] mx-auto my-12'}>
+    return <section id={'credit-option-section'} className={'w-full h-full max-w-[440px] mx-auto my-6'}>
         <div className={'w-full flex flex-col flex-wrap justify-center items-start w-full scale-95 xlPhone:scale-100'}>
             <h4 className={'text-[13px]'}>{language.p.p1} <b>3</b> {language.p.p2} <b>3</b></h4>
             <h2 className={'text-[32px] font-semibold text-start mb-4'}>{language.t1}</h2>
