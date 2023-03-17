@@ -20,7 +20,7 @@ export const RegformSection = () => {
                 <input type="checkbox"/>
                 <p className={'text-[16px]'}>{language.t4}</p>
             </div>
-            <Link href={'/signup/plan'} className={'text-center mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl mb-32 tablet:mb-0'}>{language.b1}</Link>
+            <Link href={'/signup/plan'} className={'text-center w-full mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl mb-32 tablet:mb-0'}>{language.b1}</Link>
         </div>
     </section>
 }
