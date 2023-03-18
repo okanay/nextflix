@@ -7,6 +7,7 @@ import MasterCard  from "../../../public/mastercard.png"
 import Image from "next/image";
 import {CurrentPlanBox} from "../../UI/SignUp-UI/CurrentPlanBox";
 import {useGetPlanValue} from "../../../src/customHooks/useGetPlanValue";
+import {PeerInput} from "../../UI/SignUp-UI/PeerInput";
 export const CreditOptionSection = () => {
 
     const language = useSelector(state => state.language.value.signup.creditOption)
@@ -23,70 +24,11 @@ export const CreditOptionSection = () => {
                 <Image src={AmericanExpress} alt={"checkmark"} className={'w-10'} priority/>
                 <Image src={Troy} alt={"checkmark"} className={'w-10'} priority/>
             </div>
-            {/*Name Input*/}
-            <div className={'relative peer w-full'}>
-                <input type="text"
-                       id={'name'}
-                       disabled defaultValue={"Okan"}
-                       className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none mb-2 border border-skin-theme-body-400 peer placeholder:text-transparent focus:outline-none'}
-                       placeholder={"."}/>
-                <label htmlFor="name"
-                       className={`absolute text-gray-600/60 transition-all duration-300
-                        top-1 left-3 text-[0.6rem] peer-placeholder-shown:text-gray-600/60
-                        peer-placeholder-shown:top-4 peer-placeholder-shown:left-3.5 peer-placeholder-shown:text-base`}>{language.i1}</label>
-            </div>
-            {/*Surname Input*/}
-            <div className={'relative peer w-full'}>
-                <input type="text"
-                       id={'surname'}
-                       disabled
-                       defaultValue={"Ay"}
-                       className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none mb-2 border border-skin-theme-body-400 peer placeholder:text-transparent focus:outline-none'}
-                       placeholder={"."}/>
-                <label htmlFor="surname"
-                       className={`absolute text-gray-600/60 transition-all duration-300
-                        top-1 left-3 text-[0.6rem] peer-placeholder-shown:text-gray-600/60
-                        peer-placeholder-shown:top-4 peer-placeholder-shown:left-3.5 peer-placeholder-shown:text-base`}>{language.i2}</label>
-            </div>
-            {/*Credit Number Input*/}
-            <div className={'relative peer w-full'}>
-                <input type="text"
-                       id={'cardNumber'}
-                       disabled
-                       defaultValue={"5105 | 1051 | 0510 | 5100"}
-                       className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none mb-2 border border-skin-theme-body-400 peer placeholder:text-transparent focus:outline-none'}
-                       placeholder={"."}/>
-                <label htmlFor="cardNumber"
-                       className={`absolute text-gray-600/60 transition-all duration-300
-                        top-1 left-3 text-[0.6rem] peer-placeholder-shown:text-gray-600/60
-                        peer-placeholder-shown:top-4 peer-placeholder-shown:left-3.5 peer-placeholder-shown:text-base`}>{language.i3}</label>
-            </div>
-            {/*Expiration Date Input*/}
-            <div className={'relative peer w-full'}>
-                <input type="text"
-                       id={'expirationDate'}
-                       disabled
-                       defaultValue={"07/28"}
-                       className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none mb-2 border border-skin-theme-body-400 peer placeholder:text-transparent focus:outline-none'}
-                       placeholder={"."}/>
-                <label htmlFor="expirationDate"
-                       className={`absolute text-gray-600/60 transition-all duration-300
-                        top-1 left-3 text-[0.6rem] peer-placeholder-shown:text-gray-600/60
-                        peer-placeholder-shown:top-4 peer-placeholder-shown:left-3.5 peer-placeholder-shown:text-base`}>{language.i4}</label>
-            </div>
-            {/* CVV Input*/}
-            <div className={'relative peer w-full'}>
-                <input type="text"
-                       id={'CVV'}
-                       disabled
-                       defaultValue={"195"}
-                       className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none mb-2 border border-skin-theme-body-400 peer placeholder:text-transparent focus:outline-none'}
-                       placeholder={"."}/>
-                <label htmlFor="CVV"
-                       className={`absolute text-gray-600/60 transition-all duration-300
-                        top-1 left-3 text-[0.6rem] peer-placeholder-shown:text-gray-600/60
-                        peer-placeholder-shown:top-4 peer-placeholder-shown:left-3.5 peer-placeholder-shown:text-base`}>{language.i5}</label>
-            </div>
+            <PeerInput defaultValue={"Okan"} placeholder={language.i1} id={"name"}/>
+            <PeerInput defaultValue={"Ay"} placeholder={language.i2} id={"surname"}/>
+            <PeerInput defaultValue={"5105 | 1051 | 0510 | 5100"} placeholder={language.i3} id={"cardNumber"}/>
+            <PeerInput defaultValue={"07/28"} placeholder={language.i4} id={"expirationDate"}/>
+            <PeerInput defaultValue={"195"} placeholder={language.i5} id={"CVV"}/>
          <CurrentPlanBox/>
 
 

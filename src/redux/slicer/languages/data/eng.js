@@ -102,7 +102,7 @@ export const engLanguage = {
         i3: "Remember me",
         l1: "Need help?",
         t2: {
-            p1: "New to netflix",
+            p1: "New to netflix ",
             l1: " Sign up now.",
         },
         t3: "This page is protected by Google reCAPTCHA to ensure you're not a bot.",
