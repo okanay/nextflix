@@ -18,7 +18,6 @@ export const GetStarted = ({language}) => {
             <div className={'text-center flex flex-col gap-3 pt-24 px-4'}>
                 <h1 className={'text-4xl md:text-5xl font-bold'}>{language.t1}</h1>
                 <h3 className={'text-lg md:text-2xl font-semibold my-3'}>{language.t2}</h3>
-                <h4 className={'text-base md:text-xl font-semibold text-center'}>{language.t3}</h4>
                 <GetStartedBtn/>
             </div>
         </div>

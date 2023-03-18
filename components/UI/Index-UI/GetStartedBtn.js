@@ -38,6 +38,7 @@ export const GetStartedBtn = () => {
 
     return (
         <>
+            {signData.email === "" && (<h4 className={'text-base md:text-xl font-semibold text-center'}>{language.t3}</h4>)}
             <form className={'flex flex-row flex-wrap gap-2 justify-center items-center'} onSubmit={handleSubmit}>
                 {signData.email === "" && (
                     <div className={'relative peer'}>
