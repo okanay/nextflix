@@ -1,15 +1,13 @@
 import {useSelector} from "react-redux";
 import {NavigationSignUp} from "../../components/Sections/signup-sections/NavigationSignUp";
 import {FooterSignUp} from "../../components/Sections/signup-sections/FooterSignUp";
-import {WhiteBackground} from "../../components/Sections/signup-sections/WhiteBackground";
+import {SignUpLayout} from "../../components/Sections/signup-sections/SignUpLayout";
 const SignIn = () => {
 
     const language = useSelector(state => state.language.value)
 
-    return (<WhiteBackground>
-            <NavigationSignUp/>
-            <FooterSignUp/>
-        </WhiteBackground>
+    return (<SignUpLayout>
+        </SignUpLayout>
     )
 }
 

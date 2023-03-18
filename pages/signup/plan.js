@@ -1,15 +1,13 @@
-import {WhiteBackground} from "../../components/Sections/signup-sections/WhiteBackground";
+import {SignUpLayout} from "../../components/Sections/signup-sections/SignUpLayout";
 import {NavigationSignUp} from "../../components/Sections/signup-sections/NavigationSignUp";
 import {FooterSignUp} from "../../components/Sections/signup-sections/FooterSignUp";
 import {PlanSection} from "../../components/Sections/signup-sections/PlanSection";
 
 const Plan = () => {
 
-    return (<WhiteBackground>
-            <NavigationSignUp/>
+    return (<SignUpLayout>
             <PlanSection/>
-            <FooterSignUp/>
-        </WhiteBackground>
+        </SignUpLayout>
     )
 }
 

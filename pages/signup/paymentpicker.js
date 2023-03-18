@@ -1,15 +1,13 @@
-import {WhiteBackground} from "../../components/Sections/signup-sections/WhiteBackground";
+import {SignUpLayout} from "../../components/Sections/signup-sections/SignUpLayout";
 import {NavigationSignUp} from "../../components/Sections/signup-sections/NavigationSignUp";
 import {FooterSignUp} from "../../components/Sections/signup-sections/FooterSignUp";
 import {PaymentPickerSection} from "../../components/Sections/signup-sections/paymentPickerSection";
 
 const PaymentPicker = () => {
 
-    return (<WhiteBackground>
-            <NavigationSignUp/>
+    return (<SignUpLayout>
             <PaymentPickerSection/>
-            <FooterSignUp/>
-        </WhiteBackground>
+        </SignUpLayout>
     )
 }
 

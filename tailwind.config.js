@@ -11,6 +11,7 @@ function withOpacity(variableName) {
   }
 }
 
+
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -21,6 +22,9 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      roboto: ['Roboto Flex', "sans-serif"],
+    },
     extend: {
       screens: {
         'smPhone': "360px",
