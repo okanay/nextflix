@@ -9,7 +9,7 @@ export const PlanSection = () => {
     const language = useSelector(state => state.language.value.signup.plan)
 
 
-    return (<section id={'registration-section'} className={'max-w-[340px] w-full mx-auto h-full mt-20 sm:mt-44'}>
+    return (<section id={'plan-section'} className={'max-w-[340px] w-full mx-auto h-full mt-20 sm:mt-44'}>
         <div className={'w-full h-full flex flex-col flex-wrap justify-start items-center scale-95 xlPhone:scale-100'}>
             <Image src={checkmark} alt={"checkmark"} className={'w-12'} priority/>
             <h4 className={'text-xs mt-8'}>{language.p.p1} <b>2</b> {language.p.p2} <b>3</b></h4>

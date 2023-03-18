@@ -1,10 +1,9 @@
 import {useSelector} from "react-redux";
 import Link from "next/link";
 import {CheckSVG} from "../../UI/SignUp-UI/CheckSVG";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {useSignUpDataEffect, } from "../../../src/customEffects/usePlanChooseEffect";
 export const PlanChooseSection = () => {
-
 
     const signupData = useSelector(state => state.signup.value)
     const language = useSelector(state => state.language.value.signup.planChoose)
@@ -15,7 +14,7 @@ export const PlanChooseSection = () => {
     const selectedEffect = (id) => {return selected === id ? "bg-skin-theme-600" : "hidden"}
     useSignUpDataEffect(selected, "plan")
 
-    return <section id={'registration-section'} className={'max-w-[1080px] w-full h-full mx-auto flex flex-col justify-start items-start text-skin-theme-font-50 py-[28px] px-8 mb-8'}>
+    return <section id={'plan-choose-section'} className={'max-w-[1080px] w-full h-full mx-auto flex flex-col justify-start items-start text-skin-theme-font-50 py-[28px] px-8 mb-8'}>
         <div className={'flex flex-col flex-wrap scale-95 xlPhone:scale-100 mb-10'}>
             <h4 className={'text-[13px]'}>{language.p.p1} <b>2</b> {language.p.p2} <b>3</b></h4>
             <h1 className={'text-[32px] font-semibold '}>{language.t1}</h1>
