@@ -3,12 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import {PlanRules} from "../../UI/SignUp-UI/PlanRules";
 import checkmark from "../../../public/checkmark.png"
+import {motion as m} from "framer-motion";
+import {animationStore} from "../../../framer-motion/animation-store";
 
 export const PlanSection = () => {
 
     const language = useSelector(state => state.language.value.signup.plan)
 
-    return (<section id={'plan-section'} className={'max-w-[340px] w-full mx-auto h-full mb-32 tablet:mb-10 mt-20 sm:mt-44'}>
+    return (<m.section id={'plan-section'} className={'max-w-[340px] w-full mx-auto h-full mb-32 tablet:mb-10 mt-20 sm:mt-44'}>
         <div className={'w-full h-full flex flex-col flex-wrap justify-start items-center scale-95 xlPhone:scale-100'}>
             <Image src={checkmark} alt={"checkmark"} className={'w-12'} priority/>
             <h4 className={'text-xs mt-8'}>{language.p.p1} <b>2</b> {language.p.p2} <b>3</b></h4>
@@ -18,5 +20,5 @@ export const PlanSection = () => {
             </div>
             <Link href={'/signup/planchoose'} className={'w-full text-center mt-6 py-4 bg-skin-theme-600 rounded max-w-screen-lg w-full text-skin-theme-font-900 text-2xl'}>{language.b1}</Link>
         </div>
-    </section>)
+    </m.section>)
 }

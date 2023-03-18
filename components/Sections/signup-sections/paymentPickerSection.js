@@ -9,13 +9,15 @@ import Troy  from "../../../public/troy.png"
 import AmericanExpress  from "../../../public/americanexpress.png"
 import MasterCard  from "../../../public/mastercard.png"
 import {ArrowRightSVG} from "../../UI/SignUp-UI/ArrowRightSVG";
+import {motion as m} from "framer-motion";
+import {animationStore} from "../../../framer-motion/animation-store";
 
 export const PaymentPickerSection = () => {
 
     const language = useSelector(state => state.language.value.signup.paymentPicker)
 
 
-    return (<section id={'payment-picker-section'} className={'max-w-[500px] w-full mx-auto h-full my-12 '}>
+    return (<m.section  id={'payment-picker-section'} className={'max-w-[500px] w-full mx-auto h-full my-12 '}>
         <div className={'w-full h-full flex flex-col flex-wrap justify-start items-center scale-95 xlPhone:scale-100'}>
             <Image src={lock} alt={"checkmark"} className={'w-12'} priority/>
             <h4 className={'text-xs mt-8'}>{language.p.p1} <b>3</b> {language.p.p2} <b>3</b></h4>
@@ -60,5 +62,5 @@ export const PaymentPickerSection = () => {
                 </Link>
             </div>
         </div>
-    </section>)
+    </m.section>)
 }

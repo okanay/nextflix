@@ -2,13 +2,15 @@ import Link from "next/link";
 import {useSelector} from "react-redux";
 import {CurrentPlanBox} from "../../UI/SignUp-UI/CurrentPlanBox";
 import {PeerInput} from "../../UI/SignUp-UI/PeerInput";
+import {motion as m} from "framer-motion";
+import {animationStore} from "../../../framer-motion/animation-store";
 
 
 export const GiftOptionSection = () => {
 
     const language = useSelector(state => state.language.value.signup.giftOption)
 
-    return <section id={'gift-option-section'} className={'w-full h-full max-w-[440px] mx-auto my-16'}>
+    return<m.section id={'gift-option-section'} className={'w-full h-full max-w-[440px] mx-auto my-16'}>
         <div className={'w-full flex flex-col flex-wrap justify-center items-start w-full scale-95 xlPhone:scale-100'}>
             <h4 className={'text-[13px]'}>{language.p.p1} <b>3</b> {language.p.p2} <b>3</b></h4>
             <h2 className={'text-[32px] font-semibold text-start mb-4'}>{language.t1}</h2>
@@ -19,5 +21,5 @@ export const GiftOptionSection = () => {
                 {language.t2.p1}<span className={'text-blue-600 underline'}>{language.t2.p2}</span>
             </small>
         </div>
-    </section>
+    </m.section>
 }

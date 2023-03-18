@@ -1,10 +1,19 @@
 const easing = [0.6, -0.05, 0.01, 0.99];
 export const animationStore = {
-    answer: {
-        initial: {scaleY: 0, transformOrigin: "top"},
-        open: {scaleY: 1, scaleX: 1, x: 0, y: 0, transformOrigin: "top", position : "static", transition: {duration: 0}},
-        close: {scaleY: 0, scaleX: 1, x: 0, y: 1, transformOrigin: "top", position : "absolute",  transition: {delay: 0.1 ,duration: 0}},
+
+    signUpPageExit: {
+        initial: {
+            opacity: 0
+        },
+        animate: {opacity: 1},
+        exit: {
+            opacity: 0,
+            x : 100,
+            y : 100,
+        },
+        transition: {duration: 0.75},
     },
+
     sideNavigationBar: {
         initial: {
             x: 0,
