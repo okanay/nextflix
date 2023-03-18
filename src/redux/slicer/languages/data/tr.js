@@ -243,6 +243,10 @@ export const trLanguage = {
                 month : "/Ay",
                 change : "Değiştir",
             },
+            navigation : {
+                signIn : "Oturum Aç",
+                logout : "Oturumu Kapat"
+            }
         }
     }
 }

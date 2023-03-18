@@ -243,6 +243,10 @@ export const engLanguage = {
                 month : "/Month",
                 change : "Change",
             },
+            navigation : {
+                signIn : "Sign In",
+                logout : "Logout"
+            }
         }
     }
 }
