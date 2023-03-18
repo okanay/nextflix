@@ -10,7 +10,9 @@ export const engLanguage = {
             t2: "Watch anywhere. Cancel anytime.",
             t3: "Ready to watch? Enter your email to create or restart your membership.",
             i1: "Email address",
-            btn1: "Get Started"
+            btn1: "Get Started",
+            btn2: "Finish Sign Up",
+            btn3: "New Sign Up",
         },
         section2: {
             t1: "Enjoy on your TV.",
@@ -207,12 +209,6 @@ export const engLanguage = {
             },
             t1 : "Enter your gift code",
             i1 : "Gift Card Pin or Code",
-            box : {
-                price : "130.99 TL",
-                month : "/month",
-                plan : "Premium Plan",
-                change : "Change",
-            },
             b1 : "Redeem Gift Code",
             t2 : {
                 p1 : "This page is protected by Google reCAPTCHA to ensure you're not a bot. ",
@@ -230,22 +226,23 @@ export const engLanguage = {
             i3 : "Card number",
             i4 : "Expiration date (MM/YY)",
             i5 : "Security code (CVV)",
-            box : {
-                price : "130.99 TL",
-                month : "/month",
-                plan : "Premium Plan",
-                change : "Change",
-            },
             t2 : "Your payments will be processed internationally. Additional bank fees may apply.",
             t3 : {
                 p1 : "By checking the checkbox below, you agree to our ",
-                p2 : " Terms of Use, ",
-                p3 : "Privacy Statement, ",
-                p4 : "and that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently 130.99 TL/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.",
+                p2 : " Terms of Use",
+                p3 : "Privacy Statement",
+                p4 : ", and that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently ",
+                p5 : ") to your payment method until you cancel. You may cancel at any time to avoid future charges."
             },
             i6 : "I agree.",
             b1 : "Start Membership",
 
+        },
+        common : {
+            box : {
+                month : "/Month",
+                change : "Change",
+            },
         }
     }
 }

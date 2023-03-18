@@ -5,9 +5,13 @@ import Troy  from "../../../public/troy.png"
 import AmericanExpress  from "../../../public/americanexpress.png"
 import MasterCard  from "../../../public/mastercard.png"
 import Image from "next/image";
+import {CurrentPlanBox} from "../../UI/SignUp-UI/CurrentPlanBox";
+import {useGetPlanValue} from "../../../src/customHooks/useGetPlanValue";
 export const CreditOptionSection = () => {
 
     const language = useSelector(state => state.language.value.signup.creditOption)
+    const prices = useSelector(state => state.language.value.signup.planChoose)
+    const [planValue, setPlanValue] = useGetPlanValue()
 
     return <section id={'credit-option-section'} className={'w-full h-full max-w-[440px] mx-auto my-6'}>
         <div className={'w-full flex flex-col flex-wrap justify-center items-start w-full scale-95 xlPhone:scale-100'}>
@@ -29,18 +33,18 @@ export const CreditOptionSection = () => {
                    placeholder={language.i4}/>
             <input type="text" className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none mb-2 border border-skin-theme-body-400'}
                    placeholder={language.i5}/>
-            <div type="text" className={'w-full py-3 px-3 bg-skin-theme-body-100/60 rounded focus:outline-none border border-skin-theme-body-100 flex flex-row justify-between items-center'}>
-                <div className={'flex flex-col justify-between items-start'}>
-                    <span className={'font-semibold'}>{language.box.price}{language.box.month}</span>
-                    <span className={'text-skin-theme-font-400'}>{language.box.plan}</span>
-                </div>
-                <span className={'text-blue-600 font-semibold'}>{language.box.change}</span>
-            </div>
+         <CurrentPlanBox/>
 
 
             <small className={'text-skin-theme-font-700 text-[12px] mt-4'}>{language.t2}</small>
             <small className={'text-skin-theme-font-700 text-[12px] mt-4'}>
-                {language.t3.p1} <span className={'text-blue-600 underline'}>{language.t3.p2}</span> <span className={'text-blue-600 underline'}>{language.t3.p3}</span>{language.t3.p4}
+                <span>{language.t3.p1} </span>
+                <span className={'text-blue-600 underline'}>{language.t3.p2}</span>
+                <span>, </span>
+                <span className={'text-blue-600 underline'}>{language.t3.p3}</span>
+                <span>{language.t3.p4}</span>
+                <span>{prices.plans[planValue].price}</span>
+                <span>{language.t3.p5}</span>
             </small>
             <div className={'flex flex-row justify-start gap-1 items-center mt-3 text-skin-theme-font-700 text-[16px]'}>
                 <input type="checkbox"/>

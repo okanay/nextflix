@@ -1,6 +1,16 @@
-import Link from "next/link";
+import {useRouter} from "next/router";
+import {useDispatch} from "react-redux";
+import {resetSignUp} from "../../../src/redux/slicer/SignUp/SignUpSlicer";
 
 export const LoginArea = ({language}) => {
+
+    const router = useRouter()
+    const dispatch = useDispatch()
+    const handleSignUp = () => {
+        router.push("/signup/registration").then(() => {
+            dispatch(resetSignUp())
+        })
+    }
 
     return (<section id={'login-area'}
                      className={'flex flex-row justify-start tablet:justify-center mt-2 px-1 rounded w-full items-center tablet:mx-auto tablet:w-fit scale-95 tablet:scale-100 bg-skin-theme-body-1000/75'}>
@@ -21,8 +31,8 @@ export const LoginArea = ({language}) => {
                     <p>{language.l1}</p>
                 </div>
                 <div className={'flex flex-col justify-start text-xs mt-8 text-skin-theme-font-700'}>
-                    <p className={'text-base'}>{language.t2.p1}<Link href={'/signup/registration'}
-                                                                     className={'text-skin-theme-font-900'}>{language.t2.l1}</Link>
+                    <p className={'text-base'}>{language.t2.p1}<button type={"button"} onClick={handleSignUp}
+                                                                     className={'text-skin-theme-font-900'}>{language.t2.l1}</button>
                     </p>
                     <div className={'mt-3'}>
                         <span>{language.t3}</span>

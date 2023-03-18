@@ -10,7 +10,9 @@ export const trLanguage = {
             t2 : "İstediğiniz yerde izleyin. İstediğiniz zaman iptal edin.",
             t3 : "İzlemeye hazır mısınız? Üyelik oluşturmak veya üyeliğinize erişmek için e‑posta adresinizi girin.",
             i1 : "E-posta adresi",
-            btn1 : "Başlayın"
+            btn1 : "Başlayın",
+            btn2: "Kaydı Tamamlayın",
+            btn3: "Yeni Kayıt"
         },
         section2 : {
             t1 : "Televizyonunuzda izleyebilirsiniz.",
@@ -208,12 +210,6 @@ export const trLanguage = {
             },
             t1: "Hediye kodunuzu girin",
             i1: "Hediye Kartı Pini veya Kodu",
-            box: {
-                price: "130.99 TL",
-                month: "/Ay",
-                plan: "Özel Plan",
-                change: "Değiştir",
-            },
             b1: "Hediye Kodunu Kullan",
             t2: {
                 p1: "Bu sayfa robot olmadığınızı kanıtlamak için Google reCAPTCHA tarafından korunuyor. ",
@@ -231,21 +227,22 @@ export const trLanguage = {
             i3 : "Kart Numarası",
             i4 : "Son Kullanma Tarihi (AA/YY)",
             i5 : "Güvenlik kodu (CVV)",
-            box: {
-                price: "130.99 TL",
-                month: "/Ay",
-                plan: "Özel Plan",
-                change: "Değiştir",
-            },
             t2 : "Ödemeleriniz uluslararası olarak işlenecektir. İlave banka ücretleri uygulanabilir.",
             t3 : {
                 p1 : "Aşağıdaki onay kutusunu işaretleyerek",
                 p2 : "Kullanım Koşullarımızı",
-                p3 : "Gizlilik Bildirimimizi ",
-                p4 : "ve 18 yaşından büyük olduğunuzu kabul edersiniz. Netflix, üyeliğinizi otomatik olarak devam ettirecek ve siz iptal edene kadar üyelik ücretini (şu anda aylık 130,99 TL) ödeme yönteminizden tahsil edecektir. Gelecekte ücret alınmasını istemiyorsanız üyeliğinizi istediğiniz zaman iptal edebilirsiniz.",
+                p3 : "Gizlilik Bildirimimizi",
+                p4 : " ve 18 yaşından büyük olduğunuzu kabul edersiniz. Netflix, üyeliğinizi otomatik olarak devam ettirecek ve siz iptal edene kadar üyelik ücretini (şu anda aylık ",
+                p5 : ") ödeme yönteminizden tahsil edecektir. Gelecekte ücret alınmasını istemiyorsanız üyeliğinizi istediğiniz zaman iptal edebilirsiniz."
             },
             i6 : "Kabul Ediyorum",
             b1 : "Üyeliğinizi Başlatın",
+        },
+        common : {
+            box : {
+                month : "/Ay",
+                change : "Değiştir",
+            },
         }
     }
 }

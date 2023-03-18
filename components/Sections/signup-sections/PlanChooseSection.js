@@ -2,16 +2,17 @@ import {useSelector} from "react-redux";
 import Link from "next/link";
 import {CheckSVG} from "../../UI/SignUp-UI/CheckSVG";
 import {useState} from "react";
-
+import {useSignUpDataEffect, } from "../../../src/customEffects/usePlanChooseEffect";
 export const PlanChooseSection = () => {
 
+
+    const signupData = useSelector(state => state.signup.value)
     const language = useSelector(state => state.language.value.signup.planChoose)
-    const [selected, setSelected] = useState(2)
+    const [selected, setSelected] = useState(signupData.plan === "" ? 2 : signupData.plan)
     const textColor = (id) => {return selected === id ? "text-skin-theme-600 " : "cursor-pointer"}
     const boxColor = (id) => {return selected === id ? "bg-skin-theme-600" : "bg-skin-theme-300 cursor-pointer"}
     const selectedEffect = (id) => {return selected === id ? "bg-skin-theme-600" : "hidden"}
-
-
+    useSignUpDataEffect(selected, "plan")
 
     return <section id={'registration-section'} className={'max-w-[1080px] w-full h-full mx-auto flex flex-col justify-start items-start text-skin-theme-font-50 py-[28px] px-8 mb-8'}>
         <div className={'flex flex-col flex-wrap scale-95 xlPhone:scale-100 mb-10'}>
