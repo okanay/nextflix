@@ -6,8 +6,8 @@ import {WhereEverYouWant} from "../components/Sections/index-sections/whereEverY
 import {KidsAccount} from "../components/Sections/index-sections/kidsAccount";
 import {FrequentlyQuestions} from "../components/Sections/index-sections/frequentlyQuestions";
 import {useSelector} from "react-redux";
-import {IndexNavigation} from "../components/Layouts/Main/indexNavigation";
-import {IndexFooter} from "../components/Layouts/Main/IndexFooter";
+import {IndexNavigation} from "../components/Sections/index-sections/indexNavigation";
+import {IndexFooter} from "../components/Sections/index-sections/IndexFooter";
 
 export default function Home() {
 
