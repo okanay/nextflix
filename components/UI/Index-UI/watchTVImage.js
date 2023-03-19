@@ -12,8 +12,8 @@ export const WatchTVImage = ({language}) => {
                         relative flex flex-row justify-center`}>
                 <Image src={watchImage} alt={"tv"} className={'z-20'} priority/>
                 <video autoPlay loop muted playsInline className={`
-                        w-[15rem] h-[15rem] top-5
-                        basePhone:w-[17.5rem] basePhone:h-[17.5rem] basePhone:top-5
+                        w-[15rem] h-[22rem] -top-9
+                        basePhone:w-[17.5rem] basePhone:h-[17.5rem] basePhone:top-0
                         xlPhone:w-[22rem] xlPhone:h-[22rem] xlPhone:top-0
                         sm:w-[28rem] sm:h-[28rem] sm:top-10
                         tablet:w-[31.5rem] tablet:h-[31.5rem] tablet:top-0
