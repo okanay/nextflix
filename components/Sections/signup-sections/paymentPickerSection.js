@@ -11,13 +11,23 @@ import MasterCard  from "../../../public/mastercard.png"
 import {ArrowRightSVG} from "../../UI/SignUp-UI/ArrowRightSVG";
 import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
+import {useRouter} from "next/router";
+import {useState} from "react";
 
 export const PaymentPickerSection = () => {
 
     const language = useSelector(state => state.language.value.signup.paymentPicker)
 
+    const router = useRouter()
+    const [pageAnimation, setPageAnimation] = useState('pageStatic')
+    const handleClick = (url) => {
+        setPageAnimation('pageChange')
+        setTimeout(() => {
+            router.push(url)
+        }, 500)
+    }
 
-    return (<m.section  id={'payment-picker-section'} className={'max-w-[500px] w-full mx-auto h-full my-12 '}>
+    return (<m.section variants={animationStore.pageContainer} initial={'initial'} animate={pageAnimation} id={'payment-picker-section'} className={'max-w-[500px] w-full mx-auto h-full my-12 '}>
         <div className={'w-full h-full flex flex-col flex-wrap justify-start items-center scale-95 xlPhone:scale-100'}>
             <Image src={lock} alt={"checkmark"} className={'w-12'} priority/>
             <h4 className={'text-xs mt-8'}>{language.p.p1} <b>3</b> {language.p.p2} <b>3</b></h4>
@@ -35,7 +45,7 @@ export const PaymentPickerSection = () => {
                 <LockSVG/>
             </div>
             <div className={'w-full px-4 sm:px-0'}>
-                <Link href={'/signup/creditoption'} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center mb-2'}>
+                <button onClick={() => {handleClick("creditoption")}} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center mb-2'}>
                     <div className={'flex flex-row sm:flex-col justify-between gap-2 items-center'}>
                         <div className={'flex flex-col sm:flex-row justify-start gap-2 items-start'}>
                             <span>{language.b1}</span>
@@ -48,8 +58,8 @@ export const PaymentPickerSection = () => {
                         </div>
                     </div>
                     <ArrowRightSVG/>
-                </Link>
-                <Link href={'/signup/giftoption'} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center'}>
+                </button>
+                <button onClick={() => {handleClick("giftoption")}} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center'}>
                     <div className={'flex flex-row sm:flex-col justify-between gap-2 items-center'}>
                         <div className={'flex flex-col sm:flex-row justify-start gap-2 items-start'}>
                             <span>{language.b2}</span>
@@ -59,7 +69,7 @@ export const PaymentPickerSection = () => {
                         </div>
                     </div>
                     <ArrowRightSVG/>
-                </Link>
+                </button>
             </div>
         </div>
     </m.section>)

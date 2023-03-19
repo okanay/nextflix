@@ -9,11 +9,7 @@ export const SignUpLayout = ({children}) => {
     return (
         <div className={'w-full sm:h-[100vh] bg-skin-theme-body-50 flex flex-col justify-between'}>
             <NavigationSignUp/>
-                <AnimatePresence mode={"wait"}>
-                       <m.div initial={{opacity : 0, x: -35}} animate={{opacity : 1, x : 0}} transition={{duration : 0.50, delay : 0.15}} className={'w-full sm:h-[100vh]'}>
-                           {children}
-                       </m.div>
-                </AnimatePresence>
+            {children}
             <FooterSignUp/>
         </div>
 

@@ -5,6 +5,7 @@ import {useState} from "react";
 import {useSignUpDataEffect, } from "../../../src/customEffects/usePlanChooseEffect";
 import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
+import {useRouter} from "next/router";
 export const PlanChooseSection = () => {
 
     const signupData = useSelector(state => state.signup.value)
@@ -16,7 +17,16 @@ export const PlanChooseSection = () => {
     const selectedEffect = (id) => {return selected === id ? "bg-skin-theme-600" : "hidden"}
     useSignUpDataEffect(selected, "plan")
 
-    return <m.section id={'plan-choose-section'} className={'max-w-[1080px] w-full h-full mx-auto flex flex-col justify-start items-start text-skin-theme-font-50 py-[28px] px-8 mb-8'}>
+    const router = useRouter()
+    const [pageAnimation, setPageAnimation] = useState('pageStatic')
+    const handleClick = () => {
+        setPageAnimation('pageChange')
+        setTimeout(() => {
+            router.push('/signup/paymentpicker')
+        }, 500)
+    }
+
+    return <m.section section variants={animationStore.pageContainer} initial={'initial'} animate={pageAnimation} id={'plan-choose-section'} className={'max-w-[1080px] w-full h-full mx-auto flex flex-col justify-start items-start text-skin-theme-font-50 py-[28px] px-8 mb-8'}>
         <div className={'flex flex-col flex-wrap scale-95 xlPhone:scale-100 mb-10'}>
             <h4 className={'text-[13px]'}>{language.p.p1} <b>2</b> {language.p.p2} <b>3</b></h4>
             <h1 className={'text-[32px] font-semibold '}>{language.t1}</h1>
@@ -88,6 +98,6 @@ export const PlanChooseSection = () => {
         <small className={'mt-3 px-4 text-skin-theme-font-600'}>
             <span>{language.t3}</span>
         </small>
-        <Link href={'/signup/paymentpicker'} className={'w-10/12 basePhone:w-7/12 sm:w-5/12 mx-auto text-center mt-7 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl'}>{language.b1}</Link>
+        <button onClick={handleClick} className={'w-10/12 basePhone:w-7/12 sm:w-5/12 mx-auto text-center mt-7 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl'}>{language.b1}</button>
     </m.section>
 }
