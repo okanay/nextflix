@@ -6,6 +6,10 @@ import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {handlePageChange} from "./SignUpLayout";
 import Link from "next/link";
+import {createUserWithEmailAndPassword} from "firebase/auth";
+import {auth} from "../../../firebase/database";
+import {handleCreateNewAccount, handleSignIn} from "../../../firebase/functions";
+import {ErrorDecode} from "../../../helpers/Firebase-Error-Code-Decode/ErrorDecode";
 
 
 export const RegformSection = () => {
@@ -17,14 +21,41 @@ export const RegformSection = () => {
     const passwordRef = useRef()
     const [email, setEmail] = useState(signData.email)
     const [password, setPassword] = useState(signData.password)
+    const [error, setError] = useState({status: false, code: ""})
 
     useSignUpDataEffect(email, "email")
     useSignUpDataEffect(password, "password")
 
+    const handleCreateBtn = async () => {
+
+        let response = await handleCreateNewAccount(email, password)
+
+        if (response.ok)
+        {
+            handlePageChange(setPageAnimation, router, "/signup/plan")
+        }
+        else
+        {
+            response = await handleSignIn(email,password)
+
+            if (response.ok)
+            {
+                handlePageChange(setPageAnimation, router, "/signup/plan")
+
+            }
+            else
+            {
+                setError({status: true, code: response.error.code})
+            }
+        }
+    }
+
     const router = useRouter()
     const [pageAnimation, setPageAnimation] = useState('pageStatic')
 
-    return <m.section section variants={animationStore.pageContainer} initial={'initial'} animate={pageAnimation} id={'regform-section'} className={'w-full h-full max-w-[440px] mx-auto mt-6 sm:mt-12'}>
+    return <m.section variants={animationStore.pageContainer} initial={'initial'} animate={pageAnimation}
+                      id={'regform-section'}
+                      className={'w-full h-full max-w-[440px] mx-auto mt-6 sm:mt-12 mb-32 tablet:mb-10'}>
         <div className={'w-full flex flex-col flex-wrap justify-center items-start w-full scale-95 xlPhone:scale-100'}>
             <h4 className={'text-[13px]'}>{language.p.p1} <b>1</b> {language.p.p2} <b>3</b></h4>
             <h2 className={'text-[32px] font-semibold text-start mb-4'}>{language.t1}</h2>
@@ -36,7 +67,9 @@ export const RegformSection = () => {
                        id={'email'}
                        defaultValue={email}
                        ref={emailRef}
-                       onChange={() => {setEmail(emailRef.current.value)}}
+                       onChange={() => {
+                           setEmail(emailRef.current.value)
+                       }}
                        className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none border border-skin-theme-body-400 peer placeholder:text-transparent mb-2 focus:outline-none'}
                        placeholder={language.i2}/>
                 <label htmlFor="email"
@@ -50,7 +83,9 @@ export const RegformSection = () => {
                        id={'password'}
                        defaultValue={password}
                        ref={passwordRef}
-                       onChange={() => {setPassword(passwordRef.current.value)}}
+                       onChange={() => {
+                           setPassword(passwordRef.current.value)
+                       }}
                        className={'w-full py-4 px-3 bg-skin-theme-body-50 rounded focus:outline-none border border-skin-theme-body-400 peer placeholder:text-transparent focus:outline-none'}
                        placeholder={language.i2}/>
                 <label htmlFor="password"
@@ -62,8 +97,11 @@ export const RegformSection = () => {
                 <input type="checkbox"/>
                 <p className={'text-[16px]'}>{language.t4}</p>
             </div>
-            <Link href={"/signup/plan"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
-            <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/plan")}} className={'text-center w-full mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl mb-32 tablet:mb-0'}>{language.b1}</button>
+            {error.status && (<ErrorDecode code={error.code} />)}
+            <Link href={"/signup/plan"} className={'absolute top-0 left-0 scale-0'}></Link>
+            <button onClick={handleCreateBtn}
+                    className={'text-center w-full mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl mb-32 tablet:mb-0'}>{language.b1}</button>
+
         </div>
     </m.section>
 }

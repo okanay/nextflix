@@ -41,7 +41,7 @@ export const PaymentPickerSection = () => {
                 <LockSVG/>
             </div>
             <div className={'w-full px-4 sm:px-0'}>
-                <Link href={"/signup/creditoption"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
+                <Link href={"/signup/creditoption"}  className={'absolute top-0 left-0 scale-0'}></Link>
                 <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/creditoption")}} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center mb-2'}>
                     <div className={'flex flex-row sm:flex-col justify-between gap-2 items-center'}>
                         <div className={'flex flex-col sm:flex-row justify-start gap-2 items-start'}>
@@ -56,7 +56,7 @@ export const PaymentPickerSection = () => {
                     </div>
                     <ArrowRightSVG/>
                 </button>
-                <Link href={"/signup/giftoption"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
+                <Link href={"/signup/giftoption"} className={'absolute top-0 left-0 scale-0'}></Link>
                 <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/giftoption")}} className={'w-full text-start px-4  py-4 bg-transparent border border-skin-theme-body-400 rounded text-skin-theme-font-50 flex flex-row justify-between items-center'}>
                     <div className={'flex flex-row sm:flex-col justify-between gap-2 items-center'}>
                         <div className={'flex flex-col sm:flex-row justify-start gap-2 items-start'}>

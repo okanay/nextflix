@@ -56,7 +56,7 @@ export const CreditOptionSection = () => {
                 <input type="checkbox"/>
                 <p>{language.i6}</p>
             </div>
-            <Link href={"/signup/paymentpicker"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
+            <Link href={"/signup/paymentpicker"}  className={'absolute top-0 left-0 scale-0'}></Link>
             <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/paymentpicker")}} className={'text-center mt-4 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl tablet:mb-0 w-full'}>{language.b1}</button>
         </div>
     </m.section>

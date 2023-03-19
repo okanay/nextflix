@@ -1,6 +1,6 @@
 import {NavigationSignUp} from "./NavigationSignUp";
 import {FooterSignUp} from "./FooterSignUp";
-import {animationStore} from "../../../framer-motion/animation-store";
+
 
 export const SignUpLayout = ({children}) => {
 

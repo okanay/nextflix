@@ -131,6 +131,19 @@ export const trLanguage = {
             t4: "Netflix özel teklifleri e‑posta ile gönderilmesin.",
             b1: "İleri",
         },
+        password : {
+            p: {
+                p1: "ADIM",
+                p2: "/",
+            },
+            t1 : "Tekrar hoş geldiniz!",
+            t2 : "Netflix'e katılmak çok kolay.",
+            t3 : "Hemen izlemeye başlamak için parolanızı girin.",
+            t4 : "E-posta",
+            i1 : "Parolanızı girin",
+            b1 : "Parolamı Unuttum",
+            b2 : "İleri",
+        },
         plan: {
             p: {
                 p1: "ADIM",
@@ -247,6 +260,28 @@ export const trLanguage = {
                 signIn : "Oturum Aç",
                 logout : "Oturumu Kapat"
             }
+        }
+    },
+    error : {
+        code1 : {
+            code : "auth/email-already-in-use",
+            decode : "E-mail Adresi Kullanılıyor!"
+        },
+        code2 : {
+            code : "auth/wrong-password",
+            decode : "Girdiğiniz Şifre Hatalı!"
+        },
+        code3 : {
+            code : "auth/internal-error",
+            decode : "Bir Hata Meydana Geldi!"
+        },
+        code4 : {
+            code : "auth/user-not-found",
+            decode : "Kullanıcı Bulunamadı!"
+        },
+        code5 : {
+            code : "auth/too-many-requests",
+            decode : "Çok fazla deneme yaptınız!"
         }
     }
 }

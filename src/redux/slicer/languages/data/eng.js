@@ -131,6 +131,19 @@ export const engLanguage = {
             t4: "Please do not email me Netflix special offers.",
             b1: "Next",
         },
+        password : {
+            p: {
+                p1: "STEP",
+                p2: "OF",
+            },
+            t1 : "Welcome back!",
+            t2 : "Joining Netflix is easy.",
+            t3 : "Enter your password and you'll be watching in no time.",
+            t4 : "Email",
+            i1 : "Enter your password",
+            b1 : "Forgot your password?",
+            b2 : "Next",
+        },
         plan: {
             p: {
                 p1: "STEP",
@@ -247,6 +260,28 @@ export const engLanguage = {
                 signIn : "Sign In",
                 logout : "Logout"
             }
+        }
+    },
+    error : {
+        code1 : {
+            code : "auth/email-already-in-use",
+            decode : "Email Address Already In Use!"
+        },
+        code2 : {
+            code : "auth/wrong-password",
+            decode : "Wrong Password!"
+        },
+        code3 : {
+            code : "auth/internal-error",
+            decode : "Interval Error Found!"
+        },
+        code4 : {
+            code : "auth/user-not-found",
+            decode : "User Not Found!"
+        },
+        code5 : {
+            code : "auth/too-many-requests",
+            decode : "Too many request!"
         }
     }
 }

@@ -24,7 +24,7 @@ export const GiftOptionSection = () => {
             <h2 className={'text-[32px] font-semibold text-start mb-4'}>{language.t1}</h2>
             <PeerInput defaultValue={"OA-GS-1998"} placeholder={language.i1} id={"giftCode"}/>
             <CurrentPlanBox/>
-            <Link href={"/signup/paymentpicker"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
+            <Link href={"/signup/paymentpicker"} className={'absolute top-0 left-0 scale-0'}></Link>
             <button onClick={() => {
                 handlePageChange(setPageAnimation, router, "/signup/paymentpicker")
             }}
