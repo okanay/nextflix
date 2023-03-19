@@ -6,6 +6,7 @@ import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {useState} from "react";
 import {handlePageChange} from "./SignUpLayout";
+import Link from "next/link";
 
 
 export const GiftOptionSection = () => {
@@ -23,6 +24,7 @@ export const GiftOptionSection = () => {
             <h2 className={'text-[32px] font-semibold text-start mb-4'}>{language.t1}</h2>
             <PeerInput defaultValue={"OA-GS-1998"} placeholder={language.i1} id={"giftCode"}/>
             <CurrentPlanBox/>
+            <Link href={"/signup/paymentpicker"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
             <button onClick={() => {
                 handlePageChange(setPageAnimation, router, "/signup/paymentpicker")
             }}

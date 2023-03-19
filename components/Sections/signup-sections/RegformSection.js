@@ -5,6 +5,7 @@ import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {handlePageChange} from "./SignUpLayout";
+import Link from "next/link";
 
 
 export const RegformSection = () => {
@@ -61,6 +62,7 @@ export const RegformSection = () => {
                 <input type="checkbox"/>
                 <p className={'text-[16px]'}>{language.t4}</p>
             </div>
+            <Link href={"/signup/plan"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
             <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/plan")}} className={'text-center w-full mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl mb-32 tablet:mb-0'}>{language.b1}</button>
         </div>
     </m.section>

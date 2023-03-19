@@ -6,6 +6,7 @@ import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {handlePageChange} from "./SignUpLayout";
+import Link from "next/link";
 
 export const PlanChooseSection = () => {
 
@@ -93,6 +94,7 @@ export const PlanChooseSection = () => {
         <small className={'mt-3 px-4 text-skin-theme-font-600'}>
             <span>{language.t3}</span>
         </small>
+        <Link href={"/signup/paymentpicker"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
         <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/paymentpicker")}} className={'w-10/12 basePhone:w-7/12 sm:w-5/12 mx-auto text-center mt-7 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl'}>{language.b1}</button>
     </m.section>
 }

@@ -7,6 +7,7 @@ import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {useState} from "react";
 import {handlePageChange} from "./SignUpLayout";
+import Link from "next/link";
 
 
 export const PlanSection = () => {
@@ -25,6 +26,7 @@ export const PlanSection = () => {
             <div className={'max-w-[300px]'}>
                 <PlanRules language={language}/>
             </div>
+            <Link href={"/signup/planchoose"} prefetch={true} className={'absolute top-0 left-0 scale-0'}></Link>
             <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/planchoose")}} className={'w-full text-center mt-6 py-4 bg-skin-theme-600 rounded max-w-screen-lg w-full text-skin-theme-font-900 text-2xl'}>{language.b1}</button>
         </div>
     </m.section>)
