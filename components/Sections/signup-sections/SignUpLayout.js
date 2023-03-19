@@ -1,8 +1,6 @@
 import {NavigationSignUp} from "./NavigationSignUp";
 import {FooterSignUp} from "./FooterSignUp";
-import {useRouter} from "next/router";
-import {AnimatePresence, motion as m} from "framer-motion";
-import {useEffect, useState} from "react";
+import {animationStore} from "../../../framer-motion/animation-store";
 
 export const SignUpLayout = ({children}) => {
 
@@ -16,34 +14,9 @@ export const SignUpLayout = ({children}) => {
     );
 };
 
-
-export const LoadingRouter = ({children}) => {
-
-    const router = useRouter()
-    const path = router.pathname
-    const [loading, setLoading] = useState(false)
-
-    useEffect(() => {
-        const handleStart = (url) => (url !== router.pathname) && setLoading(true)
-        const handleComplete = (url) => (url === router.pathname) && setTimeout(() => {
-            setLoading(false)
-        }, 5000)
-
-        router.events.on('routeChangeStart', handleStart)
-        router.events.on('routeChangeComplete', handleComplete)
-        router.events.on('routeChangeError', handleComplete)
-
-        return () => {
-
-            router.events.off('routeChangeStart', handleStart)
-            router.events.off('routeChangeComplete', handleComplete)
-            router.events.off('routeChangeError', handleComplete)
-
-        }
-
-    }, [])
-
-    return loading ? <><p>Loading..</p></> : (<div className={'w-full h-full'}>
-        {children}
-    </div>)
+export const handlePageChange = (setPageAnimation, router, url) => {
+    setPageAnimation('pageChange')
+    setTimeout(() => {
+        router.push(url)
+    }, animationStore.pageChangeTimeOut)
 }

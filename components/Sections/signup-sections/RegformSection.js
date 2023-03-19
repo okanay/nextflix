@@ -4,6 +4,8 @@ import {useSignUpDataEffect} from "../../../src/customEffects/usePlanChooseEffec
 import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
+import {handlePageChange} from "./SignUpLayout";
+
 
 export const RegformSection = () => {
 
@@ -20,13 +22,6 @@ export const RegformSection = () => {
 
     const router = useRouter()
     const [pageAnimation, setPageAnimation] = useState('pageStatic')
-    const handleClick = () => {
-        setPageAnimation('pageChange')
-        setTimeout(() => {
-            router.push('/signup/plan')
-        }, 500)
-    }
-
 
     return <m.section section variants={animationStore.pageContainer} initial={'initial'} animate={pageAnimation} id={'regform-section'} className={'w-full h-full max-w-[440px] mx-auto mt-6 sm:mt-12'}>
         <div className={'w-full flex flex-col flex-wrap justify-center items-start w-full scale-95 xlPhone:scale-100'}>
@@ -66,7 +61,7 @@ export const RegformSection = () => {
                 <input type="checkbox"/>
                 <p className={'text-[16px]'}>{language.t4}</p>
             </div>
-            <button onClick={handleClick} className={'text-center w-full mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl mb-32 tablet:mb-0'}>{language.b1}</button>
+            <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/plan")}} className={'text-center w-full mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl mb-32 tablet:mb-0'}>{language.b1}</button>
         </div>
     </m.section>
 }

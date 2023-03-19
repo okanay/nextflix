@@ -1,24 +1,19 @@
 import {useSelector} from "react-redux";
 import Image from "next/image";
-import Link from "next/link";
 import {PlanRules} from "../../UI/SignUp-UI/PlanRules";
 import checkmark from "../../../public/checkmark.png"
 import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {useState} from "react";
+import {handlePageChange} from "./SignUpLayout";
+
 
 export const PlanSection = () => {
 
 
     const router = useRouter()
     const [pageAnimation, setPageAnimation] = useState('pageStatic')
-    const handleClick = () => {
-        setPageAnimation('pageChange')
-        setTimeout(() => {
-            router.push('/signup/planchoose')
-        }, 500)
-    }
 
     const language = useSelector(state => state.language.value.signup.plan)
 
@@ -30,7 +25,7 @@ export const PlanSection = () => {
             <div className={'max-w-[300px]'}>
                 <PlanRules language={language}/>
             </div>
-            <button onClick={handleClick} className={'w-full text-center mt-6 py-4 bg-skin-theme-600 rounded max-w-screen-lg w-full text-skin-theme-font-900 text-2xl'}>{language.b1}</button>
+            <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/planchoose")}} className={'w-full text-center mt-6 py-4 bg-skin-theme-600 rounded max-w-screen-lg w-full text-skin-theme-font-900 text-2xl'}>{language.b1}</button>
         </div>
     </m.section>)
 }

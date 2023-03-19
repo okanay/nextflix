@@ -1,6 +1,7 @@
 const easing = [0.6, -0.05, 0.01, 0.99];
 export const animationStore = {
 
+    pageChangeTimeOut : 350,
     pageContainer : {
         initial : {
             opacity : 1,

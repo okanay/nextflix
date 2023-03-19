@@ -1,5 +1,4 @@
 import {useSelector} from "react-redux";
-import Link from "next/link";
 import Visa  from "../../../public/visa.png"
 import Troy  from "../../../public/troy.png"
 import AmericanExpress  from "../../../public/americanexpress.png"
@@ -12,21 +11,17 @@ import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useState} from "react";
 import {useRouter} from "next/router";
+import {handlePageChange} from "./SignUpLayout";
+
 export const CreditOptionSection = () => {
 
     const language = useSelector(state => state.language.value.signup.creditOption)
     const prices = useSelector(state => state.language.value.signup.planChoose)
     const [planValue, setPlanValue] = useGetPlanValue()
 
-
     const router = useRouter()
     const [pageAnimation, setPageAnimation] = useState('pageStatic')
-    const handleClick = () => {
-        setPageAnimation('pageChange')
-        setTimeout(() => {
-            router.push('/signup/paymentpicker')
-        }, 500)
-    }
+
 
     return <m.section variants={animationStore.pageContainer} initial={'initial'} animate={pageAnimation} id={'credit-option-section'} className={'w-full h-full max-w-[440px] mx-auto my-6'}>
         <div className={'w-full flex flex-col flex-wrap justify-center items-start w-full scale-95 xlPhone:scale-100'}>
@@ -61,7 +56,7 @@ export const CreditOptionSection = () => {
                 <p>{language.i6}</p>
             </div>
 
-            <button onClick={handleClick} className={'text-center mt-4 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl tablet:mb-0 w-full'}>{language.b1}</button>
+            <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/paymentpicker")}} className={'text-center mt-4 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl tablet:mb-0 w-full'}>{language.b1}</button>
         </div>
     </m.section>
 }
