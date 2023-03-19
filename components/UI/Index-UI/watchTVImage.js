@@ -13,10 +13,10 @@ export const WatchTVImage = ({language}) => {
                 <Image src={watchImage} alt={"tv"} className={'z-20'} priority/>
                 <video autoPlay loop muted playsInline className={`
                         w-[15rem] h-[22rem] -top-9
-                        basePhone:w-[17.5rem] basePhone:h-[17.5rem] basePhone:top-0
-                        xlPhone:w-[22rem] xlPhone:h-[22rem] xlPhone:top-0
-                        sm:w-[28rem] sm:h-[28rem] sm:top-10
-                        tablet:w-[31.5rem] tablet:h-[31.5rem] tablet:top-0
+                        basePhone:w-[17.5rem] basePhone:h-[17.5rem] basePhone:top-2
+                        xlPhone:w-[19.5rem] xlPhone:h-[22rem] xlPhone:top-0
+                        sm:w-[29rem] sm:h-[28rem] sm:top-10
+                        tablet:w-[29rem] tablet:h-[36rem] tablet:-top-9
                         absolute z-0`}>
                     <source
                         src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v"
