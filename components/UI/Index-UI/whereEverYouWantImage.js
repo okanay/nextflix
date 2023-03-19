@@ -14,7 +14,7 @@ export const WhereEverYouWantImage = ({language}) => {
                 <Image src={whereImage} className={'z-10 scale-80 tablet:scale-100'} alt={"tv"} priority/>
                 <video autoPlay loop muted playsInline className={`
                         w-[10rem] h-[10rem] top-10
-                        basePhone:w-[12.5rem] basePhone:h-[12.5rem] basePhone:top-10
+                        basePhone:w-[12.5rem] basePhone:h-[12.5rem] basePhone:top-5
                         xlPhone:w-[13rem] xlPhone:h-[13rem] lgPhone:top-10
                         sm:w-[20rem] sm:h-[20rem] sm:top-10
                         tablet:w-[26rem] tablet:h-[26rem] tablet:top-0
