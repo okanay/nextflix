@@ -18,5 +18,5 @@ export const handlePageChange = (setPageAnimation, router, url) => {
     setPageAnimation('pageChange')
     setTimeout(() => {
         router.push(url)
-    }, animationStore.pageChangeTimeOut)
+    }, 425)
 }

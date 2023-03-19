@@ -1,7 +1,6 @@
 const easing = [0.6, -0.05, 0.01, 0.99];
 export const animationStore = {
 
-    pageChangeTimeOut : 350,
     pageContainer : {
         initial : {
             opacity : 1,
@@ -17,7 +16,7 @@ export const animationStore = {
         pageChange : {
             x : -100,
             opacity: 0,
-            transition: {duration: 0.5}
+            transition: {duration: 0.4}
         },
     },
     sideNavigationBar: {
