@@ -263,7 +263,7 @@ export const engLanguage = {
             }
         }
     },
-    error : {
+    errors : {
         code1 : {
             code : "auth/email-already-in-use",
             decode : "Email Address Already In Use!"
@@ -273,7 +273,7 @@ export const engLanguage = {
             decode : "Wrong Password!"
         },
         code3 : {
-            code : "auth/internal-error",
+            code : "auth/internal-errors",
             decode : "Interval Error Found!"
         },
         code4 : {
@@ -287,6 +287,10 @@ export const engLanguage = {
         code6 : {
             code : "auth/weak-password",
             decode : "Your Password Must Be Include Min 6 Digit!"
+        },
+        code7 : {
+            code : "firestore/data-not-found",
+            decode : "Data Not Found!"
         }
     }
 }

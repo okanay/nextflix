@@ -1,12 +1,11 @@
 import {useSelector} from "react-redux";
 import {useRef, useState} from "react";
-import {useSignUpDataEffect} from "../../../src/customEffects/usePlanChooseEffect";
 import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {handlePageChange} from "./Layout/SignUpLayout";
 import Link from "next/link";
-import {handleCreateNewAccount} from "../../../firebase/functions";
+import {FirebaseCreateNewAccount} from "../../../firebase/functions";
 import {ErrorDecode} from "../../../helpers/Firebase-Error-Code-Decode/ErrorDecode";
 import {signIn} from "next-auth/react";
 
@@ -22,11 +21,9 @@ export const RegformSection = () => {
     const [password, setPassword] = useState(signData.password)
     const [error, setError] = useState({status: false, code: ""})
 
-    useSignUpDataEffect(email, "email")
-
     const handleCreateBtn = async () => {
 
-        let response = await handleCreateNewAccount(email, password)
+        let response = await FirebaseCreateNewAccount(email, password)
 
         if (response.ok)
         {

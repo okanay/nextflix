@@ -1,6 +1,6 @@
 import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials";
-import {handleSignIn} from "../../../firebase/functions";
+import {FirebaseSignIn} from "../../../firebase/functions";
 export const authOptions = {
     providers: [
         CredentialsProvider({
@@ -10,7 +10,7 @@ export const authOptions = {
                 let password = credentials.email || "";
                 let email = credentials.password || "";
 
-                const response = await handleSignIn(password, email)
+                const response = await FirebaseSignIn(password, email)
                 if (response.ok)
                 {
 

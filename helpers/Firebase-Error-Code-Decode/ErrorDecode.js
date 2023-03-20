@@ -2,7 +2,7 @@ import {useSelector} from "react-redux";
 
 export const ErrorDecode = ({code}) => {
 
-    const language = useSelector(state => state.language.value.error)
+    const language = useSelector(state => state.language.value.errors)
 
     switch (code) {
 
@@ -20,7 +20,7 @@ export const ErrorDecode = ({code}) => {
                 </span>
             )
 
-        case "auth/internal-error":
+        case "auth/internal-errors":
             return (
                 <span className={'w-full text-center text-skin-theme-600'}>
                 {language.code3.decode}
@@ -45,6 +45,13 @@ export const ErrorDecode = ({code}) => {
             return (
                 <span className={'w-full text-center text-skin-theme-600'}>
                 {language.code6.decode}
+                </span>
+            )
+
+        case "firestore/data-not-found":
+            return (
+                <span className={'w-full text-center text-skin-theme-600'}>
+                {language.code7.decode}
                 </span>
             )
 

@@ -5,7 +5,7 @@ import {PlanChooseSection} from "../../components/Sections/signup-sections/Prote
 import {useRouteProtectEffect} from "../../src/customEffects/useRouteProtectEffect";
 import {getSession} from "next-auth/react";
 
-const Plan = ({status}) => {
+const Plan = ({data, status}) => {
 
     useRouteProtectEffect(status)
 
@@ -24,13 +24,13 @@ export async function getServerSideProps(context) {
     if (await session !== null)
     {
         return {
-            props: {session : session, status : "authenticated"},
+            props: {data : session, status : "authenticated"},
         }
     }
     else
     {
         return {
-            props: {session : "", status : "unauthenticated"},
+            props: {data : "", status : "unauthenticated"},
         }
     }
 

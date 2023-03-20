@@ -9,6 +9,7 @@ export const OfflineWatchImage = ({language}) => {
 
     return (<div className={'bg-skin-theme-body-1000 flex flex-col items-center justify-center relative'}>
         <Image src={offlineImage} alt={"tv"} priority className={`
+                        w-auto h-auto
                         w-[18rem] h-[14rem]
                         basePhone:w-[20rem] basePhone:h-[16rem] 
                         xlPhone:w-[24rem] xlPhone:h-[20rem] 

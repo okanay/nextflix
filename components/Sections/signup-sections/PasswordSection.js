@@ -6,7 +6,7 @@ import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {handlePageChange} from "./Layout/SignUpLayout";
 import Link from "next/link";
-import {handleSignIn} from "../../../firebase/functions";
+import {FirebaseSignIn} from "../../../firebase/functions";
 import {ErrorDecode} from "../../../helpers/Firebase-Error-Code-Decode/ErrorDecode";
 import {useEmailSignDataEffect} from "../../../src/customEffects/useEmailSignDataEffect";
 import {signIn} from "next-auth/react";

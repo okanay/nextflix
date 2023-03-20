@@ -263,7 +263,7 @@ export const trLanguage = {
             }
         }
     },
-    error : {
+    errors : {
         code1 : {
             code : "auth/email-already-in-use",
             decode : "E-mail Adresi Kullanılıyor!"
@@ -273,7 +273,7 @@ export const trLanguage = {
             decode : "Girdiğiniz Şifre Hatalı!"
         },
         code3 : {
-            code : "auth/internal-error",
+            code : "auth/internal-errors",
             decode : "Bir Hata Meydana Geldi!"
         },
         code4 : {
@@ -287,6 +287,11 @@ export const trLanguage = {
         code6 : {
             code : "auth/weak-password",
             decode : "Şifreniz Minimum 6 Karakterden Oluşmalı!"
+        },
+        code7 : {
+            code : "firestore/data-not-found",
+            decode : "Data Bulunamadı!"
         }
+
     }
 }

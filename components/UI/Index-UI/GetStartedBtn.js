@@ -3,7 +3,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useRef, useState} from "react";
 import {useRouter} from "next/router";
 import {emailChange, resetSignUp} from "../../../src/redux/slicer/SignUp/SignUpSlicer";
-import {handleMailExist} from "../../../firebase/functions";
+import {FirebaseGetUserData, FirebaseUserExistCheck} from "../../../firebase/functions";
 import {signOut, useSession} from "next-auth/react";
 
 export const GetStartedBtn = () => {
@@ -13,7 +13,7 @@ export const GetStartedBtn = () => {
     const language = useSelector(state => state.language.value.index.section1)
     const emailRef = useRef(null)
     const [email, setEmail] = useState("")
-    const handleResetSignUp = () => {
+    const handleSignOut = () => {
         signOut({callbackUrl : "/"}).then(() =>
         {
             dispatch(resetSignUp())
@@ -30,7 +30,7 @@ export const GetStartedBtn = () => {
             }
             else
             {
-                const response = await handleMailExist(email)
+                const response = await FirebaseUserExistCheck(email)
                 dispatch(emailChange(email))
 
                 if (response.ok === false)
@@ -57,7 +57,7 @@ export const GetStartedBtn = () => {
     }
 
     return (<>
-            {status === "unauthenticated" && (<h4 className={'text-base md:text-xl font-semibold text-center'}>{language.t3}</h4>)}
+            {status === "unauthenticated" && (<h4 className={'text-base md:text-xl font-semibold text-center px-2 tablet:px-0'}>{language.t3}</h4>)}
             <form className={'flex flex-row flex-wrap gap-2 justify-center items-center'} onSubmit={handleSubmit}>
                 {status === "unauthenticated" && (
 
@@ -93,7 +93,7 @@ export const GetStartedBtn = () => {
                 </button>
             </form>
             {status === "authenticated" && (
-                <button type={'button'} className={'mx-auto px-2 py-1 w-fit text-skin-theme-font-900 border border-skin-theme-body-400 transition-all duration-300 hover:scale-105 text-sm rounded'} onClick={handleResetSignUp}>
+                <button type={'button'} className={'mx-auto px-2 py-1 w-fit text-skin-theme-font-900 border border-skin-theme-body-400 transition-all duration-300 hover:scale-105 text-sm rounded'} onClick={handleSignOut}>
                 {language.btn3}
             </button>
             )}
