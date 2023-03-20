@@ -7,12 +7,29 @@ import {useRouter} from "next/router";
 import {useState} from "react";
 import {handlePageChange} from "../Layout/SignUpLayout";
 import Link from "next/link";
+import {FirebaseUserPlanSet} from "../../../../firebase/functions";
+import {signOut, useSession} from "next-auth/react";
+import {useGetPlanValue} from "../../../../src/customHooks/useGetPlanValue";
 
 
 export const GiftOptionSection = () => {
     const router = useRouter()
     const language = useSelector(state => state.language.value.signup.giftOption)
     const [pageAnimation, setPageAnimation] = useState('pageStatic')
+    const [planValue, setPlanValue, planName] = useGetPlanValue()
+    const {data : session, status} = useSession()
+
+
+    const StartMembership = async () => {
+        if (status === "authenticated")
+        {
+            let accessToken = session.user.name.accessToken
+            let membershipType = "Gift Card Option"
+            await FirebaseUserPlanSet(accessToken, planValue, planName, membershipType).then(res => {
+                signOut({callbackUrl : "/login"})
+            })
+        }
+    }
 
     return <m.section variants={animationStore.pageContainer}
                       initial={'initial'}
@@ -25,9 +42,7 @@ export const GiftOptionSection = () => {
             <PeerInput defaultValue={"OA-GS-1998"} placeholder={language.i1} id={"giftCode"}/>
             <CurrentPlanBox/>
             <Link href={"/signup/paymentpicker"} className={'absolute top-0 left-0 scale-0'}></Link>
-            <button onClick={() => {
-                handlePageChange(setPageAnimation, router, "/signup/paymentpicker")
-            }}
+            <button onClick={StartMembership}
                     className={'text-center mt-3 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl tablet:mb-0 w-full'}>{language.b1}</button>
             <small className={'text-skin-theme-font-400 text-[12px] mt-4'}>
                 {language.t2.p1}<span className={'text-blue-600 underline'}>{language.t2.p2}</span>

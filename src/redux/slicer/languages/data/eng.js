@@ -14,6 +14,8 @@ export const engLanguage = {
             btn1: "Get Started",
             btn2: "Finish Sign Up",
             btn3: "New Sign Up",
+            btn4: "Watch Now",
+
         },
         section2: {
             t1: "Enjoy on your TV.",

@@ -13,15 +13,29 @@ import {useState} from "react";
 import {useRouter} from "next/router";
 import {handlePageChange} from "../Layout/SignUpLayout";
 import Link from "next/link";
+import {FirebaseUserPlanSet} from "../../../../firebase/functions";
+import {signOut, useSession} from "next-auth/react";
 
 export const CreditOptionSection = () => {
 
+    const {data:session, status} = useSession()
     const language = useSelector(state => state.language.value.signup.creditOption)
     const prices = useSelector(state => state.language.value.signup.planChoose)
-    const [planValue, setPlanValue] = useGetPlanValue()
+    const [planValue, setPlanValue, planName] = useGetPlanValue()
 
     const router = useRouter()
     const [pageAnimation, setPageAnimation] = useState('pageStatic')
+
+    const StartMembership = async () => {
+        if (status === "authenticated")
+        {
+            let accessToken = session.user.name.accessToken
+            let membershipType = "Credit Option"
+            await FirebaseUserPlanSet(accessToken, planValue, planName, membershipType).then(res => {
+                signOut({callbackUrl : "/login"})
+            })
+        }
+    }
 
 
     return <m.section variants={animationStore.pageContainer} initial={'initial'} animate={pageAnimation} id={'credit-option-section'} className={'w-full h-full max-w-[440px] mx-auto my-6'}>
@@ -57,7 +71,7 @@ export const CreditOptionSection = () => {
                 <p>{language.i6}</p>
             </div>
             <Link href={"/signup/paymentpicker"}  className={'absolute top-0 left-0 scale-0'}></Link>
-            <button onClick={() => {handlePageChange(setPageAnimation,router, "/signup/paymentpicker")}} className={'text-center mt-4 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl tablet:mb-0 w-full'}>{language.b1}</button>
+            <button onClick={StartMembership} className={'text-center mt-4 py-4 bg-skin-theme-600 rounded max-w-screen-lg text-skin-theme-font-900 text-2xl tablet:mb-0 w-full'}>{language.b1}</button>
         </div>
     </m.section>
 }

@@ -14,7 +14,7 @@ export const FirebaseCreateNewAccount = async (email, password) => {
 
     }).then(() => {
 
-        const {uid, email, emailVerified,accessToken,refreshToken} = user
+        const {uid, email, emailVerified, accessToken, refreshToken} = user
         const {creationTime, lastSignInTime, createdAt, lastLoginAt} = user.metadata
 
         const data = {
@@ -27,8 +27,9 @@ export const FirebaseCreateNewAccount = async (email, password) => {
             accessToken,
             refreshToken,
             uid,
-            planID : "-1",
-            planName : "Free Tier"
+            planID: "-2",
+            planName: "Free Tier",
+            membershipType: "not defined"
         }
         return setDoc(doc(db, "users", uid), data)
 
@@ -42,12 +43,9 @@ export const FirebaseCreateNewAccount = async (email, password) => {
 export const FirebaseSignIn = async (email, password) => {
 
     let user = undefined
-    return await signInWithEmailAndPassword(auth, email, password).
-
-    then((res) =>
-    {
+    return await signInWithEmailAndPassword(auth, email, password).then((res) => {
         user = res.user
-        const {uid, refreshToken, accessToken } = user
+        const {uid, refreshToken, accessToken} = user
         const {lastSignInTime, lastLoginAt} = user.metadata
         const updatedData = {
             lastSignInTime,
@@ -56,13 +54,27 @@ export const FirebaseSignIn = async (email, password) => {
             refreshToken,
         }
 
-        updateDoc(doc(db, "users", uid), updatedData)
-    }).
-    then(() =>
-    {
-        return {ok: true, data: user, error: {state: false, code: ""}}
-    }).
-    catch(error => { return { ok: false, data: user, error: {state: true, code: error.code}} })
+        return updateDoc(doc(db, "users", uid), updatedData)
+    }).then(() => {
+
+        return FirebaseGetUserData(user.accessToken)
+
+    }).then(data => {
+
+        let parsedData = {
+            membershipType: data.membershipType || "",
+            planID: data.planID || "",
+            planName: data.planName || "-2",
+            accessToken: data.accessToken,
+            email: data.email,
+
+        }
+
+        return {ok: true, data: parsedData, error: {state: false, code: ""}}
+
+    }).catch(error => {
+        return {ok: false, data: user, error: {state: true, code: error.code}}
+    })
 }
 export const FirebaseUserExistCheck = async (email) => {
 
@@ -98,20 +110,42 @@ export const FirebaseUserExistCheck = async (email) => {
 export const FirebaseGetUserData = async (accessToken) => {
 
     const q = await query(collection(db, "users"), where("accessToken", "==", accessToken));
-    return await getDocs(q).then((querySnapshot) =>
-    {
-        if (querySnapshot.docs.length === 0)
-        {
+    return await getDocs(q).then((querySnapshot) => {
+        if (querySnapshot.docs.length === 0) {
             return {ok: false, error: {state: true, code: "firestore/data-not-found"}}
-        }
-        else
-        {
+        } else {
             return querySnapshot.docs[0].data();
         }
-    }).
-    catch(error =>
-    {
-        return {ok: false, error: {state: true,code: error.code}}
+    }).catch(error => {
+        return {ok: false, error: {state: true, code: error.code}}
     });
+
+}
+export const FirebaseUserPlanSet = async (accessToken, planID, planName, membershipType) => {
+
+    const usersRef = collection(db, "users");
+    const q = query(usersRef, where("accessToken", "==", accessToken));
+    return await getDocs(q).then(querySnapshot => {
+        if (querySnapshot.docs.length > 0) {
+            querySnapshot.forEach((doc) => {
+                    const docRef = doc.ref;
+                    const updateData = {
+                        planID,
+                        planName,
+                        membershipType,
+                    };
+
+                    setDoc(docRef, updateData, {merge: true}).then((ok) => {
+                        return {ok: true, error: {state: false, code: ""}}
+                    })
+                }
+            )
+        }
+
+    }).catch(err => {
+            return {ok: false, error: {state: true, code: err.code}}
+        }
+    );
+
 
 }

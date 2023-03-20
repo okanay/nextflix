@@ -15,12 +15,8 @@ export const authOptions = {
                 {
 
                     const data = response.data
-                    const tokens = {
-                        accessToken: data.accessToken,
-                        refreshToken: data.refreshToken,
-                    }
 
-                    return {name: {provider: "Firebase Auth", ...tokens}, email: data.email}
+                    return {name: {provider: "Firebase Auth", ...data}, email: data.email}
                 }
                 else
                 {

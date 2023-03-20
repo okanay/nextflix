@@ -13,7 +13,8 @@ export const trLanguage = {
             i1 : "E-posta adresi",
             btn1 : "Başlayın",
             btn2: "Kaydı Tamamlayın",
-            btn3: "Yeni Kayıt"
+            btn3: "Yeni Kayıt",
+            btn4: "İzlemeye Başla"
         },
         section2 : {
             t1 : "Televizyonunuzda izleyebilirsiniz.",

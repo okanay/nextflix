@@ -1,6 +1,6 @@
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
-import {emailChange, passwordChange, planChange} from "../redux/slicer/SignUp/SignUpSlicer";
+import {emailChange, planChange} from "../redux/slicer/SignUp/SignUpSlicer";
 
 export const useSignUpDataEffect = (value, change) => {
 
@@ -11,9 +11,6 @@ export const useSignUpDataEffect = (value, change) => {
         switch (change) {
             case "email" :
                 dispatch(emailChange(value))
-                break
-            case "password" :
-                dispatch(passwordChange(value))
                 break
             case "plan" :
                 dispatch(planChange(value))
