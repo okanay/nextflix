@@ -1,7 +1,7 @@
 export const engLanguage = {
     navigation: {
         signIn: "Sign In",
-        signOut : "Sign Out",
+        signOut: "Sign Out",
         trLan: "Turkish",
         engLan: "English"
     },
@@ -134,18 +134,18 @@ export const engLanguage = {
             t4: "Please do not email me Netflix special offers.",
             b1: "Next",
         },
-        password : {
+        password: {
             p: {
                 p1: "STEP",
                 p2: "OF",
             },
-            t1 : "Welcome back!",
-            t2 : "Joining Netflix is easy.",
-            t3 : "Enter your password and you'll be watching in no time.",
-            t4 : "Email",
-            i1 : "Enter your password",
-            b1 : "Forgot your password?",
-            b2 : "Next",
+            t1: "Welcome back!",
+            t2: "Joining Netflix is easy.",
+            t3: "Enter your password and you'll be watching in no time.",
+            t4: "Email",
+            i1: "Enter your password",
+            b1: "Forgot your password?",
+            b2: "Next",
         },
         plan: {
             p: {
@@ -165,134 +165,148 @@ export const engLanguage = {
                 p1: "STEP",
                 p2: "OF",
             },
-            t1 : "Choose the plan that’s right for you",
-            rules : [
-                { l : "Watch all you want. Ad-free."},
-                { l : "Recommendations just for you."},
-                { l : "Change or cancel your plan anytime."},
+            t1: "Choose the plan that’s right for you",
+            rules: [
+                {l: "Watch all you want. Ad-free."},
+                {l: "Recommendations just for you."},
+                {l: "Change or cancel your plan anytime."},
             ],
-            plans : [
+            plans: [
                 {
-                    plan : "Basic",
-                    price : "63,99 TL",
-                    quality : "Good",
-                    resolution : "720p",
+                    plan: "Basic",
+                    price: "63,99 TL",
+                    quality: "Good",
+                    resolution: "720p",
                 },
                 {
-                    plan : "Standart",
-                    price : "97,99 TL",
-                    quality : "Better",
-                    resolution : "1080p",
+                    plan: "Standart",
+                    price: "97,99 TL",
+                    quality: "Better",
+                    resolution: "1080p",
                 },
                 {
-                    plan : "Premium",
-                    price : "130,99 TL",
-                    quality : "Best",
-                    resolution : "4K+HDR",
+                    plan: "Premium",
+                    price: "130,99 TL",
+                    quality: "Best",
+                    resolution: "4K+HDR",
                 },
             ],
-            description : [
-                {d :"Monthly price"},
-                {d :"Video quality"},
-                {d :"Resolution"},
-                {d :"Watch on your TV, computer, mobile phone and tablet"},
+            description: [
+                {d: "Monthly price"},
+                {d: "Video quality"},
+                {d: "Resolution"},
+                {d: "Watch on your TV, computer, mobile phone and tablet"},
             ],
-            t2 : {
-                p1 : "HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our ",
-                p2 : "Terms of Use ",
-                p3 : "for more details."
+            t2: {
+                p1: "HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our ",
+                p2: "Terms of Use ",
+                p3: "for more details."
             },
-            t3 : "Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.",
-            b1 : "Next"
+            t3: "Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard and 1 with Basic.",
+            b1: "Next"
         },
-        paymentPicker : {
+        paymentPicker: {
             p: {
                 p1: "STEP",
                 p2: "OF",
             },
-            t1 : "Choose how to pay",
-            t2 : "Your payment is encrypted and you can change how you pay anytime.",
-            t3 : "Secure for peace of mind.",
-            t4 : "Cancel easily online.",
-            t5 : "End-to-end encrypted",
-            b1 : "Credit or Debit Card",
-            b2 : "Gift Code",
+            t1: "Choose how to pay",
+            t2: "Your payment is encrypted and you can change how you pay anytime.",
+            t3: "Secure for peace of mind.",
+            t4: "Cancel easily online.",
+            t5: "End-to-end encrypted",
+            b1: "Credit or Debit Card",
+            b2: "Gift Code",
         },
-        giftOption : {
+        giftOption: {
             p: {
                 p1: "STEP",
                 p2: "OF",
             },
-            t1 : "Enter your gift code",
-            i1 : "Gift Card Pin or Code",
-            b1 : "Redeem Gift Code",
-            t2 : {
-                p1 : "This page is protected by Google reCAPTCHA to ensure you're not a bot. ",
-                p2 : "Learn more."
+            t1: "Enter your gift code",
+            i1: "Gift Card Pin or Code",
+            b1: "Redeem Gift Code",
+            t2: {
+                p1: "This page is protected by Google reCAPTCHA to ensure you're not a bot. ",
+                p2: "Learn more."
             }
         },
-        creditOption : {
+        creditOption: {
             p: {
                 p1: "STEP",
                 p2: "OF",
             },
-            t1 : "Set up your credit or debit card",
-            i1 : "First name",
-            i2 : "Last name",
-            i3 : "Card number",
-            i4 : "Expiration date (MM/YY)",
-            i5 : "Security code (CVV)",
-            t2 : "Your payments will be processed internationally. Additional bank fees may apply.",
-            t3 : {
-                p1 : "By checking the checkbox below, you agree to our ",
-                p2 : " Terms of Use",
-                p3 : "Privacy Statement",
-                p4 : ", and that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently ",
-                p5 : ") to your payment method until you cancel. You may cancel at any time to avoid future charges."
+            t1: "Set up your credit or debit card",
+            i1: "First name",
+            i2: "Last name",
+            i3: "Card number",
+            i4: "Expiration date (MM/YY)",
+            i5: "Security code (CVV)",
+            t2: "Your payments will be processed internationally. Additional bank fees may apply.",
+            t3: {
+                p1: "By checking the checkbox below, you agree to our ",
+                p2: " Terms of Use",
+                p3: "Privacy Statement",
+                p4: ", and that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently ",
+                p5: ") to your payment method until you cancel. You may cancel at any time to avoid future charges."
             },
-            i6 : "I agree.",
-            b1 : "Start Membership",
+            i6: "I agree.",
+            b1: "Start Membership",
 
         },
-        common : {
-            box : {
-                month : "/Month",
-                change : "Change",
+        common: {
+            box: {
+                month: "/Month",
+                change: "Change",
             },
-            navigation : {
-                signIn : "Sign In",
-                logout : "Logout"
+            navigation: {
+                signIn: "Sign In",
+                logout: "Logout"
             }
         }
     },
-    errors : {
-        code1 : {
-            code : "auth/email-already-in-use",
-            decode : "Email Address Already In Use!"
+    errors: [
+        {
+            error: {
+                code: "auth/email-already-in-use",
+                decode: "Email Address Already In Use!"
+            }
         },
-        code2 : {
-            code : "auth/wrong-password",
-            decode : "Wrong Password!"
+        {
+            error: {
+                code: "auth/wrong-password",
+                decode: "Wrong Password!"
+            }
         },
-        code3 : {
-            code : "auth/internal-errors",
-            decode : "Interval Error Found!"
+        {
+            error: {
+                code: "auth/internal-errors",
+                decode: "Interval Error Found!"
+            }
         },
-        code4 : {
-            code : "auth/user-not-found",
-            decode : "User Not Found!"
+        {
+            error: {
+                code: "auth/user-not-found",
+                decode: "User Not Found!"
+            }
         },
-        code5 : {
-            code : "auth/too-many-requests",
-            decode : "Too many request!"
+        {
+            error: {
+                code: "auth/too-many-requests",
+                decode: "Too many request!"
+            }
         },
-        code6 : {
-            code : "auth/weak-password",
-            decode : "Your Password Must Be Include Min 6 Digit!"
+        {
+            error: {
+                code: "auth/weak-password",
+                decode: "Your Password Must Be Include Min 6 Digit!"
+            }
         },
-        code7 : {
-            code : "firestore/data-not-found",
-            decode : "Data Not Found!"
+        {
+            error: {
+                code: "firestore/data-not-found",
+                decode: "Data Not Found!"
+            }
         }
-    }
+    ]
 }
