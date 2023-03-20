@@ -79,7 +79,7 @@ export const GetStartedBtn = () => {
 
             :
 
-        session.user.name.planID > 0 ?
+        session.user.name.planID >= 0 ?
         (
             // Eğer oturum açıksa ve kullanıcının planID değeri 1 ' 2 ' 3 ya da daha yüksek bir değerde ise Watch Now butonu gösterilir
             <div className={'flex flex-row flex-wrap gap-2 justify-center items-center'}>
