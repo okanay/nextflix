@@ -3,27 +3,26 @@ import {useDispatch, useSelector} from "react-redux";
 import {useRef, useState} from "react";
 import {useRouter} from "next/router";
 import {emailChange, resetSignUp} from "../../../src/redux/slicer/SignUp/SignUpSlicer";
-import {db, auth} from "../../../firebase/database";
-import {createUserWithEmailAndPassword} from 'firebase/auth'
-import {handleSignIn} from "../../../firebase/functions";
+import {handleMailExist} from "../../../firebase/functions";
+import {signOut, useSession} from "next-auth/react";
 
 export const GetStartedBtn = () => {
+    const { data: session, status} = useSession()
     const router = useRouter()
     const dispatch = useDispatch()
-    const errorLanguage = useSelector(state => state.language.value.error)
     const language = useSelector(state => state.language.value.index.section1)
-    const signData = useSelector(state => state.signup.value)
     const emailRef = useRef(null)
-    const [email, setEmail] = useState(signData.email)
-    const [firebaseError, setFirebaseError] = useState({status : false , message : ""})
-
+    const [email, setEmail] = useState("")
     const handleResetSignUp = () => {
-        dispatch(resetSignUp())
+        signOut({callbackUrl : "/"}).then(() =>
+        {
+            dispatch(resetSignUp())
+        }).catch(() => {})
     }
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        if (signData.email === "")
+        if (status === "unauthenticated")
         {
             if (!emailRef.current.value)
             {
@@ -31,42 +30,36 @@ export const GetStartedBtn = () => {
             }
             else
             {
-                const response = await handleSignIn(email , "1")
+                const response = await handleMailExist(email)
+                dispatch(emailChange(email))
 
-                if (response.error.code === "auth/user-not-found")
+                if (response.ok === false)
                 {
-                    dispatch(emailChange(email))
-                    router.push("/signup/registration")
+                    await router.push("/signup/registration")
                 }
                 else
                 {
-                    dispatch(emailChange(email))
-                    router.push("/signup/password")
+                    await router.push("/signup/password")
                 }
-
             }
         }
         else
         {
-            if (signData.password === "")
+            if (status === "authenticated")
             {
-                router.push("/signup/registration")
-            }
-            else if (signData.plan === "")
-            {
-                router.push("/signup/plan")
+                await router.push("/signup/plan")
             }
             else
             {
-                router.push("/signup/paymentpicker")
+                await router.push("/signup/paymentpicker")
             }
         }
     }
 
     return (<>
-            {signData.email === "" && (<h4 className={'text-base md:text-xl font-semibold text-center'}>{language.t3}</h4>)}
+            {status === "unauthenticated" && (<h4 className={'text-base md:text-xl font-semibold text-center'}>{language.t3}</h4>)}
             <form className={'flex flex-row flex-wrap gap-2 justify-center items-center'} onSubmit={handleSubmit}>
-                {signData.email === "" && (
+                {status === "unauthenticated" && (
 
                     // Email Input Area
                     <div className={'relative peer'}>
@@ -79,7 +72,7 @@ export const GetStartedBtn = () => {
                                value={email}
                                id={'email-get-started'}
                                className={`w-[18rem] xlPhone:w-[22rem] h-14 bg-transparent bg-skin-theme-body-1000/10 transition duration-500 
-                               ${firebaseError.status === true ? ("border-skin-theme-600") : ("border-skin-theme-body-400")}
+                               border-skin-theme-body-400
                                border rounded px-3 peer placeholder:text-transparent focus:outline-none`}
                                placeholder={"."}/>
                         <label htmlFor="email-get-started"
@@ -94,15 +87,12 @@ export const GetStartedBtn = () => {
                     className={'md:my-0 flex flex-row justify-center items-center px-4 py-2 bg-skin-theme-600 rounded'}
                     type={"submit"}>
                     <span className={'ml-3 text-2xl font-bold'}>
-                        {signData.email === "" ? language.btn1 : language.btn2}
+                        {status === "unauthenticated" ? language.btn1 : language.btn2}
                     </span>
                     <ChevronRightIcon className={'w-10 h-10'}/>
                 </button>
             </form>
-            {firebaseError.status && (
-                <p className={'text-skin-theme-600 font-semibold w-full text-center'}>{firebaseError.message}</p>
-            )}
-            {signData.email !== "" && (
+            {status === "authenticated" && (
                 <button type={'button'} className={'mx-auto px-2 py-1 w-fit text-skin-theme-font-900 border border-skin-theme-body-400 transition-all duration-300 hover:scale-105 text-sm rounded'} onClick={handleResetSignUp}>
                 {language.btn3}
             </button>

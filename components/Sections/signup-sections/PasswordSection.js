@@ -9,6 +9,7 @@ import Link from "next/link";
 import {handleSignIn} from "../../../firebase/functions";
 import {ErrorDecode} from "../../../helpers/Firebase-Error-Code-Decode/ErrorDecode";
 import {useEmailSignDataEffect} from "../../../src/customEffects/useEmailSignDataEffect";
+import {signIn} from "next-auth/react";
 
 
 export const PasswordSection = () => {
@@ -25,15 +26,16 @@ export const PasswordSection = () => {
     useEmailSignDataEffect(setEmail,signData, router)
     const handleCreateBtn = async () => {
 
-        let response = await handleSignIn(email,password)
+        const login = await signIn("credentials", {email, password, redirect: false, remember: false});
 
-        if (response.ok)
+        if (login.ok)
         {
             handlePageChange(setPageAnimation, router, "/signup/plan")
+
         }
         else
         {
-            setError({status: true, code: response.error.code})
+            setError({status: true, code: login.error})
         }
     }
 

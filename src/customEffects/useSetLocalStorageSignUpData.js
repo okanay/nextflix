@@ -1,6 +1,6 @@
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
-import {emailChange, passwordChange, planChange} from "../redux/slicer/SignUp/SignUpSlicer";
+import {emailChange, planChange} from "../redux/slicer/SignUp/SignUpSlicer";
 
 export const useSetLocalStorageSignUpData = () => {
 
@@ -13,9 +13,7 @@ export const useSetLocalStorageSignUpData = () => {
         if (data !== undefined)
         {
             dispatch(emailChange(data.email === "" ? "" : data.email))
-            dispatch(passwordChange(data.password === "" ? "" : data.password))
             dispatch(planChange(data.plan === "" ? "" : data.plan))
-
         }
     }, [])
 }

@@ -1,6 +1,7 @@
 export const engLanguage = {
     navigation: {
-        signIn: "Sign in",
+        signIn: "Sign In",
+        signOut : "Sign Out",
         trLan: "Turkish",
         engLan: "English"
     },
@@ -282,6 +283,10 @@ export const engLanguage = {
         code5 : {
             code : "auth/too-many-requests",
             decode : "Too many request!"
+        },
+        code6 : {
+            code : "auth/weak-password",
+            decode : "Your Password Must Be Include Min 6 Digit!"
         }
     }
 }

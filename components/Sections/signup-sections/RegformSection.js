@@ -6,10 +6,9 @@ import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {handlePageChange} from "./SignUpLayout";
 import Link from "next/link";
-import {createUserWithEmailAndPassword} from "firebase/auth";
-import {auth} from "../../../firebase/database";
-import {handleCreateNewAccount, handleSignIn} from "../../../firebase/functions";
+import {handleCreateNewAccount} from "../../../firebase/functions";
 import {ErrorDecode} from "../../../helpers/Firebase-Error-Code-Decode/ErrorDecode";
+import {signIn} from "next-auth/react";
 
 
 export const RegformSection = () => {
@@ -24,7 +23,6 @@ export const RegformSection = () => {
     const [error, setError] = useState({status: false, code: ""})
 
     useSignUpDataEffect(email, "email")
-    useSignUpDataEffect(password, "password")
 
     const handleCreateBtn = async () => {
 
@@ -32,13 +30,22 @@ export const RegformSection = () => {
 
         if (response.ok)
         {
-            handlePageChange(setPageAnimation, router, "/signup/plan")
+            const login = await signIn("credentials", {email, password, redirect: false, remember: false});
+
+            if (login.ok)
+            {
+                handlePageChange(setPageAnimation, router, "/signup/plan")
+            }
+        }
+        else if(response.error.code !== "")
+        {
+            setError({status: true, code: response.error.code})
         }
         else
         {
-            response = await handleSignIn(email,password)
+            const login = await signIn("credentials", {email, password, redirect: false, remember: false});
 
-            if (response.ok)
+            if (login.ok)
             {
                 handlePageChange(setPageAnimation, router, "/signup/plan")
 

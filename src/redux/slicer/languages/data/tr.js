@@ -1,6 +1,7 @@
 export const trLanguage = {
     navigation : {
-        signIn : "Oturum aç",
+        signIn : "Oturum Aç",
+        signOut : "Oturumu Kapat",
         trLan : "Türkçe",
         engLan : "İngilizce"
     },
@@ -280,8 +281,12 @@ export const trLanguage = {
             decode : "Kullanıcı Bulunamadı!"
         },
         code5 : {
-            code : "auth/too-many-requests",
+            code : "auth/too-many-requests auth/weak-password",
             decode : "Çok fazla deneme yaptınız!"
+        },
+        code6 : {
+            code : "auth/weak-password",
+            decode : "Şifreniz Minimum 6 Karakterden Oluşmalı!"
         }
     }
 }

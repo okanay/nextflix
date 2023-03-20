@@ -1,8 +1,11 @@
 import {NetflixLogo} from "../../UI/Navigation-UI/NetflixLogo";
 import {LanguageSelect} from "../../UI/Navigation-UI/LanguageSelect";
-import {SignInButton} from "../../UI/Navigation-UI/SignInButton";
+import {SignButton} from "../../UI/Navigation-UI/SignButton";
+import {useSession} from "next-auth/react";
 
 export const IndexNavigation = () => {
+
+    const {data : session, status} = useSession()
 
     return (<nav className={'relative'}>
         <div className={'mx-auto w-full max-w-screen-desktop'}>
@@ -10,7 +13,7 @@ export const IndexNavigation = () => {
                 <NetflixLogo/>
                 <div className={'flex justify-end gap-2 tablet:gap-5 items-center text-xs tablet:text-sm cursor-pointer'}>
                     <LanguageSelect rotation={'down'} theme={'dark'}/>
-                    <SignInButton/>
+                    <SignButton/>
                 </div>
             </div>
         </div>
