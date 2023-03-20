@@ -6,13 +6,18 @@ import {getSession, useSession} from "next-auth/react";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 import {useRouteProtectEffect} from "../../src/customEffects/useRouteProtectEffect";
+import {usePlanIDProtectEffect} from "../../src/customEffects/usePlanIDProtectEffect";
+import {GiftOptionSection} from "../../components/Sections/signup-sections/Protected-Routes/GiftOptionSection";
 
-const CreditOption = ({status}) => {
+const CreditOption = ({data, status}) => {
 
     useRouteProtectEffect(status)
+    usePlanIDProtectEffect(data,status)
 
     return (<SignUpLayout>
-            <CreditOptionSection/>
+            {status === "authenticated" && (
+                <CreditOptionSection/>
+            )}
         </SignUpLayout>
     )
 }
@@ -26,13 +31,13 @@ export async function getServerSideProps(context) {
     if (await session !== null)
     {
         return {
-            props: {session : session, status : "authenticated"},
+            props: {data : session, status : "authenticated"},
         }
     }
     else
     {
         return {
-            props: {session : "", status : "unauthenticated"},
+            props: {data : "", status : "unauthenticated"},
         }
     }
 

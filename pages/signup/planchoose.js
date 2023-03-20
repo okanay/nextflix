@@ -4,13 +4,19 @@ import {FooterSignUp} from "../../components/Sections/signup-sections/Layout/Foo
 import {PlanChooseSection} from "../../components/Sections/signup-sections/Protected-Routes/PlanChooseSection";
 import {useRouteProtectEffect} from "../../src/customEffects/useRouteProtectEffect";
 import {getSession} from "next-auth/react";
+import {usePlanIDProtectEffect} from "../../src/customEffects/usePlanIDProtectEffect";
+import {PaymentPickerSection} from "../../components/Sections/signup-sections/Protected-Routes/PaymentPickerSection";
 
 const Plan = ({data, status}) => {
 
     useRouteProtectEffect(status)
+    usePlanIDProtectEffect(data,status)
+
 
     return (<SignUpLayout>
-            <PlanChooseSection/>
+            {status === "authenticated" && (
+                <PlanChooseSection/>
+            )}
         </SignUpLayout>
     )
 }

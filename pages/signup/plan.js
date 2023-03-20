@@ -4,14 +4,21 @@ import {FooterSignUp} from "../../components/Sections/signup-sections/Layout/Foo
 import {PlanSection} from "../../components/Sections/signup-sections/Protected-Routes/PlanSection";
 import {getSession} from "next-auth/react";
 import {useRouteProtectEffect} from "../../src/customEffects/useRouteProtectEffect";
+import {usePlanIDProtectEffect} from "../../src/customEffects/usePlanIDProtectEffect";
+import {PlanChooseSection} from "../../components/Sections/signup-sections/Protected-Routes/PlanChooseSection";
 
-const Plan = ({status}) => {
+const Plan = ({data,status}) => {
 
     useRouteProtectEffect(status)
+    usePlanIDProtectEffect(data,status)
+
 
 
     return (<SignUpLayout>
-            <PlanSection/>
+            {status === "authenticated" && (
+                <PlanSection/>
+
+            )}
         </SignUpLayout>
     )
 }
@@ -25,13 +32,13 @@ export async function getServerSideProps(context) {
     if (await session !== null)
     {
         return {
-            props: {session : session, status : "authenticated"},
+            props: {data : session, status : "authenticated"},
         }
     }
     else
     {
         return {
-            props: {session : "", status : "unauthenticated"},
+            props: {data : "", status : "unauthenticated"},
         }
     }
 
