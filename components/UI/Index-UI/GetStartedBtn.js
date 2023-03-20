@@ -5,6 +5,7 @@ import {useRouter} from "next/router";
 import {emailChange, resetSignUp} from "../../../src/redux/slicer/SignUp/SignUpSlicer";
 import {FirebaseGetUserData, FirebaseUserExistCheck} from "../../../firebase/functions";
 import {signOut, useSession} from "next-auth/react";
+import {useGetAccessToken} from "../../../src/customHooks/useGetAccessToken";
 
 export const GetStartedBtn = () => {
     const { data: session, status} = useSession()
