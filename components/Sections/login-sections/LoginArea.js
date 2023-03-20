@@ -3,7 +3,7 @@ import {useDispatch} from "react-redux";
 import {resetSignUp} from "../../../src/redux/slicer/SignUp/SignUpSlicer";
 import {useRef, useState} from "react";
 import {signIn} from "next-auth/react";
-import {handlePageChange} from "../signup-sections/SignUpLayout";
+import {handlePageChange} from "../signup-sections/Layout/SignUpLayout";
 import {ErrorDecode} from "../../../helpers/Firebase-Error-Code-Decode/ErrorDecode";
 import Link from "next/link";
 

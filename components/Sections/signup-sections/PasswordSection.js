@@ -4,7 +4,7 @@ import {useSignUpDataEffect} from "../../../src/customEffects/usePlanChooseEffec
 import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
-import {handlePageChange} from "./SignUpLayout";
+import {handlePageChange} from "./Layout/SignUpLayout";
 import Link from "next/link";
 import {handleSignIn} from "../../../firebase/functions";
 import {ErrorDecode} from "../../../helpers/Firebase-Error-Code-Decode/ErrorDecode";

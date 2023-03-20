@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Netflix from "../../../public/netflix.png";
+import Netflix from "../../../../public/netflix.png";
 import {useSelector} from "react-redux";
-import {SignButton} from "../../UI/SignUp-UI/SignButton";
+import {SignButton} from "../../../UI/SignUp-UI/SignButton";
 
 
 export const NavigationSignUp = () => {

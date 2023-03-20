@@ -1,17 +1,17 @@
 import {useSelector} from "react-redux";
-import Visa  from "../../../public/visa.png"
-import Troy  from "../../../public/troy.png"
-import AmericanExpress  from "../../../public/americanexpress.png"
-import MasterCard  from "../../../public/mastercard.png"
+import Visa  from "../../../../public/visa.png"
+import Troy  from "../../../../public/troy.png"
+import AmericanExpress  from "../../../../public/americanexpress.png"
+import MasterCard  from "../../../../public/mastercard.png"
 import Image from "next/image";
-import {CurrentPlanBox} from "../../UI/SignUp-UI/CurrentPlanBox";
-import {useGetPlanValue} from "../../../src/customHooks/useGetPlanValue";
-import {PeerInput} from "../../UI/SignUp-UI/PeerInput";
+import {CurrentPlanBox} from "../../../UI/SignUp-UI/CurrentPlanBox";
+import {useGetPlanValue} from "../../../../src/customHooks/useGetPlanValue";
+import {PeerInput} from "../../../UI/SignUp-UI/PeerInput";
 import {motion as m} from "framer-motion";
-import {animationStore} from "../../../framer-motion/animation-store";
+import {animationStore} from "../../../../framer-motion/animation-store";
 import {useState} from "react";
 import {useRouter} from "next/router";
-import {handlePageChange} from "./SignUpLayout";
+import {handlePageChange} from "../Layout/SignUpLayout";
 import Link from "next/link";
 
 export const CreditOptionSection = () => {
@@ -49,7 +49,7 @@ export const CreditOptionSection = () => {
                 <span>, </span>
                 <span className={'text-blue-600 underline'}>{language.t3.p3}</span>
                 <span>{language.t3.p4}</span>
-                <span>{prices.plans[planValue].price}</span>
+                <span>{prices?.plans[planValue]?.price}</span>
                 <span>{language.t3.p5}</span>
             </small>
             <div className={'flex flex-row justify-start gap-1 items-center mt-3 text-skin-theme-font-700 text-[16px]'}>

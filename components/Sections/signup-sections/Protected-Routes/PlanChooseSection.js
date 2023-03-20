@@ -1,11 +1,11 @@
 import {useSelector} from "react-redux";
-import {CheckSVG} from "../../UI/SignUp-UI/CheckSVG";
+import {CheckSVG} from "../../../UI/SignUp-UI/CheckSVG";
 import {useState} from "react";
-import {useSignUpDataEffect, } from "../../../src/customEffects/usePlanChooseEffect";
+import {useSignUpDataEffect, } from "../../../../src/customEffects/usePlanChooseEffect";
 import {motion as m} from "framer-motion";
-import {animationStore} from "../../../framer-motion/animation-store";
+import {animationStore} from "../../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
-import {handlePageChange} from "./SignUpLayout";
+import {handlePageChange} from "../Layout/SignUpLayout";
 import Link from "next/link";
 
 export const PlanChooseSection = () => {

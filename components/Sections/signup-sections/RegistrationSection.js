@@ -5,7 +5,7 @@ import {motion as m} from "framer-motion";
 import {animationStore} from "../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {useState} from "react";
-import {handlePageChange} from "./SignUpLayout";
+import {handlePageChange} from "./Layout/SignUpLayout";
 import Link from "next/link";
 
 export const RegistrationSection = () => {

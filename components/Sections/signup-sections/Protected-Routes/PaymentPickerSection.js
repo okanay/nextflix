@@ -1,18 +1,18 @@
 import {useSelector} from "react-redux";
 import Image from "next/image";
-import lock from "../../../public/Lock.png";
-import {LockSVG} from "../../UI/SignUp-UI/LockSVG";
-import NetflixGift from "../../../public/netflix-gift.png"
-import Visa  from "../../../public/visa.png"
-import Troy  from "../../../public/troy.png"
-import AmericanExpress  from "../../../public/americanexpress.png"
-import MasterCard  from "../../../public/mastercard.png"
-import {ArrowRightSVG} from "../../UI/SignUp-UI/ArrowRightSVG";
+import lock from "../../../../public/Lock.png";
+import {LockSVG} from "../../../UI/SignUp-UI/LockSVG";
+import NetflixGift from "../../../../public/netflix-gift.png"
+import Visa  from "../../../../public/visa.png"
+import Troy  from "../../../../public/troy.png"
+import AmericanExpress  from "../../../../public/americanexpress.png"
+import MasterCard  from "../../../../public/mastercard.png"
+import {ArrowRightSVG} from "../../../UI/SignUp-UI/ArrowRightSVG";
 import {motion as m} from "framer-motion";
-import {animationStore} from "../../../framer-motion/animation-store";
+import {animationStore} from "../../../../framer-motion/animation-store";
 import {useRouter} from "next/router";
 import {useState} from "react";
-import {handlePageChange} from "./SignUpLayout";
+import {handlePageChange} from "../Layout/SignUpLayout";
 import Link from "next/link";
 
 

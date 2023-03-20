@@ -1,4 +1,4 @@
-import {SignUpLayout} from "../../components/Sections/signup-sections/SignUpLayout";
+import {SignUpLayout} from "../../components/Sections/signup-sections/Layout/SignUpLayout";
 import {PasswordSection} from "../../components/Sections/signup-sections/PasswordSection";
 
 const Password = () => {
