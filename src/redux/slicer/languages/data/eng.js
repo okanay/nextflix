@@ -307,6 +307,12 @@ export const engLanguage = {
                 code: "firestore/data-not-found",
                 decode: "Data Not Found!"
             }
+        },
+        {
+            error: {
+                code: "auth/invalid-email",
+                decode: "Invalid Email Address Entered!"
+            }
         }
     ]
 }

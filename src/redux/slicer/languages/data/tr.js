@@ -306,6 +306,12 @@ export const trLanguage = {
                 code: "firestore/data-not-found",
                 decode: "Data Bulunamadı!"
             }
+        },
+        {
+            error: {
+                code: "auth/invalid-email",
+                decode: "Geçersiz E-mail Adresi Girdiniz!"
+            }
         }
     ]
 }
