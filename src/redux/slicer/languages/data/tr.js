@@ -297,7 +297,7 @@ export const trLanguage = {
         },
         {
             error: {
-                code: "auth/too-many-requests auth/weak-password",
+                code: "auth/too-many-requests",
                 decode: "Çok fazla deneme yaptınız!"
             }
         },
