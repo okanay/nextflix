@@ -286,6 +286,12 @@ export const engLanguage = {
         },
         {
             error: {
+                code: "auth/internal-error",
+                decode: "Interval Error Found!"
+            }
+        },
+        {
+            error: {
                 code: "auth/user-not-found",
                 decode: "User Not Found!"
             }

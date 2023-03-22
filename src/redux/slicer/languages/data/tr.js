@@ -285,6 +285,12 @@ export const trLanguage = {
         },
         {
             error: {
+                code: "auth/internal-error",
+                decode: "Bir Hata Meydana Geldi!"
+            }
+        },
+        {
+            error: {
                 code: "auth/user-not-found",
                 decode: "Kullanıcı Bulunamadı!"
             }
