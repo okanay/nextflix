@@ -3,7 +3,7 @@ import kidsImage from "../../../public/kids.png"
 
 export const KidsAccount =  ({language}) => {
 
-    return (<section id={'kids-account'}  className={'bg-skin-theme-body-1000 pt-8 pb-16 xlPhone:py-16'}>
+    return (<section id={'kids-account'}  className={'bg-skin-theme-body-1000 pt-8 pb-8 xlPhone:pb-16 xlPhone:py-16'}>
         <div className={'flex flex-row flex-wrap-reverse justify-center items-center gap-4 xlPhone:gap-8'}>
             <Image src={kidsImage} alt={"kids"} priority/>
             <div className={'text-skin-theme-font-900 px-8 tablet:px-4 text-center xlPhone:text-start'}>

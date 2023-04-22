@@ -44,7 +44,7 @@ export const GetStartedBtn = () => {
 
         // Eğer Oturum Yoksa Burası Gösterilir
         <>
-            <h4 className={'text-base md:text-xl font-semibold text-center px-2 tablet:px-0'}>{language.t3}</h4>
+            <h4 className={'text-base md:text-xl font-semibold text-center px-4 tablet:px-0'}>{language.t3}</h4>
             <form className={'flex flex-row flex-wrap gap-2 justify-center items-center'} onSubmit={handleSubmit}>
             <div className={'relative peer'}>
                 <input type="email"
