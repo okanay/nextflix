@@ -16,7 +16,7 @@ export const LoginBackgroundImage = ({children}) => {
                     src={backgroundImage}
                     priority
                     alt={"contents"}
-                    className={'hidden tablet:block h-full object-cover object-left-top'}
+                    className={'hidden tablet:block h-full object-cover object-left-top w-full'}
                     onLoadingComplete={() => {setLoadingImage(true)}}/>
             </div>
 
